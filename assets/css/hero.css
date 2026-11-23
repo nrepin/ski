@@ -181,6 +181,9 @@
     position: relative;
     isolation: isolate;
 }
+.hero-slider__slide[hidden] {
+    display: none;
+}
 .hero-slider__content {
     display: flex;
     flex-direction: column;
@@ -232,20 +235,20 @@
 .hero-slider__scene {
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: max(100cqw, 152.8474cqh);
-    aspect-ratio: 1342 / 878;
+    left: var(--hero-scene-center, 50%);
+    width: var(--hero-scene-width, max(100cqw, 152.8474cqh));
+    aspect-ratio: var(--hero-scene-ratio, 1342 / 878);
     transform: translate(-50%, -50%);
 }
-.hero-slider__scene:not(.hero-slider__scene--foreground) {
+.hero-slider__scene:not(.hero-slider__scene--foreground, .hero-slider__scene--race) {
     background: url("../images/hero-snow-background.png") center / 100% 100% no-repeat;
 }
 .hero-slider__figure {
     position: absolute;
-    top: 27.5626%;
-    left: 35.3204%;
-    width: 51.0432%;
-    height: 75.9681%;
+    top: var(--hero-figure-top, 27.5626%);
+    left: var(--hero-figure-left, 35.3204%);
+    width: var(--hero-figure-width, 51.0432%);
+    height: var(--hero-figure-height, 75.9681%);
     overflow: hidden;
 }
 .hero-slider__picture {
@@ -309,6 +312,74 @@
     font:
         700 52px/66px "TT Bluescreens Pro Extended",
         sans-serif;
+}
+
+/* Hero — Relay and Spring Race */
+.hero-slider__content--relay {
+    --race-heading-top: 8.8973cqw;
+    --race-title-size: 15.1766cqw;
+    --race-title-line: 16.5022cqw;
+    --race-title-row: 16.0463cqw;
+}
+.hero-slider__content--spring {
+    --race-heading-top: 6.4613cqw;
+    --race-title-size: 18.2338cqw;
+    --race-title-line: 19.8265cqw;
+    --race-title-row: 18.9331cqw;
+}
+.hero-slider__backdrop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-slider__scene--race {
+    --hero-scene-width: max(100cqw, 151.5945cqh);
+    --hero-scene-ratio: 1331 / 878;
+}
+.hero-slider__figure--relay {
+    --hero-figure-top: 23.918%;
+    --hero-figure-left: 36.2134%;
+    --hero-figure-width: 37.1901%;
+    --hero-figure-height: 73.2346%;
+}
+.hero-slider__figure--spring {
+    --hero-figure-top: 25.9681%;
+    --hero-figure-left: 39.444%;
+    --hero-figure-width: 57.2502%;
+    --hero-figure-height: 73.8041%;
+}
+
+@media (min-width: 768px) {
+    .hero-slider__content--race {
+        min-height: 65.9654cqw;
+        padding: var(--race-heading-top) 6.2359cqw 8.8655cqw 6.5364cqw;
+    }
+    .hero-slider__heading--race {
+        grid-template-rows: var(--race-title-row) auto;
+        padding-inline: 0;
+    }
+    .hero-slider__title--race {
+        font-size: var(--race-title-size);
+        line-height: var(--race-title-line);
+        text-transform: uppercase;
+    }
+    .hero-slider__wordmark--race {
+        width: 33.3833cqw;
+        height: 4.1164cqw;
+    }
+    .hero-slider__bottom--race {
+        padding-inline-start: 0.3cqw;
+    }
+    .hero-slider__info--race {
+        max-width: 499px;
+    }
+    .hero-slider__text--race {
+        letter-spacing: 0.02em;
+    }
+    .hero-slider__stage--race {
+        padding-inline: 15px;
+    }
 }
 .hero-slider__label {
     font-size: 24.304px;
@@ -423,10 +494,10 @@
 
     /* Mobile — Hero Slider */
     .hero-slider__scene {
-        width: max(100cqw, 55.0775cqh);
-        aspect-ratio: 320 / 581;
+        width: var(--hero-scene-width, max(100cqw, 55.0775cqh));
+        aspect-ratio: var(--hero-scene-ratio, 320 / 581);
     }
-    .hero-slider__scene:not(.hero-slider__scene--foreground) {
+    .hero-slider__scene:not(.hero-slider__scene--foreground, .hero-slider__scene--race) {
         background-image: url("../images/originals/hero-snow-background-mobile.png");
         background-size: auto 109.77%;
         background-position: 82.8% 75.7%;
@@ -450,10 +521,10 @@
         height: 5.9143cqw;
     }
     .hero-slider__figure {
-        top: 31.1532%;
-        left: 0;
-        width: 83.4375%;
-        height: 63.8554%;
+        top: var(--hero-figure-top, 31.1532%);
+        left: var(--hero-figure-left, 0);
+        width: var(--hero-figure-width, 83.4375%);
+        height: var(--hero-figure-height, 63.8554%);
     }
     .hero-slider__skier {
         height: auto;
@@ -504,6 +575,17 @@
         padding: 12px 16px;
         font-size: 12px;
         line-height: 20px;
+    }
+
+    /* Mobile — Relay and Spring Race */
+    .hero-slider__content--relay {
+        --hero-scene-center: 72%;
+        --race-mobile-title-size: 20.5cqw;
+    }
+    .hero-slider__title--race {
+        font-size: var(--race-mobile-title-size, 23.125cqw);
+        line-height: 20.8cqw;
+        text-transform: uppercase;
     }
     .hero-slider__arrow {
         top: 34.7676%;

@@ -1,8 +1,6 @@
 "use strict";
 // Replace only video.url when the project's final video is available.
 window.SKI_CONFIG = Object.freeze({
-    heroSlides: [{ stage: 1 }, { stage: 2 }, { stage: 3 }],
-    homeExtraStages: [{ stage: 4 }, { stage: 5 }],
     // Final project account URLs have not been supplied.
     social: { max: null, vk: null, telegram: null, instagram: null },
     video: Object.freeze({

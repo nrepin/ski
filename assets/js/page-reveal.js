@@ -41,10 +41,7 @@ function initPageReveal() {
                         : pending.has(element),
                 );
                 if (!elements.length) return;
-                elements.forEach((element) => {
-                    pending.delete(element);
-                    element.dataset.revealed = "true";
-                });
+                elements.forEach((element) => pending.delete(element));
                 for (const onlyFade of [false, true]) {
                     const group = elements.filter(
                         (element) => fadeOnly(element) === onlyFade,
@@ -61,32 +58,34 @@ function initPageReveal() {
                         )
                     ) {
                         gsap.set(group, { clearProps });
+                        group.forEach((element) => {
+                            element.dataset.revealed = "true";
+                        });
                         continue;
                     }
                     // Keep each staggered tween independently cancellable when
                     // keyboard focus reaches a delayed or already moving item.
                     group.forEach((element, index) => {
-                        gsap.fromTo(
-                            element,
-                            onlyFade
-                                ? { opacity: 0 }
-                                : { opacity: 0, y: distance },
-                            {
-                                opacity: 1,
-                                ...(onlyFade ? {} : { y: 0 }),
-                                duration: 0.7,
-                                delay: onlyFade ? 0 : index * 0.1,
-                                ease: "power2.out",
-                                overwrite: "auto",
-                                clearProps,
+                        gsap.to(element, {
+                            opacity: 1,
+                            ...(onlyFade ? {} : { y: 0 }),
+                            duration: 0.7,
+                            delay: onlyFade ? 0 : index * 0.1,
+                            ease: "power2.out",
+                            overwrite: "auto",
+                            clearProps,
+                            onComplete: () => {
+                                // A breakpoint change can revert an unfinished reveal.
+                                element.dataset.revealed = "true";
                             },
-                        );
+                        });
                     });
                 }
             });
 
             ScrollTrigger.batch(targets, {
-                start: "clamp(top 92%)",
+                // A negative start lets already visible blocks enter at scrollY 0.
+                start: "top 92%",
                 interval: 0.08,
                 batchMax: 4,
                 once: true,
@@ -163,18 +162,12 @@ function heroBezierEase(firstX, secondX) {
 // Hero — reproduce the inspected reference, including its exact Bezier curve.
 function initHeroTextMotion() {
     const element = document.querySelector(".hero-slider");
-    const slider = element?.swiper;
-    if (!slider || !window.gsap) return;
+    if (!element?.hasAttribute("aria-busy") || !window.gsap) return;
+    const slider = element.swiper;
 
     const controls = Array.from(
         document.querySelectorAll(".hero-slider__arrow"),
     );
-    const original = {
-        next: slider.allowSlideNext,
-        prev: slider.allowSlidePrev,
-        touch: slider.allowTouchMove,
-        speed: slider.params.speed,
-    };
     const referenceEase = heroBezierEase(0.16, 0.3);
     const lock = (locked) => {
         element.setAttribute(
@@ -188,25 +181,15 @@ function initHeroTextMotion() {
     };
     const media = gsap.matchMedia();
     media.add(
-        {
-            motion: "(prefers-reduced-motion: no-preference)",
-            reduced: "(prefers-reduced-motion: reduce)",
-        },
+        "(prefers-reduced-motion: no-preference)",
         (context) => {
-            slider.params.speed = context.conditions.reduced
-                ? 0
-                : original.speed;
-            if (context.conditions.reduced) {
-                lock(false);
-                return;
-            }
-
             let timeline;
             let title;
             let text;
             let cta;
             let secondary = [];
             let ready = false;
+            let active = true;
             const restore = () => {
                 if (text)
                     gsap.set([text, ...secondary, cta], {
@@ -217,16 +200,16 @@ function initHeroTextMotion() {
             const prepare = () => {
                 timeline?.kill();
                 restore();
-                const slide = slider.slides[slider.activeIndex];
-                title = slide.querySelector(".hero-slider__title");
-                text = slide.querySelector(".hero-slider__title-text");
-                cta = slide.querySelector(".hero-slider__link");
+                const frame = slider ? slider.slides[slider.activeIndex] : element;
+                title = frame.querySelector(".hero-slider__title");
+                text = frame.querySelector(".hero-slider__title-text");
+                cta = frame.querySelector(".hero-slider__link");
                 secondary = [
                     ".hero-slider__wordmark",
                     ".hero-slider__emphasis",
                     ".hero-slider__text",
-                ].map((selector) => slide.querySelector(selector));
-                const extra = slide.querySelector(".hero-slider__stage, .hero-slider__note");
+                ].map((selector) => frame.querySelector(selector));
+                const extra = frame.querySelector(".hero-slider__stage, .hero-slider__note");
                 if (extra) secondary.push(extra);
                 title.classList.add("hero-slider__title--revealing");
                 gsap.set(text, { yPercent: 110, opacity: 0 });
@@ -276,10 +259,10 @@ function initHeroTextMotion() {
                     );
             });
             const onChange = () => context.playHero();
-            slider.on("slideChangeTransitionStart", onChange);
+            slider?.on("slideChangeTransitionStart", onChange);
             context.playHero();
-            Promise.all([document.fonts.ready, slider.loadingReady]).then(() => {
-                if (context.isReverted || slider.destroyed) return;
+            Promise.all([document.fonts.ready, heroImageReady]).then(() => {
+                if (!active || slider?.destroyed) return;
                 ready = true;
                 context.playHero();
             });
@@ -296,9 +279,10 @@ function initHeroTextMotion() {
             };
             element.addEventListener("focusin", onFocus);
             return () => {
+                active = false;
                 timeline?.kill();
                 title?.classList.remove("hero-slider__title--revealing");
-                slider.off("slideChangeTransitionStart", onChange);
+                slider?.off("slideChangeTransitionStart", onChange);
                 element.removeEventListener("focusin", onFocus);
                 lock(false);
             };

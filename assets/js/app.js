@@ -1,14 +1,13 @@
 "use strict";
 
-// Only the active slide owns initial readiness; no extra requests or Swipers.
-function initSliderLoading(slider) {
-    const element = slider.el;
+// Wait for the banner image or the first active slide image.
+function initMediaLoading(element, slider) {
     let controller;
     let finished = false;
     let resolveReady;
     delete element.dataset.sliderReady;
     element.setAttribute("aria-busy", "true");
-    slider.loadingReady = new Promise((resolve) => {
+    const ready = new Promise((resolve) => {
         resolveReady = resolve;
     });
     const finish = (state) => {
@@ -16,19 +15,20 @@ function initSliderLoading(slider) {
         finished = true;
         clearTimeout(deadline);
         controller?.abort();
-        slider.off("activeIndexChange", checkActiveSlide);
-        slider.off("destroy", onDestroy);
+        slider?.off("activeIndexChange", checkActiveImage);
+        slider?.off("destroy", onDestroy);
         element.dataset.sliderReady = state;
         element.setAttribute("aria-busy", "false");
         resolveReady();
     };
     const onDestroy = () => finish("unavailable");
-    const checkActiveSlide = () => {
+    const checkActiveImage = () => {
         controller?.abort();
         controller = new AbortController();
         const { signal } = controller;
-        const slide = slider.slides[slider.activeIndex];
-        const image = slide?.querySelector(".hero-slider__skier, .race-photos__image");
+        const frame = slider ? slider.slides[slider.activeIndex] : element;
+        const image = frame?.querySelector(".hero-slider__skier, .race-photos__image");
+        const backdrop = frame?.querySelector(".hero-slider__backdrop");
         if (!image) {
             finish("ready");
             return;
@@ -40,7 +40,7 @@ function initSliderLoading(slider) {
                 return;
             }
             try {
-                await image.decode?.();
+                await Promise.allSettled([image.decode?.(), backdrop?.decode?.()]);
             } catch {
                 // A decoded frame is optional; a valid loaded image still works.
             }
@@ -50,13 +50,19 @@ function initSliderLoading(slider) {
         image.addEventListener("error", () => finish("error"), { once: true, signal });
         // Promote only the actual first visible image if it was marked lazy.
         image.loading = "eager";
+        if (backdrop) backdrop.loading = "eager";
         if (image.complete) loaded();
     };
     // Network-stall fallback, never a minimum display time or simulated loading.
     const deadline = setTimeout(() => finish("timeout"), 15000);
-    slider.on("activeIndexChange", checkActiveSlide);
-    slider.on("destroy", onDestroy);
-    checkActiveSlide();
+    slider?.on("activeIndexChange", checkActiveImage);
+    slider?.on("destroy", onDestroy);
+    checkActiveImage();
+    return ready;
+}
+
+function initSliderLoading(slider) {
+    slider.loadingReady = initMediaLoading(slider.el, slider);
 }
 
 // Owners prevent one dialog from unlocking another during a handoff.
@@ -105,20 +111,20 @@ function updateHeroCorner() {
     }
 }
 
-function initHeroStagePicker(slider, slides) {
+function initHeroStagePicker(slider, stages) {
     const drum = document.querySelector(".hero-stages__drum");
     if (!drum) return;
 
     const current = drum.querySelector(".hero-stages__current");
     const controls = Array.from(drum.querySelectorAll("[data-hero-stage]"));
-    const count = slides.length;
+    const count = stages.length;
     const renderControls = (index) => {
         const focused = controls.indexOf(document.activeElement);
         const focusedStage = focused >= 0 ? Number(controls[focused].dataset.heroStage) : null;
-        current.querySelector(".hero-stages__digit").textContent = slides[index].stage;
+        current.querySelector(".hero-stages__digit").textContent = stages[index];
         controls.forEach((button, slot) => {
             const nextIndex = (index + slot + 1) % count;
-            const number = slides[nextIndex].stage;
+            const number = stages[nextIndex];
             button.dataset.heroStage = nextIndex;
             button.querySelector(".hero-stages__digit").textContent = number;
             button.setAttribute("aria-label", `${number} этап`);
@@ -142,10 +148,10 @@ function initHeroStagePicker(slider, slides) {
     mask.setAttribute("aria-hidden", "true");
     const reel = document.createElement("div");
     reel.className = "hero-stages__reel";
-    for (const slide of [...slides, ...slides]) {
+    for (const stage of [...stages, ...stages]) {
         const digit = document.createElement("span");
         digit.className = "hero-stages__reel-digit";
-        digit.textContent = slide.stage;
+        digit.textContent = stage;
         reel.append(digit);
     }
     mask.append(reel);
@@ -190,52 +196,24 @@ function initHeroStagePicker(slider, slides) {
     draw();
 }
 
-function initHeroSlider() {
+function initHero() {
     const element = document.querySelector(".hero-slider");
-    if (!element || typeof Swiper === "undefined") return;
+    if (!element) return;
     updateHeroCorner();
+    if (!element.classList.contains("swiper") || typeof Swiper === "undefined") {
+        return initMediaLoading(element);
+    }
     const track = element.querySelector(".swiper-wrapper");
-    const template = track.firstElementChild;
-    // Independent records can replace dates, text and images for each stage.
-    const { heroSlides, homeExtraStages } = window.SKI_CONFIG;
-    const isHome = element.hasAttribute("data-stage-links");
-    const slides = isHome ? [...heroSlides, ...homeExtraStages] : heroSlides;
-    slides.forEach((data, index) => {
-        const slide = index === 0 ? template : template.cloneNode(true);
-        if (!isHome) {
-            slide.querySelector(".hero-slider__stage-number").textContent = data.stage;
-        }
-        slide.setAttribute("aria-label", `${data.stage} этап`);
-        if (data.title)
-            slide.querySelector(".hero-slider__title-text").textContent =
-                data.title;
-        if (data.date)
-            slide.querySelector(
-                ".hero-slider__emphasis",
-            ).firstChild.textContent = `${data.date} `;
-        if (data.year)
-            slide.querySelector(".hero-slider__year").textContent = data.year;
-        if (data.location)
-            slide.querySelector(".hero-slider__text").textContent =
-                data.location;
-        if (data.image)
-            slide.querySelector(".hero-slider__skier").src = data.image;
-        if (index && isHome) {
-            const link = slide.querySelector(".hero-slider__link");
-            if (data.url) {
-                link.href = data.url;
-            } else {
-                link.removeAttribute("href");
-                link.setAttribute("role", "link");
-                link.setAttribute("aria-disabled", "true");
-            }
-        }
-        if (index) track.append(slide);
+    const stages = Array.from(track.children, (slide) => {
+        slide.hidden = false;
+        return Number(slide.dataset.stageNumber);
     });
+    const motionPreference = matchMedia("(prefers-reduced-motion: reduce)");
+    const slideSpeed = 300;
     const slider = new Swiper(element, {
         slidesPerView: 1,
         loop: true,
-        speed: matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 300,
+        speed: motionPreference.matches ? 0 : slideSpeed,
         preventInteractionOnTransition: false,
         loopPreventsSliding: false,
         navigation: {
@@ -245,7 +223,10 @@ function initHeroSlider() {
         a11y: { enabled: true },
         on: { init: initSliderLoading },
     });
-    if (isHome) initHeroStagePicker(slider, slides);
+    motionPreference.addEventListener("change", ({ matches }) => {
+        slider.params.speed = matches ? 0 : slideSpeed;
+    });
+    initHeroStagePicker(slider, stages);
     element.addEventListener("keydown", (event) => {
         if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
         event.preventDefault();
@@ -254,8 +235,9 @@ function initHeroSlider() {
         if (event.key === "ArrowLeft") slider.slidePrev();
         else slider.slideNext();
     });
+    return slider.loadingReady;
 }
-initHeroSlider();
+const heroImageReady = initHero();
 
 // Generic service homepages are placeholders until the project URLs arrive.
 document.querySelectorAll(".header__social-link").forEach((link, index) => {
