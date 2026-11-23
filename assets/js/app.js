@@ -239,15 +239,6 @@ function initHero() {
 }
 const heroImageReady = initHero();
 
-// Generic service homepages are placeholders until the project URLs arrive.
-document.querySelectorAll(".header__social-link").forEach((link, index) => {
-    const key = ["max", "vk", "telegram"][index];
-    const url = window.SKI_CONFIG.social[key];
-    link.dataset.social = key;
-    link.rel = "noopener noreferrer";
-    if (url) link.href = url;
-});
-
 // The menu and media dialog share the page scroll lock.
 const menuToggle = document.querySelector(".header__menu-toggle");
 const menu = document.querySelector("#menu");
@@ -472,7 +463,7 @@ menu.addEventListener("click", (event) => {
     const link = event.target.closest("a");
     if (link) {
         const href = link.getAttribute("href");
-        const local = /^(?:#|(?:index|stage1)\.html(?:#|$))/.test(href);
+        const local = /^(?:#|(?:index|stage[1-3])\.html(?:#|$))/.test(href);
         const modified = event.ctrlKey || event.metaKey || event.shiftKey || event.altKey;
         if (local && !modified && !link.target) {
             event.preventDefault();
@@ -506,7 +497,6 @@ menu.addEventListener("click", (event) => {
             setMenuOpen(false);
     }
 });
-let activeVideo;
 let gallerySlider;
 let thumbnailSlider;
 let galleryResizeObserver;
@@ -517,7 +507,6 @@ let viewerClosing = false;
 function closeViewer() {
     if (!viewer.open || viewerClosing) return;
     viewerClosing = true;
-    activeVideo?.pause();
     const opacity = getComputedStyle(viewer).opacity;
     viewerAnimation?.cancel();
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -574,12 +563,6 @@ viewer?.addEventListener("close", () => {
     thumbnailSlider?.destroy();
     thumbnailSlider = null;
     photoSlider?.keyboard?.enable();
-    activeVideo?.pause();
-    if (activeVideo) {
-        activeVideo.removeAttribute("src");
-        activeVideo.load();
-        activeVideo = null;
-    }
     viewerContent.replaceChildren();
     scrollLock.unlock(viewer);
     viewer.removeAttribute("data-mode");
@@ -622,7 +605,7 @@ document.addEventListener("click", (event) => {
     image.src = button.dataset.image;
     image.alt = button.querySelector(".map-preview__image").alt;
     viewerContent.replaceChildren(image);
-    openViewer();
+    openViewer(button);
 });
 viewer
     ?.querySelector(".media-dialog__close")
@@ -644,52 +627,24 @@ document.querySelector("[data-video]")?.addEventListener("click", (event) => {
     viewer
         .querySelector(".media-dialog__close")
         .classList.add("media-dialog__close--video");
-    viewer.setAttribute("aria-label", "Видео лыжной гонки");
-    const frame = document.createElement("div");
-    frame.className = "video-player";
-    const video = document.createElement("video");
-    video.className = "video-player__video";
-    video.controls = true;
-    video.playsInline = true;
-    video.preload = "metadata";
-    video.setAttribute("aria-label", "Временное видео: " + config.title);
-    video.poster = document.querySelector(".video-cover__image").src;
-    const message = document.createElement("p");
-    message.className = "video-player__message";
-    message.setAttribute("role", "status");
-    message.textContent = "Загрузка видео…";
-    const retry = document.createElement("button");
-    retry.className = "button video-player__retry";
-    retry.hidden = true;
-    retry.textContent = "Повторить";
-    retry.addEventListener("click", () => {
-        video.load();
-        video.play().catch(() => {});
-    });
-    video.addEventListener("loadeddata", () => {
-        message.hidden = true;
-        retry.hidden = true;
-    });
-    video.addEventListener("playing", () => {
-        message.hidden = true;
-        retry.hidden = true;
-    });
-    video.addEventListener("error", () => {
-        message.hidden = false;
-        message.textContent = "Видео недоступно. Попробуйте ещё раз.";
-        retry.hidden = false;
-    });
-    frame.append(video, message, retry);
-    viewerContent.replaceChildren(frame);
-    activeVideo = video;
+    viewer.setAttribute("aria-label", config.title);
+    const player = document.createElement("div");
+    player.className = "video-player";
+    const frame = document.createElement("iframe");
+    frame.className = "video-player__frame";
+    frame.title = config.title;
+    frame.allow = "autoplay; encrypted-media; fullscreen; picture-in-picture";
+    frame.allowFullscreen = true;
+    const fallback = document.createElement("a");
+    fallback.className = "video-player__fallback";
+    fallback.href = config.url;
+    fallback.target = "_blank";
+    fallback.rel = "noopener";
+    fallback.textContent = "Открыть в VK Видео";
+    frame.src = config.embedUrl;
+    player.append(frame, fallback);
+    viewerContent.replaceChildren(player);
     openViewer(event.currentTarget);
-    video.src = config.url;
-    video.play().catch(() => {
-        if (!video.error) {
-            message.hidden = false;
-            message.textContent = "Нажмите Play для воспроизведения.";
-        }
-    });
 });
 
 const galleryPhotos = Array.from(
@@ -886,19 +841,26 @@ function slideToLogicalPhoto(slider, index) {
 // Independent panels; text switches immediately, only the map fades.
 const routeButtons = Array.from(document.querySelectorAll("[data-route]"));
 const routeTemplate = document.querySelector(".routes__panel");
-routeButtons.slice(1).forEach((button) => {
-    const panel = routeTemplate.cloneNode(true);
-    panel.id = button.getAttribute("aria-controls");
-    panel.setAttribute("aria-labelledby", button.id);
-    panel.hidden = true;
-    routeTemplate.parentElement.append(panel);
-});
-routeButtons.forEach((button) => {
-    const panel = document.getElementById(button.getAttribute("aria-controls"));
-    if (button.dataset.routeMap) {
-        panel.querySelector(".map-preview__image").src = button.dataset.routeMap;
-        panel.querySelector(".map-preview").dataset.image = button.dataset.routeMap;
+routeButtons.forEach((button, index) => {
+    const panel = index === 0 ? routeTemplate : routeTemplate.cloneNode(true);
+    const { route, routeMap, routeDescription, routeLaps, routeTurns, routeDifficulty } = button.dataset;
+    if (index !== 0) {
+        panel.id = button.getAttribute("aria-controls");
+        panel.setAttribute("aria-labelledby", button.id);
+        panel.hidden = true;
+        panel.querySelector(".routes__text").textContent = routeDescription.trim();
+        panel.querySelector(".stats-icon__em").textContent = `×${routeLaps}`;
+        panel.querySelector(".route-stats__emphasis--laps").textContent =
+            `${routeLaps} ${routeLaps === "1" ? "круг" : "круга"}`;
+        panel.querySelector(".route-stats__emphasis--turns").textContent = routeTurns;
+        panel.querySelector(".route-stats__emphasis--difficulty").textContent = routeDifficulty;
     }
+    const preview = panel.querySelector(".map-preview");
+    const image = preview.querySelector(".map-preview__image");
+    preview.dataset.image = routeMap;
+    image.src = routeMap;
+    image.alt = `Схема трассы на ${route}`;
+    if (index !== 0) routeTemplate.parentElement.append(panel);
 });
 let routeMapAnimation;
 let routeMapVersion = 0;

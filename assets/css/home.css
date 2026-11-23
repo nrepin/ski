@@ -27,6 +27,11 @@
 .hero__park-mark {
     display: none;
 }
+.hero__park-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 /* Home — Hero Slider */
 .hero-slider__note {

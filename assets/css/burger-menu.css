@@ -63,8 +63,8 @@
     line-height: 19.3265px;
     transition: background-color 200ms ease;
 }
-.burger-menu__link--pickup {
-    min-height: 62px;
+.burger-menu__link--placeholder {
+    opacity: 0.65;
 }
 .burger-menu__contacts {
     display: none;
@@ -138,14 +138,6 @@
         border-radius: 0;
         font-size: 15px;
         line-height: 19.3265px;
-    }
-    .burger-menu__link--pickup {
-        max-width: 282px;
-        min-height: 39px;
-    }
-    .burger-menu__link--location,
-    .burger-menu__link--schedule {
-        min-height: 39px;
     }
     .burger-menu__contacts {
         display: flex;
@@ -228,7 +220,7 @@
     .burger-menu__close:hover {
         color: var(--hover-cyan);
     }
-    .burger-menu__link:hover {
+    .burger-menu__link:any-link:hover {
         background-color: var(--menu-link-highlight);
     }
 }

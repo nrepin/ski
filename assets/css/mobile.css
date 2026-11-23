@@ -117,6 +117,7 @@
         align-items: stretch;
         display: grid;
         grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
         gap: 16px;
     }
     .route-heading {
@@ -147,21 +148,11 @@
         margin-right: 0;
     }
     .map-preview {
-        --map-width: 101.7857%;
-        --map-height: 100.889%;
-        --map-x: -3.5037%;
-        --map-y: -2.3266%;
         margin-block-start: 0;
-        aspect-ratio: 280 / 248.788;
         align-self: stretch;
         order: 1;
         grid-column: 1;
         grid-row: 2;
-    }
-    .map-preview__image {
-        display: block;
-        width: var(--map-width);
-        height: var(--map-height);
     }
     .route-stats {
         order: 3;

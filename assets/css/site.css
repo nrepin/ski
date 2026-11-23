@@ -597,6 +597,7 @@ dialog::backdrop {
 .routes {
     display: grid;
     grid-template-columns: minmax(0, 454fr) minmax(0, 619fr);
+    grid-template-rows: auto 1fr;
     gap: 94px;
     align-items: start;
     row-gap: 28px;
@@ -639,6 +640,7 @@ dialog::backdrop {
 .route-stats {
     min-height: 165px;
     display: grid;
+    container-type: inline-size;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     background: var(--ink);
     border-radius: 20px;
@@ -661,6 +663,7 @@ dialog::backdrop {
     font:
         700 16px/20px "TT Bluescreens Pro Extended",
         sans-serif;
+    font-size: clamp(8px, 4.2cqi - 1.1px, 16px);
 }
 .route-stats__icon {
     width: 62px;
@@ -668,15 +671,11 @@ dialog::backdrop {
     object-fit: contain;
 }
 .map-preview {
-    --map-width: 101.2924%;
-    --map-height: 101.2727%;
-    --map-x: -3.2166%;
-    --map-y: -2.268%;
-    margin-block-start: calc((615px - 550px) / 2);
+    margin-block-start: 32.5px;
     align-self: start;
     display: block;
     width: 100%;
-    aspect-ratio: 619 / 550;
+    aspect-ratio: 619 / 572;
     overflow: hidden;
     padding: 0;
     border: 0;
@@ -686,11 +685,9 @@ dialog::backdrop {
 }
 .map-preview__image {
     display: block;
-    width: var(--map-width);
-    height: var(--map-height);
-    max-width: none;
-    transform-origin: top left;
-    transform: translate(var(--map-x), var(--map-y)) scale(1.021, 1.0182);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .stats-icon {
     display: grid;
