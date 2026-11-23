@@ -1,0 +1,1609 @@
+/* Fonts */
+@font-face {
+    font-family: "TT Bluescreens Pro";
+    src: url("../fonts/TT_Bluescreens_Pro_Bold_Italic.otf");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "TT Bluescreens Pro Extended";
+    src: url("../fonts/TT_Bluescreens_Pro_Extended_Medium.otf");
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: "TT Bluescreens Pro Extended";
+    src: url("../fonts/TT_Bluescreens_Pro_Extended_Bold.otf");
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: "TT Bluescreens Pro Extended";
+    src: url("../fonts/TT_Bluescreens_Pro_Extended_ExtraBold.otf");
+    font-weight: 800;
+    font-display: swap;
+}
+@font-face {
+    font-family: "TT Bluescreens Pro Expanded";
+    src: url("../fonts/TT_Bluescreens_Pro_Expanded_Medium.otf");
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: "TT Bluescreens Pro Expanded";
+    src: url("../fonts/TT_Bluescreens_Pro_Expanded_Bold.otf");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TT Bluescreens Pro Expanded";
+    src: url("../fonts/TT_Bluescreens_Pro_Expanded_DemiBold.otf");
+    font-weight: 600;
+    font-display: swap;
+}
+
+/* Foundations */
+:root {
+    --navy: #08183b;
+    --ink: #282d3a;
+    --cyan: #21dbff;
+    --hover-cyan: #1ec3e7;
+    --white: #f8feff;
+    --content: 1166px;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
+}
+body {
+    margin: 0;
+    color: var(--navy);
+    background: #fff;
+    font:
+        500 18px/25px "TT Bluescreens Pro Expanded",
+        Arial,
+        sans-serif;
+    letter-spacing: 0.02em;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+a {
+    color: inherit;
+}
+button {
+    font: inherit;
+    cursor: pointer;
+}
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+button:disabled {
+    cursor: default;
+    opacity: 0.4;
+}
+strong,
+b {
+    font-weight: 700;
+}
+p {
+    margin: 0;
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+h2 {
+    font:
+        italic 700 72px/1.26 "TT Bluescreens Pro",
+        Impact,
+        sans-serif;
+    text-transform: uppercase;
+    color: var(--cyan);
+    letter-spacing: 0.02em;
+}
+h3 {
+    font:
+        700 24px/1.2 "TT Bluescreens Pro Extended",
+        sans-serif;
+}
+:focus-visible {
+    outline: 3px solid #ee7900;
+    outline-offset: 4px;
+}
+/* Buttons — Outline Reset */
+button,
+[role="button"],
+.button,
+button:focus-visible,
+[role="button"]:focus-visible,
+.button:focus-visible {
+    outline: none;
+}
+[hidden] {
+    display: none !important;
+}
+main {
+    position: relative;
+    isolation: isolate;
+    display: flow-root;
+}
+main::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 0 auto;
+    height: 5907px;
+    background: url("../images/figwright/page-track-lines.svg") center top/3939px 5907px
+        no-repeat;
+    pointer-events: none;
+}
+dialog::backdrop {
+    background: #141414d9;
+}
+
+/* Accessibility */
+.skip {
+    position: fixed;
+    top: 0;
+    left: 10px;
+    z-index: 99;
+    padding: 14px;
+    background: white;
+    translate: 0 -150%;
+}
+.skip:focus {
+    translate: 0;
+}
+
+/* Container */
+.container {
+    width: calc(100% - 64px);
+    max-width: var(--content);
+    margin-inline: auto;
+}
+
+/* Page */
+@media (min-width: 768px) {
+    .page__body {
+        padding-block-end: 12px;
+    }
+}
+
+.page__section {
+    margin-block: 80px;
+}
+.page__dialog {
+    border: 0;
+    border-radius: 20px;
+    padding: 44px 20px 20px;
+    max-width: 94vw;
+    max-height: 94dvh;
+    color: var(--navy);
+    margin: auto;
+}
+
+/* Buttons */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 18px 24px;
+    border: 0;
+    border-radius: 100px;
+    background: var(--ink);
+    color: var(--white);
+    font:
+        500 16px/20px "TT Bluescreens Pro Extended",
+        sans-serif;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    text-align: center;
+    max-width: 100%;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+.button:focus-visible {
+    background-color: var(--hover-cyan);
+    color: #fff;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    isolation: isolate;
+    background: var(--navy) url("../images/hero-snow-background.png") center/cover no-repeat;
+    color: var(--white);
+    border-radius: 42px;
+    overflow: clip;
+    width: calc(100% - 26px);
+    max-width: 100%;
+    margin-inline: 13px;
+}
+
+/* Merch Banner */
+.merch.container {
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 178px;
+    border-radius: 42px;
+    background: #08183b;
+    padding: 84px max(32px, calc((100% - 1135px) / 2)) 69px;
+    width: calc(100% - 26px);
+    max-width: 100%;
+    margin-inline: 13px;
+}
+.merch__group {
+    min-width: 0;
+}
+.merch-art {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+.merch-art__image {
+    position: absolute;
+    max-width: none;
+}
+/* Figma 65:2929 solid fill; the former PNG also contained an unwanted seal. */
+.merch-base {
+    position: absolute;
+    inset: 0;
+    background: #1d53df;
+}
+.merch-glow {
+    object-fit: cover;
+    width: 183.5%;
+    height: 157.7%;
+    left: -41.75%;
+    top: -41.5%;
+}
+.merch-pattern {
+    height: 797px;
+    width: 1554px;
+    left: calc(50% - 1624px);
+    top: -84px;
+    transform: rotate(180deg);
+}
+.merch-notch {
+    position: absolute;
+    grid-area: auto;
+    top: 0;
+    left: calc(50% - 157px);
+    width: 314px;
+}
+.merch-title {
+    position: relative;
+    z-index: 1;
+    align-self: start;
+}
+.merch__title {
+    font-size: 151.19px;
+    line-height: 1.1;
+    color: var(--white);
+    white-space: nowrap;
+}
+.merch__subtitle {
+    display: block;
+    width: 703px;
+    height: 41.3px;
+    object-fit: contain;
+}
+.merch-shirt {
+    position: absolute;
+    grid-area: auto;
+    top: 205px;
+    right: max(100px, calc((100% - 1008px) / 2));
+    width: 579px;
+    height: 492px;
+    max-width: none;
+    object-fit: contain;
+    pointer-events: none;
+}
+.merch__button {
+    position: relative;
+    z-index: 2;
+    align-self: center;
+    margin-top: 0;
+    width: 403px;
+    background: var(--white);
+    color: var(--navy);
+}
+.merch-seal {
+    position: absolute;
+    grid-area: auto;
+    right: max(32px, calc((100% - 1250px) / 2));
+    bottom: 45px;
+    width: 96px;
+    height: 96px;
+}
+
+/* Footer */
+.page__footer {
+    position: relative;
+    isolation: isolate;
+    color: white;
+    background: #1e58ea;
+    border-radius: 43px;
+    overflow: clip;
+    margin-top: 0;
+    width: calc(100% - 26px);
+    max-width: 100%;
+    margin-inline: 13px;
+}
+.footer-art {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("../images/footer-decoration.svg") center 31%/144% 184% no-repeat;
+    pointer-events: none;
+}
+.footer-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 36.84fr) minmax(0, 36.5fr) minmax(
+            0,
+            26.66fr
+        );
+    max-width: 1341px;
+    padding: 49px 92px 0;
+    margin: auto;
+}
+.footer__logo {
+    width: 246px;
+}
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    font:
+        700 24px/42px "TT Bluescreens Pro Extended",
+        sans-serif;
+    white-space: nowrap;
+}
+.footer-contact__link {
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+.footer-contact__link:focus-visible,
+.footer-credit:focus-visible {
+    color: var(--hover-cyan);
+}
+.footer-inquiry {
+    text-align: right;
+}
+.footer-inquiry__text {
+    font:
+        500 18px/23px "TT Bluescreens Pro Expanded",
+        sans-serif;
+    margin-bottom: 21px;
+}
+.footer-buttons {
+    display: flex;
+    gap: 11px;
+    justify-content: end;
+}
+.footer-buttons__button {
+    background: var(--white);
+    color: var(--navy);
+    min-height: 44px;
+    padding: 12px 20px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.footer-bottom {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: end;
+    margin-top: 34px;
+}
+.hashtags {
+    display: flex;
+    justify-content: center;
+    gap: 29px;
+    font:
+        500 14px/23px "TT Bluescreens Pro Extended",
+        sans-serif;
+    white-space: nowrap;
+}
+.footer-social {
+    width: 203px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18.5px;
+}
+.footer-credit {
+    transition: color 200ms ease;
+    position: relative;
+    isolation: isolate;
+    grid-column: 1/-1;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 8px;
+    justify-self: center;
+    width: 412px;
+    min-height: 44px;
+    padding-bottom: 6px;
+    margin-top: 10px;
+    color: #07173a;
+    font:
+        500 18px/20px Arial,
+        sans-serif;
+    text-decoration: none;
+}
+.footer-credit::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("../images/footer-credit-background.svg") center/100% 100% no-repeat;
+    rotate: 180deg;
+}
+.footer-credit__image {
+    width: 114px;
+    height: auto;
+}
+.footer-social__link {
+    transition: color 200ms ease;
+    display: block;
+    flex: 1;
+    min-width: 0;
+}
+.footer-social__link:focus-visible {
+    color: var(--hover-cyan);
+}
+.footer-social__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Intro */
+.intro {
+    max-width: 964px;
+    text-align: center;
+    margin-top: 108px;
+}
+.intro__title {
+    font-size: 72px;
+    line-height: 66px;
+    margin-bottom: 10px;
+}
+.intro__text {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+/* Organizers */
+.organizers {
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 43px;
+    border-radius: 23px;
+    background: radial-gradient(ellipse at 35% 20%, #08183b 40%, #1ec4e8 90%);
+}
+.organizers::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("../images/figwright/organizers-background.svg") center/cover;
+    opacity: 0.8;
+    pointer-events: none;
+}
+.organizers__title {
+    font-size: 72px;
+    line-height: 91px;
+}
+.organizers__group {
+    display: flex;
+    align-items: center;
+    gap: 101px;
+}
+.organizers__link {
+    display: block;
+    flex-shrink: 0;
+}
+.organizers__image {
+    width: 229px;
+    height: auto;
+}
+.organizers__image--secondary {
+    width: 232.34px;
+}
+
+/* Video */
+.video {
+    display: grid;
+    grid-template-columns: minmax(0, 454fr) minmax(0, 620fr);
+    gap: 92px;
+    align-items: center;
+}
+.video__title {
+    font-size: 62px;
+    line-height: 1.26;
+}
+
+/* Video Cover */
+.video-cover {
+    position: relative;
+    display: grid;
+    grid-template: 1fr/1fr;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 620/349.348;
+    border: 0;
+    border-radius: 24px;
+    padding: 0;
+    overflow: hidden;
+    background: var(--navy);
+}
+.video-cover__image {
+    grid-area: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #14141466;
+    pointer-events: none;
+}
+
+/* Video Play */
+.video-play {
+    grid-area: 1/1;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 69.125px;
+    color: var(--navy);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--white);
+}
+.video-play__image {
+    width: 26.055px;
+    height: 29.777px;
+    margin-left: 4px;
+}
+
+/* Tracks */
+.routes {
+    display: grid;
+    grid-template-columns: minmax(0, 454fr) minmax(0, 619fr);
+    gap: 94px;
+    align-items: start;
+    row-gap: 28px;
+}
+.route-heading__title {
+    line-height: 91px;
+}
+.route-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-column: 1;
+    grid-row: 1;
+}
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    max-width: 420px;
+}
+.tabs__button {
+    width: 122px;
+    min-width: 115px;
+    min-height: 54px;
+    padding: 9px 15px;
+    border: 0;
+    border-radius: 100px;
+    background: var(--ink);
+    color: white;
+    font:
+        700 18px/23px "TT Bluescreens Pro Extended",
+        sans-serif;
+}
+.tabs__button--compact {
+    width: 115px;
+}
+.tabs__button[aria-selected="true"] {
+    background: var(--cyan);
+}
+.route-stats {
+    min-height: 165px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    background: var(--ink);
+    border-radius: 20px;
+    color: white;
+    padding: 15px 20px;
+    gap: 12px;
+    font:
+        700 12px/25px "TT Bluescreens Pro Expanded",
+        sans-serif;
+    text-align: center;
+}
+.route-stats__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+.route-stats__emphasis {
+    font:
+        700 16px/20px "TT Bluescreens Pro Extended",
+        sans-serif;
+}
+.route-stats__icon {
+    width: 62px;
+    height: 66px;
+    object-fit: contain;
+}
+.map-preview {
+    --map-width: 101.2924%;
+    --map-height: 101.2727%;
+    --map-x: -3.2166%;
+    --map-y: -2.268%;
+    margin-block-start: calc((615px - 550px) / 2);
+    align-self: start;
+    display: block;
+    width: 100%;
+    aspect-ratio: 619 / 550;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    background: none;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+.map-preview__image {
+    display: block;
+    width: var(--map-width);
+    height: var(--map-height);
+    max-width: none;
+    transform-origin: top left;
+    transform: translate(var(--map-x), var(--map-y)) scale(1.021, 1.0182);
+}
+.stats-icon {
+    display: grid;
+    grid-template: 1fr/1fr;
+    width: 62px;
+    height: 66px;
+    place-items: center;
+}
+.stats-icon__layer {
+    grid-area: 1/1;
+}
+.stats-icon__em {
+    font:
+        700 24.6px/51.26px "TT Bluescreens Pro Expanded",
+        sans-serif;
+    color: var(--cyan);
+}
+.route-stats__group--separated::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    height: 106.5px;
+    border-left: 1px solid var(--white);
+    transform: translateY(-50%);
+}
+.route-stats[hidden] {
+    display: none;
+}
+.routes__panel {
+    display: contents;
+}
+.routes__copy {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    min-width: 0;
+}
+/* Dark Panel */
+.dark-panel {
+    position: relative;
+    isolation: isolate;
+    color: var(--white);
+}
+
+/* Price Definitions */
+.price-definitions {
+    position: absolute;
+}
+
+/* Price Artwork */
+.price-artwork {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--ink) url("../images/figwright/price-background.svg") center/100%
+        100% no-repeat;
+    clip-path: url("#price-panel-clip");
+    overflow: hidden;
+}
+.price-artwork::after {
+    content: none;
+}
+
+/* Price Content */
+.price-content {
+    padding: 14px 69px 40px;
+}
+.price-content__title {
+    line-height: 91px;
+    margin-bottom: 28px;
+}
+
+/* Data Row */
+.data-row {
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(0, 52.19fr) minmax(0, 28.14fr) minmax(
+            0,
+            19.67fr
+        );
+    gap: 0;
+    min-height: 78px;
+    border-bottom: 1px solid #f8feff;
+    font:
+        700 24px/1.2 "TT Bluescreens Pro Expanded",
+        sans-serif;
+}
+.data-row__emphasis,
+.data-row__price {
+    font:
+        700 26px/1.2 "TT Bluescreens Pro Extended",
+        sans-serif;
+}
+.data-row__price {
+    text-decoration: none;
+}
+.data-row__price--free {
+    text-transform: uppercase;
+}
+
+/* Fine */
+.fine {
+    list-style: disc;
+    font:
+        500 14px/25px "TT Bluescreens Pro Expanded",
+        sans-serif;
+    margin-top: 52px;
+    padding-left: 0;
+}
+.fine__item--secondary {
+    margin-top: 6px;
+}
+
+/* Benefits */
+.benefits {
+    text-align: center;
+    margin-top: 160px;
+}
+.benefits__title {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 91px;
+}
+.benefits__link {
+    width: 355px;
+}
+
+/* Benefit List — Desktop Figma 65:2727 */
+.benefit-list {
+    width: 100%;
+    max-width: 958px;
+    min-height: 261px;
+    margin: 0 auto 40px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--ink);
+    font:
+        500 24px/25px "TT Bluescreens Pro Expanded",
+        sans-serif;
+}
+.benefit-list__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+/* Explicit emphasis belongs to the component, independently of strong/b defaults. */
+.benefit-list__emphasis,
+.benefit-large__emphasis,
+.benefit-list__food {
+    font-weight: 700;
+}
+.benefit-list__medal,
+.benefit-list__food {
+    font-family: "TT Bluescreens Pro Extended", sans-serif;
+}
+.benefit-large {
+    font-family: "TT Bluescreens Pro Extended", sans-serif;
+    font-size: 32px;
+    line-height: normal;
+}
+
+/* Start Number Accordion */
+.information {
+    background-color: #fff;
+    max-width: 1165px;
+}
+.information__title {
+    text-align: center;
+    line-height: 79px;
+    margin-bottom: 20px;
+}
+.information-panel {
+    padding: 108.5px 8%;
+    border-radius: 44px;
+    color: var(--white);
+    background: var(--ink);
+    overflow: hidden;
+    mask:
+        radial-gradient(circle at left 58.5%, transparent 36px, #000 37px),
+        radial-gradient(circle at right 58.5%, transparent 36px, #000 37px);
+    mask-composite: intersect;
+}
+.information-panel__glow {
+    position: absolute;
+    left: calc(50% + 14.95px);
+    width: 1480.904px;
+    height: 203.794px;
+    border-radius: 50%;
+    transform: translateX(-50%) rotate(-0.05deg);
+    background: var(--cyan);
+    filter: blur(36.98px);
+    z-index: -1;
+    pointer-events: none;
+}
+.information-panel__glow--top {
+    top: -164.645px;
+}
+.information-panel__glow--bottom {
+    bottom: -167.15px;
+}
+.information-panel__details--separated {
+    border-top: 0;
+    margin-top: 32px;
+}
+.information-panel__summary--last {
+    padding-block: 0;
+    min-height: 33px;
+    padding: 0;
+}
+.information-panel__summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+    cursor: pointer;
+    font:
+        700 24px/25px "TT Bluescreens Pro Expanded",
+        sans-serif;
+    min-height: 33px;
+    padding: 0;
+}
+.information-panel__summary::-webkit-details-marker {
+    display: none;
+}
+
+.information-panel__description {
+    margin-top: 15px;
+    padding-right: 81px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+}
+.information-panel__content {
+    overflow: hidden;
+}
+.information-panel__details--ruled {
+    position: relative;
+    padding-bottom: 32px;
+    border-bottom: 0;
+}
+
+.information-panel__details--ruled::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 81px);
+    border-bottom: 2px solid var(--white);
+}
+.information-panel__details--last {
+    margin-top: 25px;
+}
+.information-panel__emphasis {
+    font-weight: 600;
+}
+.information-panel__lead {
+    color: var(--cyan);
+    font-family: "TT Bluescreens Pro Extended", sans-serif;
+    font-weight: 700;
+}
+
+/* Teams */
+.teams {
+    background-color: #fff;
+    max-width: 1030px;
+}
+.teams__title {
+    text-align: center;
+    line-height: 91px;
+    margin-bottom: 20px;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 480fr) minmax(0, 440fr);
+    gap: 110px;
+    align-items: center;
+}
+.team-grid__article {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+}
+.team-grid__picture {
+    height: auto;
+    margin-bottom: 12px;
+    width: 133px;
+    display: block;
+}
+.team-grid__subtitle {
+    color: var(--cyan);
+    font:
+        700 24px/21px "TT Bluescreens Pro Extended",
+        sans-serif;
+    margin-bottom: 24px;
+}
+.team-lead__link {
+    color: var(--cyan);
+}
+.team-grid__text--content {
+    font-size: 18px;
+    line-height: 25px;
+}
+.team-grid__text--team-lead {
+    font:
+        500 18px/21px "TT Bluescreens Pro Extended",
+        sans-serif;
+    margin-bottom: 24px;
+    line-height: 21px;
+}
+.team-grid__link {
+    width: 296px;
+    margin-block: 24px;
+}
+.team-grid__note {
+    font-size: 20px;
+    font-weight: 700;
+}
+.team-grid__image--content {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.team-description--secondary {
+    max-width: 420px;
+}
+.team-grid__age-note {
+    white-space: nowrap;
+}
+.team-grid__mobile-copy {
+    display: none;
+}
+
+/* Schedule */
+.schedule {
+    max-width: 1165px;
+}
+.schedule-art {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("../images/schedule-panel.svg") center/100% 100% no-repeat;
+    pointer-events: none;
+}
+.schedule__title {
+    text-align: right;
+    padding: 14px 80px 0 40%;
+    line-height: 91px;
+    margin-bottom: 79px;
+}
+.schedule__rows {
+    padding: 0 94px 127px 103px;
+}
+.schedule__row {
+    grid-template-columns: 24.6% minmax(0, 1fr) 25.8%;
+    border: 0;
+    min-height: 70px;
+    font:
+        500 18px/25px "TT Bluescreens Pro Expanded",
+        sans-serif;
+}
+.schedule__row--opening {
+    min-height: 90px;
+    align-items: start;
+}
+.schedule__row--closing {
+    min-height: 30px;
+}
+.schedule__value {
+    font:
+        700 24px/1.3 "TT Bluescreens Pro Extended",
+        sans-serif;
+}
+.schedule__distance {
+    text-align: right;
+}
+
+/* Location */
+.location {
+    display: grid;
+    grid-template-columns: minmax(0, 460fr) minmax(0, 460fr);
+    gap: 20px 87px;
+    padding-inline: 79px;
+}
+.location__title {
+    grid-column: 1/-1;
+    text-align: center;
+    line-height: 91px;
+    margin-bottom: 0;
+}
+
+/* Location Copy */
+.location-copy {
+    align-self: end;
+}
+.location-copy__text {
+    font-size: 18px;
+    line-height: 25px;
+}
+.location-copy__text--secondary {
+    margin-top: 8px;
+    font:
+        700 14px/21px "TT Bluescreens Pro Extended",
+        sans-serif;
+    color: var(--ink);
+}
+
+/* Location Map */
+.location-map {
+    position: relative;
+    grid-row: 2 / span 2;
+    grid-column: 2;
+    align-self: end;
+    width: 100%;
+    aspect-ratio: 460 / 310;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.location-map__frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 148px);
+    border: 0;
+}
+
+/* Location Directions */
+.location-directions {
+    align-self: start;
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+    width: 257px;
+}
+
+/* Transport */
+.transport {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 87px;
+    margin-top: 53px;
+}
+.transport__article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.transport__subtitle {
+    color: var(--ink);
+    margin-bottom: 8px;
+}
+.transport__text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 25px;
+}
+.transport__link {
+    margin-top: 20px;
+    width: 257px;
+}
+
+/* Slider Loading — existing slides reserve all geometry. */
+.slider-loading {
+    --skeleton-base: #e4eaee;
+    --skeleton-highlight: #f3f6f8;
+    --skeleton-cycle: 1.5s;
+    --skeleton-fade: 350ms;
+    position: relative;
+}
+.slider-loading__skeleton {
+    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    overflow: hidden;
+    border-radius: var(--skeleton-radius, 0px);
+    background: var(--skeleton-base);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity var(--skeleton-fade) ease-out,
+        visibility 0s var(--skeleton-fade);
+}
+.slider-loading__skeleton::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--skeleton-highlight) 50%,
+        transparent
+    );
+    transform: translateX(-100%);
+    animation: slider-loading-shimmer var(--skeleton-cycle) linear infinite;
+    animation-play-state: paused;
+}
+.slider-loading__content {
+    transition: opacity var(--skeleton-fade) ease-out;
+}
+.page--js .slider-loading__skeleton {
+    display: block;
+}
+.page--js .slider-loading:not([data-slider-ready]) .slider-loading__skeleton {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--skeleton-fade) ease-out;
+}
+.page--js .slider-loading:not([data-slider-ready]) .slider-loading__skeleton::before {
+    animation-play-state: running;
+}
+.page--js .slider-loading:not([data-slider-ready]) .slider-loading__content {
+    opacity: 0;
+}
+@keyframes slider-loading-shimmer {
+    to {
+        transform: translateX(100%);
+    }
+}
+/* Reduced Motion — Slider Loading */
+@media (prefers-reduced-motion: reduce) {
+    .slider-loading {
+        --skeleton-fade: 0s;
+    }
+    .slider-loading__skeleton::before {
+        animation: none;
+    }
+}
+
+/* Photos */
+.photos {
+    text-align: center;
+    overflow: clip;
+}
+.photos__title {
+    line-height: 79px;
+    margin: 0 auto 32px;
+}
+.race-photos {
+    --skeleton-highlight: #fff;
+    --skeleton-radius: 9.283px;
+    width: 100%;
+    overflow: hidden;
+}
+.race-photos__group {
+    width: 285.93px;
+    height: 347.201px;
+}
+.race-photos__button {
+    position: relative;
+    display: grid;
+    grid-template: 1fr/1fr;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 9.283px;
+    overflow: hidden;
+    background: var(--ink);
+}
+.race-photos__image {
+    grid-area: 1/1;
+    width: var(--crop-w);
+    height: var(--crop-h);
+    max-width: none;
+    object-fit: fill;
+    transform: translate(var(--crop-x), var(--crop-y));
+}
+.race-photos__zoom {
+    position: absolute;
+    top: 17.64px;
+    right: 16.7px;
+    width: 34.35px;
+    height: 34.35px;
+}
+.race-photos__zoom-icon {
+    width: 100%;
+    height: auto;
+}
+.photo-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 16px auto 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+    overflow: hidden;
+}
+.photo-controls__button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--ink);
+    color: white;
+}
+.photo-controls:focus-within {
+    position: relative;
+    width: auto;
+    height: auto;
+    clip-path: none;
+    overflow: visible;
+}
+
+/* Partners */
+.partners {
+    text-align: center;
+}
+.partners__title {
+    line-height: 91px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+/* Partner Banner */
+.partner-banner {
+    display: block;
+    width: 100%;
+    height: 196px;
+    margin-bottom: 20px;
+    background: url(../images/partners-banner.svg) center/100% 100% no-repeat;
+}
+
+/* Partner Grid */
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Partner Card */
+.partner-card {
+    display: grid;
+    place-items: center;
+    background: #f1f3f9;
+    border-radius: 30px;
+    aspect-ratio: 375/150;
+    overflow: hidden;
+}
+
+/* Partner Park */
+.partner-park {
+    width: 59.42%;
+}
+
+/* Partner Sport */
+.partner-sport {
+    width: 67.36%;
+}
+
+/* Partner Race */
+.partner-race {
+    width: 27.54%;
+}
+
+/* Partner Symbol */
+.partner-symbol {
+    display: grid;
+    grid-template: 1fr/1fr;
+    width: 16.5%;
+    aspect-ratio: 62.064/74;
+    overflow: hidden;
+    mix-blend-mode: multiply;
+}
+.partner-symbol__image {
+    width: 240.28%;
+    height: 205.89%;
+    max-width: none;
+    transform: translate(-29.19%, -25.72%);
+}
+
+/* Partner Radio */
+.partner-radio {
+    display: grid;
+    grid-template: 1fr/1fr;
+    width: 30.4%;
+    aspect-ratio: 114/110;
+    overflow: hidden;
+    mix-blend-mode: multiply;
+}
+.partner-radio__image {
+    width: 128.28%;
+    height: 132.29%;
+    max-width: none;
+    transform: translate(-15.75%, -11.02%);
+}
+
+@media (768px <= width < 1280px) {
+    /* Responsive — Foundations */
+    h2 {
+        font-size: 56px;
+    }
+
+    /* Responsive — Intro */
+    .intro__title {
+        font-size: 56px;
+    }
+
+    /* Responsive — Organizers */
+    .organizers {
+        gap: 20px;
+        padding: 32px;
+    }
+    .organizers__title {
+        font-size: 48px;
+    }
+    .organizers__group {
+        gap: 30px;
+    }
+    .organizers__image,
+    .organizers__image--secondary {
+        width: 160px;
+    }
+
+    /* Responsive — Video */
+    .video {
+        gap: 35px;
+    }
+    .video__title {
+        font-size: 46px;
+    }
+
+    /* Responsive — Tracks */
+    .routes {
+        gap: 35px;
+    }
+
+    /* Responsive — Price Content */
+    .price-content {
+        padding-inline: 40px;
+    }
+
+    /* Responsive — Data Row */
+    .data-row {
+        font-size: 18px;
+    }
+    .data-row__emphasis,
+    .data-row__price {
+        font-size: 20px;
+    }
+
+    /* Responsive — Teams */
+    .team-grid {
+        gap: 50px;
+    }
+
+    /* Responsive — Location */
+    .location {
+        padding-inline: 30px;
+        gap: 20px 40px;
+    }
+
+    /* Responsive — Transport */
+    .transport {
+        gap: 40px;
+    }
+
+    /* Responsive — Merch Banner */
+    .merch__title {
+        font-size: 10.8vw;
+    }
+    .merch-shirt {
+        width: 50%;
+        height: auto;
+    }
+
+    /* Responsive — Footer */
+    .footer-layout {
+        padding: 40px 32px 0;
+        gap: 20px;
+    }
+    .footer-contact {
+        font-size: 17px;
+    }
+    .footer-inquiry__text {
+        font-size: 13px;
+    }
+    .hashtags {
+        font-size: 10px;
+        gap: 14px;
+    }
+    .footer-social {
+        width: 160px;
+    }
+    .footer-buttons__button {
+        padding-inline: 12px;
+        font-size: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Responsive — Foundations */
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms;
+        transition-duration: 0.01ms;
+    }
+
+    /* Responsive — Start Number Accordion */
+}
+
+/* Interactive Controls */
+.tabs__button,
+.photo-controls__button {
+    transition: background-color 200ms ease, color 200ms ease;
+}
+.tabs__button:focus-visible,
+.photo-controls__button:focus-visible {
+    background-color: var(--hover-cyan);
+    color: #fff;
+}
+/* Reduced Motion — Interaction Feedback */
+@media (prefers-reduced-motion: reduce) {
+    .button,
+    .tabs__button,
+    .photo-controls__button,
+    .information-panel__summary,
+    .footer-contact__link,
+    .footer-credit,
+    .footer-social__link {
+        transition: none;
+    }
+}
+
+/* Inline SVG — vector color feedback */
+.svg-icon__shape--fill,
+.svg-icon__shape--stroke {
+    transition: fill 200ms ease, stroke 200ms ease;
+}
+/* Reduced Motion — Inline SVG */
+@media (prefers-reduced-motion: reduce) {
+    .svg-icon__shape--fill,
+    .svg-icon__shape--stroke {
+        transition: none;
+    }
+}
+
+/* Start Number Accordion — inline state icons, no hover fill */
+.information-panel__summary {
+    background: none;
+    color: var(--white);
+}
+.information-panel__summary:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 5px;
+}
+.information-panel__icon {
+    display: block;
+    flex: 0 0 33px;
+    width: 33px;
+    height: 33px;
+}
+.information-panel__icon--open {
+    display: none;
+}
+.information-panel__summary[aria-expanded="true"] .information-panel__icon--closed {
+    display: none;
+}
+.information-panel__summary[aria-expanded="true"] .information-panel__icon--open {
+    display: block;
+}
+.photo-controls__icon {
+    width: 14px;
+    height: 28px;
+}
+
+/* Video Play — color the inline triangle */
+.video-cover:focus-visible .video-play {
+    color: var(--hover-cyan);
+}
+.video-play {
+    transition: color 200ms ease;
+}
+
+/* Desktop — Pointer Hover */
+@media (width >= 768px) {
+    .button:hover,
+    .tabs__button:hover,
+    .photo-controls__button:hover {
+        background-color: var(--hover-cyan);
+        color: #fff;
+    }
+    .footer-contact__link:hover,
+    .footer-credit:hover,
+    .footer-social__link:hover,
+    .svg-icon--hoverable:hover,
+    .video-cover:hover .video-play {
+        color: var(--hover-cyan);
+    }
+    .svg-icon--hoverable:hover .svg-icon__shape--fill {
+        fill: currentColor;
+    }
+    .svg-icon--hoverable:hover .svg-icon__shape--stroke {
+        stroke: currentColor;
+    }
+}

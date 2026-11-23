@@ -1,0 +1,234 @@
+/* Burger Menu */
+.burger-menu {
+    --menu-link-highlight: #f3f3f3;
+    position: fixed;
+    inset: var(--menu-top, 11px) auto auto var(--menu-left, 0px);
+    width: 543px;
+    min-height: min(751px, calc(100dvh - var(--menu-top, 11px)));
+    max-width: var(--menu-width, 543px);
+    max-height: calc(100dvh - var(--menu-top, 11px));
+    margin: 0;
+    padding: 24px 31px 24.72px 16px;
+    border: 2px solid #d7d7d7;
+    border-radius: var(--menu-radius, 37px);
+    color: var(--navy);
+    background: #fff;
+    overflow: auto;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+}
+.burger-menu::backdrop {
+    background: transparent;
+}
+
+/* Burger Menu — reversible GSAP reveal */
+.burger-menu--animating {
+    will-change: clip-path;
+}
+
+.burger-menu[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.burger-menu__item {
+    flex-shrink: 0;
+}
+.burger-menu__brand {
+    display: block;
+    width: 201.568px;
+    height: 48.306px;
+    margin-inline-start: 32.392px;
+}
+.burger-menu__brand-image {
+    width: 100%;
+    height: 100%;
+}
+.burger-menu__links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 11px;
+    margin-top: 36.694px;
+}
+.burger-menu__link {
+    padding: 11px 83px 12px 31px;
+    border-radius: 36px;
+    font-family: "TT Bluescreens Pro Extended", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    font-size: 16px;
+    min-height: 43px;
+    line-height: 19.3265px;
+    transition: background-color 200ms ease;
+}
+.burger-menu__link--pickup {
+    min-height: 62px;
+}
+.burger-menu__contacts {
+    display: none;
+}
+.burger-menu__social {
+    display: flex;
+    gap: 21.733px;
+    margin-top: 76px;
+    margin-inline-start: 31px;
+}
+.burger-menu__social-link {
+    transition: color 200ms ease;
+    display: block;
+    width: 43.278px;
+    height: 43.278px;
+}
+.burger-menu__social-image {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+}
+.burger-menu__social-link:focus-visible {
+    color: var(--hover-cyan);
+}
+.burger-menu__social-link:active {
+    opacity: 0.5;
+}
+.burger-menu__close {
+    position: absolute;
+    top: var(--menu-close-top, 20px);
+    left: var(--menu-close-left, auto);
+    right: auto;
+    width: var(--menu-close-size, 32px);
+    height: var(--menu-close-size, 32px);
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: var(--navy);
+    background: white;
+    font:
+        30px/1 Arial,
+        sans-serif;
+}
+@media (width < 768px) {
+    /* Mobile — Burger Menu */
+    .burger-menu {
+        inset: 0;
+        width: 100%;
+        height: 100dvh;
+        min-height: 0;
+        max-width: none;
+        max-height: 100dvh;
+        padding: 37.709px 20px 35.791px;
+        border: 0;
+        border-radius: 0;
+    }
+    .burger-menu__brand {
+        width: 137px;
+        height: 32.832px;
+        margin-inline-start: 0;
+    }
+    .burger-menu__links {
+        gap: 18px;
+        max-width: 282px;
+        margin-top: 27.459px;
+    }
+    .burger-menu__link {
+        max-width: 244px;
+        min-height: 20px;
+        padding: 0;
+        border-radius: 0;
+        font-size: 15px;
+        line-height: 19.3265px;
+    }
+    .burger-menu__link--pickup {
+        max-width: 282px;
+        min-height: 39px;
+    }
+    .burger-menu__link--location,
+    .burger-menu__link--schedule {
+        min-height: 39px;
+    }
+    .burger-menu__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+        margin-top: 37px;
+        margin-inline: auto;
+        font-family: "TT Bluescreens Pro Extended", sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .burger-menu__contact-link {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        text-decoration: none;
+        gap: 12px;
+    }
+    .burger-menu__image {
+        width: 25px;
+        height: 25px;
+    }
+    .burger-menu__mail-icon {
+        height: 18px;
+    }
+    .burger-menu__social {
+        gap: 30px;
+        margin-top: 34px;
+        margin-inline: auto;
+    }
+    .burger-menu__social-link {
+        width: 40.209px;
+        height: 40.209px;
+    }
+}
+
+/* Reduced Motion — Social Links */
+@media (prefers-reduced-motion: reduce) {
+    .burger-menu__social-link {
+        transition: none;
+    }
+}
+
+/* Burger Menu — link focus and close feedback */
+.burger-menu__close {
+    transition: color 200ms ease;
+}
+.burger-menu__link:focus-visible {
+    background-color: var(--menu-link-highlight);
+}
+.burger-menu__close:focus-visible {
+    color: var(--hover-cyan);
+}
+.burger-menu__close {
+    display: grid;
+    place-items: center;
+}
+.burger-menu__close-icon {
+    width: 30px;
+    height: 30px;
+}
+@media (width < 768px) {
+    /* Mobile — Burger Menu Close */
+    .burger-menu__close-icon {
+        width: 22px;
+        height: 22px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .burger-menu__link,
+    .burger-menu__close {
+        transition: none;
+    }
+}
+
+/* Desktop — Burger Menu Hover */
+@media (width >= 768px) {
+    .burger-menu__social-link:hover,
+    .burger-menu__close:hover {
+        color: var(--hover-cyan);
+    }
+    .burger-menu__link:hover {
+        background-color: var(--menu-link-highlight);
+    }
+}

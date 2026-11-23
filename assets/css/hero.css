@@ -1,0 +1,635 @@
+/* Hero */
+.hero {
+    position: relative;
+    isolation: isolate;
+    container-type: inline-size;
+    width: calc(100% - 26px);
+    max-width: 100%;
+    margin-inline: 13px;
+    overflow: clip;
+    border-radius: var(--hero-radius, 42px);
+    /* The fixed outer mask clips every moving slide throughout a transition. */
+    clip-path: inset(0 round var(--hero-radius, 42px));
+    color: var(--white);
+    background: #fff;
+}
+.hero__inner {
+    position: relative;
+    display: grid;
+}
+
+/* Desktop — Hero Page Inset */
+@media (min-width: 768px) {
+    .page__body {
+        padding-block-start: 12px;
+    }
+}
+
+/* Header */
+.page--js:not(.page--header-ready) .header__actions,
+.page--js:not(.page--header-ready) .header__contact {
+    visibility: hidden;
+}
+.header {
+    --header-unit: max(1px, 0.0745156cqw);
+    /* Keep both full control groups clear of the centered logo as the Hero narrows. */
+    --header-brand-width: clamp(160px, 38cqw - 195px, calc(314 * var(--header-unit)));
+    --header-group-gap: clamp(6px, max(1.5cqw - 8.1px, 13cqw - 162.2px), 30px);
+    position: relative;
+    z-index: 5;
+    grid-area: 1 / 1;
+    align-self: start;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--header-brand-width) minmax(0, 1fr);
+    align-items: center;
+    min-height: calc(67 * var(--header-unit));
+    margin-inline: clamp(16px, 18cqw - 153px, 6.78%);
+}
+.header__actions,
+.header__contact {
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, var(--header-group-gap) - 3px, 24px);
+    align-self: stretch;
+    justify-content: flex-start;
+}
+.header__action-link,
+.header__phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    padding-inline: clamp(8px, 3cqw - 20px, 20px);
+    border-radius: 100px;
+    background: var(--white);
+    color: var(--navy);
+    font:
+        500 12px / 20px
+            "TT Bluescreens Pro Extended",
+        sans-serif;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+.header__action-link:focus-visible,
+.header__phone:focus-visible {
+    background-color: var(--hover-cyan);
+    color: #fff;
+}
+.header__contact {
+    justify-content: flex-end;
+    gap: var(--header-group-gap);
+}
+.header__phone {
+    flex-shrink: 0;
+    padding-block: 9px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.header__phone-icon {
+    flex-shrink: 0;
+    width: 26px;
+    height: auto;
+}
+.header__brand {
+    align-self: start;
+    justify-self: center;
+    width: var(--header-brand-width);
+}
+.header__logo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.header__brand:focus-visible .header__logo-mark {
+    fill: var(--hover-cyan);
+}
+.header__social {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 2cqw - 12.8px, 14px);
+}
+.header__social-link {
+    transition: color 200ms ease;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    aspect-ratio: 1;
+}
+.header__social-icon {
+    width: 100%;
+}
+.header__social-link:focus-visible {
+    color: var(--hover-cyan);
+}
+.header__social-link:active {
+    opacity: 0.5;
+}
+.header__menu-toggle {
+    display: grid;
+    place-items: center;
+    flex: 0 0 36px;
+    width: 36px;
+    aspect-ratio: 1;
+    padding: 0;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    color: var(--white);
+    background: none;
+    transition: color 200ms ease;
+}
+.header__menu-toggle:focus-visible {
+    color: var(--hover-cyan);
+    outline: 2px solid var(--hover-cyan);
+    outline-offset: 3px;
+}
+.header__menu-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 20px;
+}
+.header__menu-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+}
+
+/* Wide Desktop — Header Alignment */
+@media (min-width: 1366px) {
+    .header__actions,
+    .header__contact {
+        align-self: start;
+        /* Use the viewport so a scrollbar on only one page cannot shift the row. */
+        margin-block-start: max(23px, calc(45 * (100vw - 26px) / 1342 - 22px));
+    }
+}
+
+/* Hero Slider */
+.hero-slider {
+    --skeleton-radius: var(--hero-radius, 42px);
+    grid-area: 1 / 1;
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.hero-slider__slide {
+    position: relative;
+    isolation: isolate;
+}
+.hero-slider__content {
+    display: flex;
+    flex-direction: column;
+    min-height: 65.425cqw;
+    padding: 8.495cqw 6.781cqw 8.793cqw;
+}
+.hero-slider__heading {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-rows: 18.852cqw auto;
+    padding-inline: 0.67cqw;
+}
+.hero-slider__title {
+    font:
+        italic 700 18.4224cqw/19.9426cqw "TT Bluescreens Pro",
+        Impact,
+        sans-serif;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+/* Hero Text Reveal — the mask stays still while the text rises inside it. */
+.hero-slider__title-text {
+    display: block;
+}
+.hero-slider__title--revealing {
+    /* Clip vertically while preserving the italic text's horizontal overhang. */
+    clip-path: inset(0 -100%);
+}
+
+/* Hero Slider — artwork and content */
+.hero-slider__wordmark {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 33.1097cqw;
+    height: 4.0826cqw;
+    object-fit: contain;
+}
+.hero-slider__artwork {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+    container-type: size;
+}
+.hero-slider__scene {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max(100cqw, 152.8474cqh);
+    aspect-ratio: 1342 / 878;
+    transform: translate(-50%, -50%);
+}
+.hero-slider__scene:not(.hero-slider__scene--foreground) {
+    background: url("../images/hero-snow-background.png") center / 100% 100% no-repeat;
+}
+.hero-slider__figure {
+    position: absolute;
+    top: 27.5626%;
+    left: 35.3204%;
+    width: 51.0432%;
+    height: 75.9681%;
+    overflow: hidden;
+}
+.hero-slider__picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.hero-slider__skier {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+}
+.hero-slider__bottom {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-top: auto;
+    padding-top: 10.43cqw;
+}
+.hero-slider__info {
+    max-width: 491px;
+}
+.hero-slider__emphasis {
+    display: block;
+    font:
+        800 40px/60px "TT Bluescreens Pro Extended",
+        sans-serif;
+    text-transform: uppercase;
+}
+.hero-slider__text {
+    margin: 0 0 28px;
+    font:
+        500 24px/27px "TT Bluescreens Pro Expanded",
+        sans-serif;
+}
+.hero-slider__link {
+    width: 219px;
+    min-height: 0;
+    padding: 18px 24px;
+    background: var(--white);
+    color: var(--navy);
+    font-size: 16px;
+    line-height: 20px;
+}
+.hero-slider__stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    min-width: 189px;
+    min-height: 79px;
+    padding: 6px 30px;
+    border-radius: 15px;
+    background: #fcfcfc;
+    color: var(--navy);
+    font:
+        700 52px/66px "TT Bluescreens Pro Extended",
+        sans-serif;
+}
+.hero-slider__label {
+    font-size: 24.304px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero-slider__arrow {
+    position: absolute;
+    z-index: 6;
+    top: 34.8519%;
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 268px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: var(--navy);
+    transition: color 200ms ease;
+}
+.hero-slider__arrow:focus-visible {
+    color: var(--hover-cyan);
+}
+.hero-slider__image {
+    width: 21px;
+    height: 46px;
+}
+.hero-slider__arrow-picture {
+    display: grid;
+    place-items: center;
+}
+.hero-slider__prev {
+    left: 0;
+}
+.hero-slider__next {
+    right: -2px;
+}
+.hero-slider__arrow:disabled {
+    opacity: 0.55;
+}
+.hero-slider__arrow:focus-visible {
+    outline-offset: -4px;
+}
+.hero-slider__artwork--foreground {
+    z-index: 3;
+}
+.hero-slider__scene--foreground {
+    background: none;
+}
+
+@media (width < 768px) {
+    /* Mobile — Hero */
+    .hero-slider {
+        --skeleton-radius: 0px;
+    }
+    .hero {
+        width: 100%;
+        margin-inline: 0;
+        border-radius: 0;
+        clip-path: none;
+    }
+
+    /* Mobile — Header */
+    .header {
+        --header-unit: 1px;
+        margin-inline: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 0;
+        height: 46px;
+        padding: 0 min(32px, 8%);
+        background: url("../images/figwright/header-background-mobile.svg") center / 100% 100%
+            no-repeat;
+    }
+    .header__actions {
+        display: none;
+    }
+    .header__brand {
+        align-self: center;
+        width: 65.446px;
+        margin-right: auto;
+    }
+    .header__contact {
+        gap: 8px;
+        padding: 0;
+    }
+    .header__phone {
+        gap: 0;
+        padding: 0;
+        background: none;
+    }
+    .header__phone-number {
+        display: none;
+    }
+    .header__phone-icon {
+        width: 31px;
+    }
+    .header__social {
+        display: none;
+    }
+    .header__menu-toggle {
+        flex-basis: 31px;
+        width: 31px;
+        color: var(--navy);
+    }
+    .header__menu-lines {
+        width: 16.24px;
+        gap: 3px;
+    }
+
+    /* Mobile — Hero Slider */
+    .hero-slider__scene {
+        width: max(100cqw, 55.0775cqh);
+        aspect-ratio: 320 / 581;
+    }
+    .hero-slider__scene:not(.hero-slider__scene--foreground) {
+        background-image: url("../images/originals/hero-snow-background-mobile.png");
+        background-size: auto 109.77%;
+        background-position: 82.8% 75.7%;
+    }
+    .hero-slider__content {
+        min-height: 181.5625cqw;
+        padding: 23.125cqw 6.25cqw 4.375cqw;
+    }
+    .hero-slider__heading {
+        grid-template-rows: auto auto;
+        padding: 0;
+    }
+    .hero-slider__title {
+        max-width: 76.25cqw;
+        font-size: 26.0376cqw;
+        line-height: 21.4848cqw;
+        white-space: normal;
+    }
+    .hero-slider__wordmark {
+        width: 47.9282cqw;
+        height: 5.9143cqw;
+    }
+    .hero-slider__figure {
+        top: 31.1532%;
+        left: 0;
+        width: 83.4375%;
+        height: 63.8554%;
+    }
+    .hero-slider__skier {
+        height: auto;
+    }
+    .hero-slider__bottom {
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+        padding-top: 36.117cqw;
+    }
+    .hero-slider__stage {
+        order: -1;
+        gap: 9px;
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        color: white;
+        font-size: 34px;
+        line-height: 43px;
+    }
+    .hero-slider__label {
+        font-size: 15.888px;
+        line-height: 24px;
+    }
+    .hero-slider__info {
+        width: 100%;
+        max-width: none;
+    }
+    .hero-slider__emphasis {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .hero-slider__year {
+        display: block;
+        font-size: 35.568px;
+        line-height: 39px;
+    }
+    .hero-slider__text {
+        max-width: 225px;
+        margin-bottom: 24px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .hero-slider__link {
+        width: 166px;
+        padding: 12px 16px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .hero-slider__arrow {
+        top: 34.7676%;
+        width: 24px;
+        height: 177px;
+        color: var(--white);
+    }
+    .hero-slider__next {
+        right: 0;
+        transform: rotate(180deg);
+    }
+    .hero-slider__image {
+        width: 11px;
+        height: 23px;
+    }
+}
+
+@media (768px <= width <= 980px) {
+    /* Compact Desktop — Header */
+    .header__actions {
+        justify-content: center;
+    }
+
+    .header__action-link--participation {
+        width: min(290px, 100%);
+    }
+
+    .header__action-link--partnership,
+    .header__action-link--volunteer,
+    .header__phone-number {
+        display: none;
+    }
+
+    .header__phone {
+        gap: 0;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+    }
+
+    .header__social {
+        gap: 10px;
+    }
+}
+
+@media (768px <= width < 820px) {
+    /* Narrow Desktop — Header */
+    .header__social {
+        display: none;
+    }
+}
+
+/* Reduced Motion — Header and Hero Controls */
+@media (prefers-reduced-motion: reduce) {
+    .header__action-link,
+    .header__phone,
+    .header__social-link,
+    .header__menu-toggle,
+    .header__menu-line,
+    .hero-slider__arrow {
+        transition: none;
+    }
+}
+
+/* Inline SVG — responsive artwork variants */
+.header__logo--mobile,
+.hero-slider__image--mobile,
+.team-grid__image--mobile {
+    display: none;
+}
+@media (width < 768px) {
+    /* Mobile — Inline SVG variants */
+    .header__logo--desktop,
+    .hero-slider__image--desktop,
+    .team-grid__image--desktop {
+        display: none;
+    }
+    .header__logo--mobile,
+    .hero-slider__image--mobile,
+    .team-grid__image--mobile {
+        display: block;
+    }
+}
+
+/* Hero Slider — original white SVG contours */
+.hero-slider__outline {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.hero-slider__outline--mobile {
+    display: none;
+}
+.hero-slider__arrow-picture {
+    position: relative;
+    z-index: 1;
+}
+
+/* Desktop — Header and Hero Hover */
+@media (width >= 768px) {
+    .header__brand:hover .header__logo-mark {
+        fill: var(--hover-cyan);
+    }
+    .header__action-link:hover,
+    .header__phone:hover {
+        background-color: var(--hover-cyan);
+        color: #fff;
+    }
+    .header__phone-icon.svg-icon:hover {
+        color: inherit;
+    }
+    .header__menu-toggle:hover,
+    .header__social-link:hover,
+    .hero-slider__arrow:hover {
+        color: var(--hover-cyan);
+    }
+}
+
+@media (width < 768px) {
+    /* Mobile — Hero Arrow Contours */
+    .hero-slider__outline--desktop {
+        display: none;
+    }
+    .hero-slider__outline--mobile {
+        display: block;
+    }
+}
