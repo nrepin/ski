@@ -716,10 +716,14 @@ document.querySelector("[data-video]")?.addEventListener("click", (event) => {
 
 const galleryPhotos = Array.from(
     document.querySelectorAll(".race-photos [data-photo-index]"),
-    (button) => ({
-        src: button.dataset.image,
-        alt: button.querySelector(".race-photos__image").alt,
-    }),
+    (button) => {
+        const thumbnail = button.querySelector(".race-photos__image");
+        return {
+            src: button.dataset.image,
+            thumbnailSrc: thumbnail.src,
+            alt: thumbnail.alt,
+        };
+    },
 );
 function openGallery(index, opener) {
     viewer.dataset.mode = "gallery";
@@ -766,7 +770,7 @@ function openGallery(index, opener) {
         button.setAttribute("aria-label", "Открыть фотографию " + (i + 1));
         const thumb = new Image();
         thumb.className = "gallery__thumbnail";
-        thumb.src = photo.src;
+        thumb.src = photo.thumbnailSrc;
         thumb.alt = "";
         button.append(thumb);
         thumbSlide.append(button);
@@ -1049,9 +1053,6 @@ function initializePhotoSlider() {
     photoTrack.replaceChildren();
     for (let i = 0; i < count; i++) {
         const slide = photoTemplates[i % galleryPhotos.length].cloneNode(true);
-        slide.querySelectorAll(".race-photos__image").forEach((image) => {
-            image.loading = "eager";
-        });
         photoTrack.append(slide);
     }
     photoSlider = new Swiper(photoElement, {
@@ -1077,13 +1078,6 @@ function initializePhotoSlider() {
     });
 }
 
-// Decode each original once; repeated URLs share the browser's image cache.
-const photoPreloads = galleryPhotos.map((photo) => {
-    const image = new Image();
-    image.src = photo.src;
-    image.decode().catch(() => {});
-    return image;
-});
 if (photoTrack) {
     initializePhotoSlider();
     new ResizeObserver(initializePhotoSlider).observe(photoElement);

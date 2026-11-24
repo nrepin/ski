@@ -14,7 +14,7 @@ main::before {
 /* Brand Ribbon */
 .brand-ribbon {
     height: 91px;
-    background: url("../images/section9/brand-ribbon-desktop.svg") center / auto 100%
+    background: url("../images/section9/brand-ribbon-desktop.webp") center / auto 100%
         repeat-x;
     pointer-events: none;
 }
@@ -128,7 +128,7 @@ main::before {
     /* Mobile — Brand Ribbon */
     .brand-ribbon {
         height: 50.896px;
-        background-image: url("../images/section9/brand-ribbon-mobile.svg");
+        background-image: url("../images/section9/brand-ribbon-mobile.webp");
     }
 
     /* Mobile — Tracks */

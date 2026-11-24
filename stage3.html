@@ -11,6 +11,20 @@
         />
         <link href="assets/images/ski-factory-favicon.svg" rel="icon" />
         <title>Весенняя гонка — Ski Factory 2027</title>
+        <link
+            rel="preload"
+            as="image"
+            type="image/webp"
+            fetchpriority="high"
+            href="assets/images/hero/stage3-background.webp"
+        />
+        <link
+            rel="preload"
+            as="image"
+            type="image/webp"
+            fetchpriority="high"
+            href="assets/images/hero/stage3-skier.webp"
+        />
         <script>
             if (location.protocol === "http:" || location.protocol === "https:") {
                 for (const file of ["TT_Bluescreens_Pro_Extended_Medium.otf", "TT_Bluescreens_Pro_Extended_Bold.otf"]) {
@@ -29,14 +43,14 @@
             href="assets/vendor/swiper/swiper-bundle.min.css?v=74ca6aae5468"
             rel="stylesheet"
         />
-        <link href="assets/css/site.css?v=58104e5592d9" rel="stylesheet" />
-        <link href="assets/css/mobile.css?v=aa872876c013" rel="stylesheet" />
+        <link href="assets/css/site.css?v=c8da9a028472" rel="stylesheet" />
+        <link href="assets/css/mobile.css?v=9903c198fa0a" rel="stylesheet" />
         <link href="assets/css/overlays.css?v=aa9d2576f4d5" rel="stylesheet" />
-        <link href="assets/css/hero.css?v=a635a2eb6d8e" rel="stylesheet" />
+        <link href="assets/css/hero.css?v=01609c3ad9d9" rel="stylesheet" />
         <link href="assets/css/burger-menu.css?v=d9fccc418b34" rel="stylesheet" />
-        <link href="assets/css/footer.css?v=128f57fa590e" rel="stylesheet" />
-        <link href="assets/css/sliding-footer.css?v=a6ff88542008" rel="stylesheet" />
-        <link href="assets/css/decor.css?v=b40e507845e6" rel="stylesheet" />
+        <link href="assets/css/footer.css?v=99846a30352f" rel="stylesheet" />
+        <link href="assets/css/sliding-footer.css?v=ecd923076e56" rel="stylesheet" />
+        <link href="assets/css/decor.css?v=5654cafbdae0" rel="stylesheet" />
         <script>
             document.documentElement.classList.add("page--js");
             Promise.allSettled([
@@ -293,7 +307,8 @@
                                     <img
                                         alt=""
                                         class="hero-slider__backdrop"
-                                        src="assets/images/hero/stage3-background.png"
+                                        fetchpriority="high"
+                                        src="assets/images/hero/stage3-background.webp"
                                     />
                                 </div>
                             </div>
@@ -308,7 +323,8 @@
                                         <img
                                             alt=""
                                             class="hero-slider__skier"
-                                            src="assets/images/hero/stage3-skier.png"
+                                            fetchpriority="high"
+                                            src="assets/images/hero/stage3-skier.webp"
                                         />
                                     </div>
                                 </div>
@@ -404,7 +420,7 @@
                     <img
                         alt="Участники гонки Ski Factory 2026"
                         class="video-cover__image"
-                        src="assets/images/race-video-cover.png"
+                        src="assets/images/race-video-cover.webp"
                     /><span aria-hidden="true" class="video-play"
                         ><svg class="video-play__image svg-icon" aria-hidden="true" focusable="false" width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22.8232 11.5068C24.2521 12.3233 24.2521 14.3837 22.8232 15.2002L3.18219 26.4236C1.76425 27.2338 8.97409e-08 26.21 1.61866e-07 24.5769L1.15322e-06 2.13005C1.22534e-06 0.49694 1.76425 -0.526891 3.18218 0.283356L22.8232 11.5068Z" fill="currentColor"/>
@@ -424,7 +440,7 @@
                             aria-selected="true"
                             class="tabs__button tabs__button--compact"
                             data-route="600 м"
-                            data-route-map="assets/images/map/600.png"
+                            data-route-map="assets/images/map/600.webp"
                             id="route-tab-0"
                             role="tab"
                             tabindex="0"
@@ -435,7 +451,7 @@
                             aria-selected="false"
                             class="tabs__button"
                             data-route="2,5 км"
-                            data-route-map="assets/images/map/2km.png"
+                            data-route-map="assets/images/map/2km.webp"
                             data-route-laps="1"
                             data-route-turns="Умеренно"
                             data-route-difficulty="5/10"
@@ -452,7 +468,7 @@
                             aria-selected="false"
                             class="tabs__button tabs__button--last-in-row"
                             data-route="5 км"
-                            data-route-map="assets/images/map/5km.png"
+                            data-route-map="assets/images/map/5km.webp"
                             data-route-laps="1"
                             data-route-turns="Интенсивно"
                             data-route-difficulty="5/10"
@@ -469,7 +485,7 @@
                             aria-selected="false"
                             class="tabs__button tabs__button--compact"
                             data-route="10 км"
-                            data-route-map="assets/images/map/10km.png"
+                            data-route-map="assets/images/map/10km.webp"
                             data-route-laps="2"
                             data-route-turns="Интенсивно"
                             data-route-difficulty="7/10"
@@ -484,7 +500,7 @@
                             aria-selected="false"
                             class="tabs__button"
                             data-route="20 км"
-                            data-route-map="assets/images/map/20km.png"
+                            data-route-map="assets/images/map/20km.webp"
                             data-route-laps="4"
                             data-route-turns="Интенсивно"
                             data-route-difficulty="9/10"
@@ -550,12 +566,12 @@
                     <button
                         aria-label="Увеличить схему трасс"
                         class="map-preview"
-                        data-image="assets/images/map/600.png"
+                        data-image="assets/images/map/600.webp"
                     >
                         <img
                             alt="Схема трассы на 600 м"
                             class="map-preview__image"
-                            src="assets/images/map/600.png"
+                            src="assets/images/map/600.webp"
                         />
                     </button>
                 </div>
@@ -1160,14 +1176,15 @@
                             <button
                                 aria-label="Увеличить фотографию 1"
                                 class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-01.png"
+                                data-image="assets/images/originals/race-2026-gallery-01.webp"
                                 data-photo-index="0"
                             >
                                 <img
                                     alt="Участники гонки Ski Factory 2026 — фото 1"
                                     class="swiper-slide__image race-photos__image"
                                     decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-01.png"
+                                    loading="lazy"
+                                    src="assets/images/originals/race-2026-gallery-01-thumb.webp"
                                 /><span
                                     aria-hidden="true"
                                     class="race-photos__zoom"
@@ -1184,14 +1201,15 @@
                             <button
                                 aria-label="Увеличить фотографию 2"
                                 class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-02.png"
+                                data-image="assets/images/originals/race-2026-gallery-02.webp"
                                 data-photo-index="1"
                             >
                                 <img
                                     alt="Участники гонки Ski Factory 2026 — фото 2"
                                     class="swiper-slide__image race-photos__image"
                                     decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-02.png"
+                                    loading="lazy"
+                                    src="assets/images/originals/race-2026-gallery-02-thumb.webp"
                                 /><span
                                     aria-hidden="true"
                                     class="race-photos__zoom"
@@ -1208,14 +1226,15 @@
                             <button
                                 aria-label="Увеличить фотографию 3"
                                 class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-03.png"
+                                data-image="assets/images/originals/race-2026-gallery-03.webp"
                                 data-photo-index="2"
                             >
                                 <img
                                     alt="Участники гонки Ski Factory 2026 — фото 3"
                                     class="swiper-slide__image race-photos__image"
                                     decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-03.png"
+                                    loading="lazy"
+                                    src="assets/images/originals/race-2026-gallery-03-thumb.webp"
                                 /><span
                                     aria-hidden="true"
                                     class="race-photos__zoom"
@@ -1232,14 +1251,15 @@
                             <button
                                 aria-label="Увеличить фотографию 4"
                                 class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-04.png"
+                                data-image="assets/images/originals/race-2026-gallery-04.webp"
                                 data-photo-index="3"
                             >
                                 <img
                                     alt="Участники гонки Ski Factory 2026 — фото 4"
                                     class="swiper-slide__image race-photos__image"
                                     decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-04.png"
+                                    loading="lazy"
+                                    src="assets/images/originals/race-2026-gallery-04-thumb.webp"
                                 /><span
                                     aria-hidden="true"
                                     class="race-photos__zoom"
@@ -1256,14 +1276,15 @@
                             <button
                                 aria-label="Увеличить фотографию 5"
                                 class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-05.png"
+                                data-image="assets/images/originals/race-2026-gallery-05.webp"
                                 data-photo-index="4"
                             >
                                 <img
                                     alt="Участники гонки Ski Factory 2026 — фото 5"
                                     class="swiper-slide__image race-photos__image"
                                     decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-05.png"
+                                    loading="lazy"
+                                    src="assets/images/originals/race-2026-gallery-05-thumb.webp"
                                 /><span
                                     aria-hidden="true"
                                     class="race-photos__zoom"
@@ -1280,14 +1301,15 @@
                             <button
                                 aria-label="Увеличить фотографию 6"
                                 class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-06.png"
+                                data-image="assets/images/originals/race-2026-gallery-06.webp"
                                 data-photo-index="5"
                             >
                                 <img
                                     alt="Участники гонки Ski Factory 2026 — фото 6"
                                     class="swiper-slide__image race-photos__image"
                                     decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-06.png"
+                                    loading="lazy"
+                                    src="assets/images/originals/race-2026-gallery-06-thumb.webp"
                                 /><span
                                     aria-hidden="true"
                                     class="race-photos__zoom"
@@ -1304,14 +1326,15 @@
                             <button
                                 aria-label="Увеличить фотографию 7"
                                 class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-07.png"
+                                data-image="assets/images/originals/race-2026-gallery-07.webp"
                                 data-photo-index="6"
                             >
                                 <img
                                     alt="Участники гонки Ski Factory 2026 — фото 7"
                                     class="swiper-slide__image race-photos__image"
                                     decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-07.png"
+                                    loading="lazy"
+                                    src="assets/images/originals/race-2026-gallery-07-thumb.webp"
                                 /><span
                                     aria-hidden="true"
                                     class="race-photos__zoom"
@@ -1328,14 +1351,15 @@
                             <button
                                 aria-label="Увеличить фотографию 8"
                                 class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-08.png"
+                                data-image="assets/images/originals/race-2026-gallery-08.webp"
                                 data-photo-index="7"
                             >
                                 <img
                                     alt="Участники гонки Ski Factory 2026 — фото 8"
                                     class="swiper-slide__image race-photos__image"
                                     decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-08.png"
+                                    loading="lazy"
+                                    src="assets/images/originals/race-2026-gallery-08-thumb.webp"
                                 /><span
                                     aria-hidden="true"
                                     class="race-photos__zoom"
@@ -1352,14 +1376,15 @@
                             <button
                                 aria-label="Увеличить фотографию 9"
                                 class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-09.png"
+                                data-image="assets/images/originals/race-2026-gallery-09.webp"
                                 data-photo-index="8"
                             >
                                 <img
                                     alt="Участники гонки Ski Factory 2026 — фото 9"
                                     class="swiper-slide__image race-photos__image"
                                     decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-09.png"
+                                    loading="lazy"
+                                    src="assets/images/originals/race-2026-gallery-09-thumb.webp"
                                 /><span
                                     aria-hidden="true"
                                     class="race-photos__zoom"
@@ -1376,14 +1401,15 @@
                             <button
                                 aria-label="Увеличить фотографию 10"
                                 class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-10.png"
+                                data-image="assets/images/originals/race-2026-gallery-10.webp"
                                 data-photo-index="9"
                             >
                                 <img
                                     alt="Участники гонки Ski Factory 2026 — фото 10"
                                     class="swiper-slide__image race-photos__image"
                                     decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-10.png"
+                                    loading="lazy"
+                                    src="assets/images/originals/race-2026-gallery-10-thumb.webp"
                                 /><span
                                     aria-hidden="true"
                                     class="race-photos__zoom"
@@ -1489,7 +1515,7 @@
                             ><img
                                 alt="БИВИУМ"
                                 class="partner-symbol__image"
-                                src="assets/images/originals/partner-symbol.png"
+                                src="assets/images/originals/partner-symbol.webp"
                         /></span>
                     </a>
                     <a
@@ -1519,13 +1545,20 @@
                             </g>
                         </svg>
                     </a>
-                    <div class="partner-card partner-card--race" data-reveal="">
+                    <a
+                        class="partner-card partner-card--link partner-card--race"
+                        href="https://results.racetime.online/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Результаты гонок на Race Time"
+                        data-reveal=""
+                    >
                         <img
                             alt="Race Time"
-                            class="partner-race"
-                            src="assets/images/originals/race-time-logo.png"
+                            class="partner-race partner-card__logo"
+                            src="assets/images/originals/race-time-logo.webp"
                         />
-                    </div>
+                    </a>
                     <a
                         class="partner-card partner-card--link partner-card--radio"
                         href="https://silver.ru/"
@@ -1537,7 +1570,7 @@
                             ><img
                                 alt="Серебряный дождь 100.1 FM"
                                 class="partner-radio__image"
-                                src="assets/images/originals/radio-100-1-logo.png"
+                                src="assets/images/originals/radio-100-1-logo.webp"
                         /></span>
                     </a>
                 </div>
@@ -1644,7 +1677,7 @@
                     alt="Фирменная тёмно-синяя футболка Ski Factory"
                     class="merch-shirt merch__group"
                     data-reveal=""
-                    src="assets/images/ski-factory-shirt.png"
+                    src="assets/images/ski-factory-shirt.webp"
                 />
                 <a
                     class="button merch__group merch__button"
@@ -1899,7 +1932,7 @@
         <script src="assets/vendor/swiper/swiper-bundle.min.js?v=985f1224c0ee"></script>
         <script src="assets/vendor/gsap/gsap.min.js?v=3d1bea374ab1"></script>
         <script src="assets/vendor/gsap/ScrollTrigger.min.js?v=b5bb360661f4"></script>
-        <script src="assets/js/app.js?v=0f74e600cc6f"></script>
+        <script src="assets/js/app.js?v=456a65403702"></script>
         <script src="assets/js/page-reveal.js?v=733ae24ab9ac"></script>
     </body>
 </html>

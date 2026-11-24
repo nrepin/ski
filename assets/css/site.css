@@ -220,7 +220,7 @@ dialog::backdrop {
 .hero {
     position: relative;
     isolation: isolate;
-    background: var(--navy) url("../images/hero-snow-background.png") center/cover no-repeat;
+    background: var(--navy) url("../images/hero-snow-background.webp") center/cover no-repeat;
     color: var(--white);
     border-radius: 42px;
     overflow: clip;
