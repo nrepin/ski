@@ -1,0 +1,280 @@
+/* Footer */
+.page__footer {
+    width: calc(100% - 26px);
+    max-width: 100%;
+    margin-inline: 13px;
+    overflow: clip;
+    border-radius: 43px;
+    color: #fff;
+    background: #1e58ea url("../images/footer-shade-desktop.png") center / 100% 100% no-repeat;
+}
+
+.footer-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 305px minmax(0, 1fr);
+    align-items: start;
+    max-width: 1341px;
+    margin-inline: auto;
+    padding: 49px clamp(24px, 20vw - 170px, 92px) 0;
+}
+
+.footer__link {
+    justify-self: start;
+    max-width: 100%;
+    color: var(--white);
+}
+
+.footer__logo {
+    display: block;
+    width: min(100%, 246px);
+    height: auto;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    color: var(--white);
+    font: 700 24px / 19.3265px "TT Bluescreens Pro Extended", sans-serif;
+}
+
+.footer-contact__link {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    min-height: 42px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.footer-inquiry {
+    justify-self: end;
+    width: min(100%, 309px);
+    margin-block-start: 4px;
+    text-align: end;
+}
+
+.footer-inquiry__text {
+    font: 500 18px / 23px "TT Bluescreens Pro Expanded", sans-serif;
+}
+
+.footer-inquiry__link {
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content minmax(0, 1fr);
+    align-items: end;
+    margin-block-start: 55px;
+}
+
+.hashtags {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    gap: 29px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 500 14px / 23px "TT Bluescreens Pro Extended", sans-serif;
+}
+
+.hashtags__mobile {
+    display: none;
+}
+
+.footer-social {
+    grid-column: 3;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 18.52px;
+    color: var(--white);
+}
+
+.footer-social__link {
+    display: block;
+    width: 37px;
+}
+
+.footer-social__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.footer-credit {
+    position: relative;
+    isolation: isolate;
+    grid-column: 1 / -1;
+    justify-self: center;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: min(412px, 100%);
+    min-height: 44px;
+    margin-block-start: 10px;
+    padding-block-end: 7px;
+    color: #07173a;
+}
+
+.footer-credit::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("../images/footer-credit-background.svg") center / 100% 100% no-repeat;
+    rotate: 180deg;
+    content: "";
+}
+
+.footer-credit__mark {
+    display: block;
+    width: 212px;
+    height: auto;
+}
+
+.footer__link,
+.footer-contact__link,
+.footer-inquiry__link,
+.footer-social__link,
+.footer-credit {
+    transition: color 200ms ease;
+}
+
+.footer__link:focus-visible,
+.footer-contact__link:focus-visible,
+.footer-inquiry__link:focus-visible,
+.footer-social__link:focus-visible {
+    color: var(--hover-cyan);
+    outline-offset: 4px;
+}
+
+.footer-credit:focus-visible {
+    color: var(--hover-cyan);
+    outline: 2px solid var(--hover-cyan);
+    outline-offset: -4px;
+}
+
+/* Compact Desktop — Footer */
+@media (768px <= width < 1100px) {
+    .footer-layout {
+        column-gap: 12px;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-block-start: 34px;
+    }
+
+    .hashtags {
+        flex-wrap: wrap;
+        gap: 6px 20px;
+    }
+}
+
+/* Mobile — Footer */
+@media (width < 768px) {
+    .page__footer {
+        width: 100%;
+        margin-inline: 0;
+        border-radius: 20px 20px 0 0;
+        background-image: url("../images/footer-shade-mobile.png");
+    }
+
+    .footer-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 34.4px 0 0;
+        text-align: center;
+    }
+
+    .footer__logo {
+        width: 134px;
+    }
+
+    .footer-contact {
+        align-items: center;
+        gap: 0;
+        margin-block-start: 20px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .footer-inquiry {
+        width: min(calc(100% - 10px), 309px);
+        margin-block-start: 24px;
+        text-align: center;
+    }
+
+    .footer-inquiry__text,
+    .hashtags {
+        font: 500 12px / 16px "TT Bluescreens Pro Expanded", sans-serif;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22.3px;
+        margin-block-start: 24.6px;
+    }
+
+    .hashtags {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hashtags__desktop {
+        display: none;
+    }
+
+    .hashtags__mobile {
+        display: inline;
+    }
+
+    .footer-social {
+        gap: 19.15px;
+    }
+
+    .footer-social__link {
+        width: 38.13px;
+    }
+
+    .footer-credit {
+        width: min(320px, 100%);
+        min-height: 34px;
+        margin-block-start: 34px;
+        padding-block-end: 5px;
+    }
+
+    .footer-credit__mark {
+        width: 167px;
+    }
+}
+
+@media (min-width: 768px) and (hover: hover) {
+    .footer__link:hover,
+    .footer-contact__link:hover,
+    .footer-inquiry__link:hover,
+    .footer-social__link:hover,
+    .footer-credit:hover {
+        color: var(--hover-cyan);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer__link,
+    .footer-contact__link,
+    .footer-inquiry__link,
+    .footer-social__link,
+    .footer-credit {
+        transition: none;
+    }
+}

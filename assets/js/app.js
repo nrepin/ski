@@ -82,6 +82,7 @@ const scrollLock = (() => {
                 if (gap > 0) {
                     // Keep the page's width while top-layer dialogs use the full viewport.
                     document.body.style.width = `calc(100vw - ${gap}px)`;
+                    document.body.style.setProperty("--scroll-lock-gap", `${gap}px`);
                 }
                 element.style.overflow = "hidden";
             }
@@ -91,6 +92,7 @@ const scrollLock = (() => {
             if (!owners.delete(owner) || owners.size) return;
             document.documentElement.style.overflow = saved.overflow;
             document.body.style.width = saved.bodyWidth;
+            document.body.style.removeProperty("--scroll-lock-gap");
         },
     };
 })();
@@ -240,16 +242,48 @@ function initHero() {
 const heroImageReady = initHero();
 
 // The menu and media dialog share the page scroll lock.
-const menuToggle = document.querySelector(".header__menu-toggle");
+const headerMenuToggle = document.querySelector(".header__menu-toggle");
+const slidingFooter = document.querySelector(".sliding-footer");
+const slidingMenuToggle = slidingFooter.querySelector("[data-menu-toggle]");
+const pageHeader = headerMenuToggle.closest(".header");
+const pageFooter = document.querySelector(".page__footer");
 const menu = document.querySelector("#menu");
 const viewer = document.querySelector("#viewer");
 const viewerContent = document.querySelector("#dialog-content");
+const desktopViewport = matchMedia("(min-width: 768px)");
+let menuToggle = headerMenuToggle;
+
+// Sliding Footer
+function isInViewport(element) {
+    const { top, bottom } = element.getBoundingClientRect();
+    return bottom >= 0 && top <= document.documentElement.clientHeight;
+}
+
+function focusMenuOpener(opener) {
+    const target = opener === slidingMenuToggle && slidingFooter.inert
+        ? (isInViewport(pageFooter) ? pageFooter : headerMenuToggle)
+        : opener;
+    target.focus({ preventScroll: true });
+}
+
+function updateSlidingFooter() {
+    // Keep the animation origin in place until the shared dialog finishes closing.
+    if (desktopViewport.matches && menu.open && menuToggle === slidingMenuToggle) return;
+    const visible = desktopViewport.matches && !isInViewport(pageHeader);
+    const restoreFocus = !visible && slidingFooter.contains(document.activeElement);
+    slidingFooter.classList.toggle("sliding-footer--visible", visible);
+    slidingFooter.inert = !visible;
+    if (restoreFocus) focusMenuOpener(slidingMenuToggle);
+}
+
+const slidingFooterObserver = new IntersectionObserver(updateSlidingFooter);
+slidingFooterObserver.observe(pageHeader);
 
 function positionBurgerMenu() {
     const hero = document.querySelector(".hero");
-    if (!hero || !menu) return;
+    if (menuToggle === slidingMenuToggle && !desktopViewport.matches) return;
     const trigger = menuToggle.getBoundingClientRect();
-    const mobile = matchMedia("(width < 768px)").matches;
+    const mobile = !desktopViewport.matches;
     let left = 0;
     let top = 0;
     const border = mobile ? 0 : 2;
@@ -377,9 +411,15 @@ function createMenuAnimation() {
         );
 }
 
-function setMenuOpen(open) {
-    const animate = window.gsap && !menuMotionPreference.matches;
+function setMenuOpen(open, opener = menuToggle) {
+    const animate = window.gsap && !menuMotionPreference.matches &&
+        (desktopViewport.matches || opener !== slidingMenuToggle);
     if (open) {
+        if (!menu.open) menuToggle = opener;
+        if (menuToggle === slidingMenuToggle) {
+            // Settle the entrance so the dialog and its close button use one origin.
+            slidingFooter.getAnimations().forEach((animation) => animation.finish());
+        }
         menuNavigation = null;
         if (viewer?.open) closeViewer();
         scrollLock.lock(menu);
@@ -435,9 +475,13 @@ menu.addEventListener("focusin", (event) => {
         menuAnimation.progress(1);
     }
 });
-const desktopViewport = matchMedia("(min-width: 768px)");
-desktopViewport.addEventListener("change", () => setMenuOpen(false));
-menuToggle.addEventListener("click", () => setMenuOpen(!menu.open));
+desktopViewport.addEventListener("change", () => {
+    setMenuOpen(false);
+    updateSlidingFooter();
+});
+document.querySelectorAll("[data-menu-toggle]").forEach((button) => {
+    button.addEventListener("click", () => setMenuOpen(!menu.open, button));
+});
 menu.querySelector(".burger-menu__close").addEventListener("click", () =>
     setMenuOpen(false),
 );
@@ -452,9 +496,12 @@ menu.addEventListener("close", () => {
     menuClosing = false;
     clearMenuMotion();
     scrollLock.unlock(menu);
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Открыть меню");
-    if (!viewer?.open) menuToggle.focus({ preventScroll: true });
+    const opener = menuToggle;
+    opener.setAttribute("aria-expanded", "false");
+    opener.setAttribute("aria-label", "Открыть меню");
+    menuToggle = headerMenuToggle;
+    updateSlidingFooter();
+    if (!viewer?.open) focusMenuOpener(opener);
     const navigate = menuNavigation;
     menuNavigation = null;
     navigate?.();
@@ -507,6 +554,7 @@ let viewerClosing = false;
 function closeViewer() {
     if (!viewer.open || viewerClosing) return;
     viewerClosing = true;
+    viewerContent.querySelector(".video-player__frame")?.pause();
     const opacity = getComputedStyle(viewer).opacity;
     viewerAnimation?.cancel();
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -563,6 +611,12 @@ viewer?.addEventListener("close", () => {
     thumbnailSlider?.destroy();
     thumbnailSlider = null;
     photoSlider?.keyboard?.enable();
+    const video = viewerContent.querySelector(".video-player__frame");
+    if (video) {
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+    }
     viewerContent.replaceChildren();
     scrollLock.unlock(viewer);
     viewer.removeAttribute("data-mode");
@@ -622,29 +676,42 @@ viewer?.addEventListener("click", (event) => {
         closeViewer();
 });
 document.querySelector("[data-video]")?.addEventListener("click", (event) => {
-    const config = window.SKI_CONFIG.video;
+    const opener = event.currentTarget;
+    const title = "Видео лыжной гонки";
     viewer.dataset.mode = "video";
     viewer
         .querySelector(".media-dialog__close")
         .classList.add("media-dialog__close--video");
-    viewer.setAttribute("aria-label", config.title);
+    viewer.setAttribute("aria-label", title);
     const player = document.createElement("div");
     player.className = "video-player";
-    const frame = document.createElement("iframe");
-    frame.className = "video-player__frame";
-    frame.title = config.title;
-    frame.allow = "autoplay; encrypted-media; fullscreen; picture-in-picture";
-    frame.allowFullscreen = true;
-    const fallback = document.createElement("a");
-    fallback.className = "video-player__fallback";
-    fallback.href = config.url;
-    fallback.target = "_blank";
-    fallback.rel = "noopener";
-    fallback.textContent = "Открыть в VK Видео";
-    frame.src = config.embedUrl;
-    player.append(frame, fallback);
+    const video = document.createElement("video");
+    video.className = "video-player__frame";
+    video.setAttribute("aria-label", title);
+    video.controls = true;
+    video.autoplay = true;
+    video.playsInline = true;
+
+    const status = document.createElement("p");
+    status.className = "video-player__status video-player__status--loading";
+    status.setAttribute("role", "status");
+    status.textContent = "Загрузка видео…";
+
+    const hideLoading = () => {
+        status.hidden = true;
+    };
+    video.addEventListener("loadeddata", hideLoading, { once: true });
+    video.addEventListener("playing", hideLoading, { once: true });
+    video.addEventListener("error", () => {
+        status.classList.remove("video-player__status--loading");
+        status.textContent = "Не удалось загрузить видео";
+        status.hidden = false;
+    }, { once: true });
+
+    player.append(video, status);
     viewerContent.replaceChildren(player);
-    openViewer(event.currentTarget);
+    openViewer(opener);
+    video.src = opener.dataset.video;
 });
 
 const galleryPhotos = Array.from(
@@ -652,7 +719,6 @@ const galleryPhotos = Array.from(
     (button) => ({
         src: button.dataset.image,
         alt: button.querySelector(".race-photos__image").alt,
-        crop: button.querySelector(".race-photos__image").getAttribute("style"),
     }),
 );
 function openGallery(index, opener) {
@@ -702,7 +768,6 @@ function openGallery(index, opener) {
         thumb.className = "gallery__thumbnail";
         thumb.src = photo.src;
         thumb.alt = "";
-        thumb.style.cssText = photo.crop;
         button.append(thumb);
         thumbSlide.append(button);
         thumbTrack.append(thumbSlide);

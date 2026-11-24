@@ -652,20 +652,17 @@
 
 /* Inline SVG — responsive artwork variants */
 .header__logo--mobile,
-.hero-slider__image--mobile,
-.team-grid__image--mobile {
+.hero-slider__image--mobile {
     display: none;
 }
 @media (width < 768px) {
     /* Mobile — Inline SVG variants */
     .header__logo--desktop,
-    .hero-slider__image--desktop,
-    .team-grid__image--desktop {
+    .hero-slider__image--desktop {
         display: none;
     }
     .header__logo--mobile,
-    .hero-slider__image--mobile,
-    .team-grid__image--mobile {
+    .hero-slider__image--mobile {
         display: block;
     }
 }

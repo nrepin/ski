@@ -474,6 +474,12 @@
         width: 72px;
         margin-bottom: 12px;
     }
+    .team-grid__image--desktop {
+        display: none;
+    }
+    .team-grid__image--mobile {
+        display: block;
+    }
     .team-grid__subtitle {
         font-size: 14px;
         line-height: 18px;
@@ -507,20 +513,13 @@
         right: -20px;
         height: 54px;
         z-index: -1;
-        background: url("../images/figwright/schedule-decoration-mobile.svg") center/328px 270px
+        background: url("../images/section9/schedule-bottom-decoration-mobile.svg") center/328px 270px
             no-repeat;
         pointer-events: none;
     }
     .team-description--secondary {
         max-width: none;
     }
-    .team-grid__desktop-copy {
-        display: none;
-    }
-    .team-grid__mobile-copy {
-        display: inline;
-    }
-
     /* Mobile — Schedule */
     .schedule {
         width: 100%;
@@ -811,109 +810,6 @@
         height: 190px;
         left: calc(50% - 388px);
         top: -20px;
-    }
-
-    /* Mobile — Footer */
-    .page__footer {
-        margin-top: 0;
-        border-radius: 10px 10px 0 0;
-        width: 100%;
-        max-width: 100%;
-        margin-inline: 0;
-    }
-    .footer-art {
-        background-size: auto 145%;
-        background-position: center top;
-    }
-    .footer-layout {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        padding: 34px 5px 0;
-        max-width: 560px;
-        text-align: center;
-    }
-    .footer__link {
-        display: block;
-    }
-    .footer__logo {
-        width: 134px;
-        height: 53.886px;
-        object-fit: contain;
-    }
-    .footer-contact {
-        gap: 0;
-        font-size: 14px;
-        line-height: 18px;
-        margin-top: 20px;
-    }
-    .footer-contact__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 42px;
-    }
-    .footer-inquiry {
-        text-align: center;
-        width: 100%;
-        margin-top: 24px;
-    }
-    .footer-inquiry__text {
-        max-width: 309px;
-        margin: 0 auto 16px;
-        font-size: 12px;
-        line-height: 16px;
-    }
-    .footer-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-    .footer-buttons__button {
-        width: 228px;
-        min-height: 44px;
-        padding: 12px 16px;
-        font-size: 12px;
-    }
-    .footer-bottom {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 22px;
-        margin-top: 22px;
-    }
-    .hashtags {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        font-family: "TT Bluescreens Pro Expanded", sans-serif;
-        font-size: 12px;
-        line-height: 16px;
-    }
-    .footer-social {
-        width: 208.44px;
-        height: 38.13px;
-    }
-    .footer-credit {
-        display: flex;
-        align-items: end;
-        gap: 5px;
-        width: 320px;
-        max-width: calc(100% + 10px);
-        min-height: 34px;
-        margin-top: 34px;
-        padding-bottom: 0;
-        font-family: "TT Bluescreens Pro Expanded", sans-serif;
-        font-size: 12px;
-        line-height: 16px;
-    }
-    .footer-credit__text {
-        white-space: nowrap;
-    }
-    .footer-credit__image {
-        width: 88.38px;
     }
 
     /* Mobile — Price Decoration Frame */
