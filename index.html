@@ -84,6 +84,13 @@
                         element.dataset.sliderReady = "unavailable";
                     }
                 });
+                const pendingImages = document.querySelectorAll(
+                    ".hero-slider.swiper-initialized img[loading='lazy']",
+                );
+                pendingImages.forEach((image) => {
+                    image.loading = "eager";
+                    image.decode().catch(() => {});
+                });
             }, { once: true });
         </script>
         <link href="assets/css/home.css?v=8d2ba1d403c7" rel="stylesheet" />
@@ -425,7 +432,9 @@
                                         <div class="hero-slider__scene hero-slider__scene--race">
                                             <img
                                                 alt=""
-                                                class="hero-slider__backdrop" loading="lazy"
+                                                class="hero-slider__backdrop"
+                                                fetchpriority="low"
+                                                loading="lazy"
                                                 src="assets/images/hero/stage2-background.webp"
                                             />
                                         </div>
@@ -440,7 +449,9 @@
                                             <div class="hero-slider__figure hero-slider__figure--relay">
                                                 <img
                                                     alt=""
-                                                    class="hero-slider__skier" loading="lazy"
+                                                    class="hero-slider__skier"
+                                                    fetchpriority="low"
+                                                    loading="lazy"
                                                     src="assets/images/hero/stage2-skier.webp"
                                                 />
                                             </div>
@@ -511,7 +522,9 @@
                                         <div class="hero-slider__scene hero-slider__scene--race">
                                             <img
                                                 alt=""
-                                                class="hero-slider__backdrop" loading="lazy"
+                                                class="hero-slider__backdrop"
+                                                fetchpriority="low"
+                                                loading="lazy"
                                                 src="assets/images/hero/stage3-background.webp"
                                             />
                                         </div>
@@ -526,7 +539,9 @@
                                             <div class="hero-slider__figure hero-slider__figure--spring">
                                                 <img
                                                     alt=""
-                                                    class="hero-slider__skier" loading="lazy"
+                                                    class="hero-slider__skier"
+                                                    fetchpriority="low"
+                                                    loading="lazy"
                                                     src="assets/images/hero/stage3-skier.webp"
                                                 />
                                             </div>
