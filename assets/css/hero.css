@@ -241,7 +241,46 @@
     transform: translate(-50%, -50%);
 }
 .hero-slider__scene:not(.hero-slider__scene--foreground, .hero-slider__scene--race) {
-    background: url("../images/hero-snow-background.png") center / 100% 100% no-repeat;
+    background: url("../images/hero-snow-background.webp") center / 100% 100% no-repeat;
+}
+.hero-slider__rainbow {
+    position: absolute;
+    inset: 0;
+    mix-blend-mode: screen;
+}
+.hero-slider__rainbow::before,
+.hero-slider__rainbow::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    mask-image: linear-gradient(transparent, #000 28%, #000 76%, transparent);
+}
+.hero-slider__rainbow::before {
+    top: 20%;
+    height: 17%;
+    background: linear-gradient(
+        174deg,
+        #fa84b500 22%,
+        #f78aac62 41%,
+        #ffc47580 50%,
+        #ffeaae56 57%,
+        #a2def84d 64%,
+        #a2def800 79%
+    );
+}
+.hero-slider__rainbow::after {
+    bottom: 0;
+    height: 36%;
+    background: linear-gradient(
+        166deg,
+        #ff88ae00 31%,
+        #ff88ae82 43%,
+        #ffd99392 49%,
+        #a1ebb77a 52%,
+        #7ddfff81 57%,
+        #a492ff58 62%,
+        #a492ff00 73%
+    );
 }
 .hero-slider__figure {
     position: absolute;
@@ -498,9 +537,7 @@
         aspect-ratio: var(--hero-scene-ratio, 320 / 581);
     }
     .hero-slider__scene:not(.hero-slider__scene--foreground, .hero-slider__scene--race) {
-        background-image: url("../images/originals/hero-snow-background-mobile.png");
-        background-size: auto 109.77%;
-        background-position: 82.8% 75.7%;
+        background-image: url("../images/originals/hero-snow-background-mobile.webp");
     }
     .hero-slider__content {
         min-height: 181.5625cqw;

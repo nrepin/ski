@@ -11,6 +11,20 @@
         />
         <link href="assets/images/ski-factory-favicon.svg" rel="icon" />
         <title>Большая эстафета — Ski Factory 2027</title>
+        <link
+            rel="preload"
+            as="image"
+            type="image/webp"
+            fetchpriority="high"
+            href="assets/images/hero/stage2-background.webp"
+        />
+        <link
+            rel="preload"
+            as="image"
+            type="image/webp"
+            fetchpriority="high"
+            href="assets/images/hero/stage2-skier.webp"
+        />
         <script>
             if (location.protocol === "http:" || location.protocol === "https:") {
                 for (const file of ["TT_Bluescreens_Pro_Extended_Medium.otf", "TT_Bluescreens_Pro_Extended_Bold.otf"]) {
@@ -29,14 +43,14 @@
             href="assets/vendor/swiper/swiper-bundle.min.css?v=74ca6aae5468"
             rel="stylesheet"
         />
-        <link href="assets/css/site.css?v=58104e5592d9" rel="stylesheet" />
-        <link href="assets/css/mobile.css?v=aa872876c013" rel="stylesheet" />
-        <link href="assets/css/overlays.css?v=aa9d2576f4d5" rel="stylesheet" />
-        <link href="assets/css/hero.css?v=a635a2eb6d8e" rel="stylesheet" />
+        <link href="assets/css/site.css?v=cd05091229c8" rel="stylesheet" />
+        <link href="assets/css/mobile.css?v=f97637d26782" rel="stylesheet" />
+        <link href="assets/css/overlays.css?v=9b207e07f8ac" rel="stylesheet" />
+        <link href="assets/css/hero.css?v=01609c3ad9d9" rel="stylesheet" />
         <link href="assets/css/burger-menu.css?v=d9fccc418b34" rel="stylesheet" />
-        <link href="assets/css/footer.css?v=128f57fa590e" rel="stylesheet" />
-        <link href="assets/css/sliding-footer.css?v=a6ff88542008" rel="stylesheet" />
-        <link href="assets/css/decor.css?v=b40e507845e6" rel="stylesheet" />
+        <link href="assets/css/footer.css?v=99846a30352f" rel="stylesheet" />
+        <link href="assets/css/sliding-footer.css?v=ecd923076e56" rel="stylesheet" />
+        <link href="assets/css/decor.css?v=c7d227add11f" rel="stylesheet" />
         <script>
             document.documentElement.classList.add("page--js");
             Promise.allSettled([
@@ -293,7 +307,8 @@
                                     <img
                                         alt=""
                                         class="hero-slider__backdrop"
-                                        src="assets/images/hero/stage2-background.png"
+                                        fetchpriority="high"
+                                        src="assets/images/hero/stage2-background.webp"
                                     />
                                 </div>
                             </div>
@@ -308,7 +323,8 @@
                                         <img
                                             alt=""
                                             class="hero-slider__skier"
-                                            src="assets/images/hero/stage2-skier.png"
+                                            fetchpriority="high"
+                                            src="assets/images/hero/stage2-skier.webp"
                                         />
                                     </div>
                                 </div>
@@ -404,7 +420,7 @@
                     <img
                         alt="Участники гонки Ski Factory 2026"
                         class="video-cover__image"
-                        src="assets/images/race-video-cover.png"
+                        src="assets/images/race-video-cover.webp"
                     /><span aria-hidden="true" class="video-play"
                         ><svg class="video-play__image svg-icon" aria-hidden="true" focusable="false" width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22.8232 11.5068C24.2521 12.3233 24.2521 14.3837 22.8232 15.2002L3.18219 26.4236C1.76425 27.2338 8.97409e-08 26.21 1.61866e-07 24.5769L1.15322e-06 2.13005C1.22534e-06 0.49694 1.76425 -0.526891 3.18218 0.283356L22.8232 11.5068Z" fill="currentColor"/>
@@ -421,10 +437,10 @@
                     <div aria-label="Дистанции" class="tabs" role="tablist">
                         <button
                             aria-controls="route-panel-0"
-                            aria-selected="true"
+                            aria-selected="false"
                             class="tabs__button tabs__button--compact"
                             data-route="600 м"
-                            data-route-map="assets/images/map/600.png"
+                            data-route-map="assets/images/map/600.webp"
                             id="route-tab-0"
                             role="tab"
                             tabindex="0"
@@ -435,7 +451,7 @@
                             aria-selected="false"
                             class="tabs__button"
                             data-route="2,5 км"
-                            data-route-map="assets/images/map/2km.png"
+                            data-route-map="assets/images/map/2km.webp"
                             data-route-laps="1"
                             data-route-turns="Умеренно"
                             data-route-difficulty="5/10"
@@ -452,7 +468,7 @@
                             aria-selected="false"
                             class="tabs__button tabs__button--last-in-row"
                             data-route="5 км"
-                            data-route-map="assets/images/map/5km.png"
+                            data-route-map="assets/images/map/5km.webp"
                             data-route-laps="1"
                             data-route-turns="Интенсивно"
                             data-route-difficulty="5/10"
@@ -469,7 +485,7 @@
                             aria-selected="false"
                             class="tabs__button tabs__button--compact"
                             data-route="10 км"
-                            data-route-map="assets/images/map/10km.png"
+                            data-route-map="assets/images/map/10km.webp"
                             data-route-laps="2"
                             data-route-turns="Интенсивно"
                             data-route-difficulty="7/10"
@@ -484,7 +500,7 @@
                             aria-selected="false"
                             class="tabs__button"
                             data-route="20 км"
-                            data-route-map="assets/images/map/20km.png"
+                            data-route-map="assets/images/map/20km.webp"
                             data-route-laps="4"
                             data-route-turns="Интенсивно"
                             data-route-difficulty="9/10"
@@ -499,13 +515,7 @@
                         </button>
                     </div>
                 </div>
-                <div
-                    aria-labelledby="route-tab-0"
-                    class="routes__panel"
-                    id="route-panel-0"
-                    role="tabpanel"
-                    tabindex="0"
-                >
+                <div class="routes__panel" id="routes-overview">
                     <div class="routes__copy">
                         <p class="routes__text">
                             Трасса длиной 600 метров - это самый легкий и комфортный круг легендарного
@@ -547,17 +557,14 @@
                             </div>
                         </div>
                     </div>
-                    <button
-                        aria-label="Увеличить схему трасс"
-                        class="map-preview"
-                        data-image="assets/images/map/600.png"
-                    >
+                    <div class="map-preview">
                         <img
-                            alt="Схема трассы на 600 м"
+                            alt="Схема трасс Одинцовского парка: 600 метров, 2,5, 5, 10 и 20 километров"
                             class="map-preview__image"
-                            src="assets/images/map/600.png"
+                            loading="lazy"
+                            src="assets/images/race-tracks-map.webp"
                         />
-                    </button>
+                    </div>
                 </div>
             </section>
             <section
@@ -887,7 +894,9 @@
             <div aria-hidden="true" class="brand-ribbon"></div>
             <section class="teams container page__section" id="teams">
                 <h2 class="teams__title" data-reveal="">
-                    Клубный и Корпоративный зачёты
+                    Клубный<br class="teams__title-break" />
+                    и Корпоративный<br class="teams__title-break" />
+                    зачёты
                 </h2>
                 <div class="team-grid">
                     <article class="team-grid__article" data-reveal="">
@@ -920,10 +929,11 @@
                         </p>
                         <p class="team-description team-grid__text--content">
                             Итоги клубного зачёта рассчитываются исходя
-                            из&nbsp;количества участников и преодоленной дистанции:
-                            участник, пробежавший основную дистанцию (20&nbsp;км
-                            для мужчин или 10&nbsp;км для женщин), приносит клубу
-                            2 балла, участник, пробежавший дистанцию 5&nbsp;км
+                            из количества участников<br class="team-description__break" />
+                            и преодоленной дистанции: участник, пробежавший основную дистанцию<br class="team-description__break" />
+                            (20&nbsp;км для мужчин или 10&nbsp;км для женщин) приносит клубу
+                            2 балла, участник, пробежавший дистанцию<br class="team-description__break" />
+                            5&nbsp;км
                             <span class="team-grid__age-note">(возраст 18+) - 1 балл</span>
                         </p>
                         <a
@@ -962,19 +972,19 @@
                         <p
                             class="team-lead team-lead--corporate team-grid__text--team-lead team-grid__text--content"
                         >
-                            Стоимость участия: 3500 ₽/чел.
+                            Стоимость участия корпоративной команды: 3500 ₽/чел.
                             на&nbsp;любую&nbsp;дистанцию
                         </p>
                         <p
                             class="team-description team-grid__text--content team-description--secondary"
                         >
-                            Что включено в стоимость: сопровождение менеджера,
+                            В стоимость включено: сопровождение менеджера,
                             стартовый пакет участника, лого компании на
                             официальной странице гонки, возможность разместить
                             флаг компании в стартовом городке соревнований
                         </p>
                         <a
-                            class="button team-grid__link"
+                            class="button team-grid__link team-grid__link--corporate"
                             href="https://reg.place/events/gonka-uralhim-ski-factory-2027"
                             target="_blank"
                             rel="noopener"
@@ -983,7 +993,7 @@
                         <p
                             class="team-grid__text team-grid__text--content team-grid__note team-grid__note--corporate"
                         >
-                            Команды победителей и призеры награждаются памятными
+                            команды победителей и призеры награждаются памятными
                             кубками
                         </p>
                     </article>
@@ -1147,272 +1157,267 @@
             </section>
             <section class="photos page__section">
                 <h2 class="photos__title" data-reveal="">
-                    Фотографии с Гонки Уралхим<br class="photos__break" />Ski
-                    Factory 2026
+                    Фотографии с Гонки Уралхим<br class="photos__break" />
+                    Ski Factory 2026
                 </h2>
                 <div
                     aria-label="Фотографии с гонки"
-                    class="swiper race-photos slider-loading"
+                    class="race-photos"
                 >
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide race-photos__group">
-                            <div class="slider-loading__skeleton" aria-hidden="true"></div>
-                            <button
-                                aria-label="Увеличить фотографию 1"
-                                class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-01.png"
-                                data-photo-index="0"
-                            >
-                                <img
-                                    alt="Участники гонки Ski Factory 2026 — фото 1"
-                                    class="swiper-slide__image race-photos__image"
-                                    decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-01.png"
-                                /><span
-                                    aria-hidden="true"
-                                    class="race-photos__zoom"
-                                    ><svg class="swiper-slide__image race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-                                        </g>
-                                    </svg></span>
-                            </button>
-                        </div>
-                        <div class="swiper-slide race-photos__group">
-                            <div class="slider-loading__skeleton" aria-hidden="true"></div>
-                            <button
-                                aria-label="Увеличить фотографию 2"
-                                class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-02.png"
-                                data-photo-index="1"
-                            >
-                                <img
-                                    alt="Участники гонки Ski Factory 2026 — фото 2"
-                                    class="swiper-slide__image race-photos__image"
-                                    decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-02.png"
-                                /><span
-                                    aria-hidden="true"
-                                    class="race-photos__zoom"
-                                    ><svg class="swiper-slide__image race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-                                        </g>
-                                    </svg></span>
-                            </button>
-                        </div>
-                        <div class="swiper-slide race-photos__group">
-                            <div class="slider-loading__skeleton" aria-hidden="true"></div>
-                            <button
-                                aria-label="Увеличить фотографию 3"
-                                class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-03.png"
-                                data-photo-index="2"
-                            >
-                                <img
-                                    alt="Участники гонки Ski Factory 2026 — фото 3"
-                                    class="swiper-slide__image race-photos__image"
-                                    decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-03.png"
-                                /><span
-                                    aria-hidden="true"
-                                    class="race-photos__zoom"
-                                    ><svg class="swiper-slide__image race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-                                        </g>
-                                    </svg></span>
-                            </button>
-                        </div>
-                        <div class="swiper-slide race-photos__group">
-                            <div class="slider-loading__skeleton" aria-hidden="true"></div>
-                            <button
-                                aria-label="Увеличить фотографию 4"
-                                class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-04.png"
-                                data-photo-index="3"
-                            >
-                                <img
-                                    alt="Участники гонки Ski Factory 2026 — фото 4"
-                                    class="swiper-slide__image race-photos__image"
-                                    decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-04.png"
-                                /><span
-                                    aria-hidden="true"
-                                    class="race-photos__zoom"
-                                    ><svg class="swiper-slide__image race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-                                        </g>
-                                    </svg></span>
-                            </button>
-                        </div>
-                        <div class="swiper-slide race-photos__group">
-                            <div class="slider-loading__skeleton" aria-hidden="true"></div>
-                            <button
-                                aria-label="Увеличить фотографию 5"
-                                class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-05.png"
-                                data-photo-index="4"
-                            >
-                                <img
-                                    alt="Участники гонки Ski Factory 2026 — фото 5"
-                                    class="swiper-slide__image race-photos__image"
-                                    decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-05.png"
-                                /><span
-                                    aria-hidden="true"
-                                    class="race-photos__zoom"
-                                    ><svg class="swiper-slide__image race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-                                        </g>
-                                    </svg></span>
-                            </button>
-                        </div>
-                        <div class="swiper-slide race-photos__group">
-                            <div class="slider-loading__skeleton" aria-hidden="true"></div>
-                            <button
-                                aria-label="Увеличить фотографию 6"
-                                class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-06.png"
-                                data-photo-index="5"
-                            >
-                                <img
-                                    alt="Участники гонки Ski Factory 2026 — фото 6"
-                                    class="swiper-slide__image race-photos__image"
-                                    decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-06.png"
-                                /><span
-                                    aria-hidden="true"
-                                    class="race-photos__zoom"
-                                    ><svg class="swiper-slide__image race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-                                        </g>
-                                    </svg></span>
-                            </button>
-                        </div>
-                        <div class="swiper-slide race-photos__group">
-                            <div class="slider-loading__skeleton" aria-hidden="true"></div>
-                            <button
-                                aria-label="Увеличить фотографию 7"
-                                class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-07.png"
-                                data-photo-index="6"
-                            >
-                                <img
-                                    alt="Участники гонки Ski Factory 2026 — фото 7"
-                                    class="swiper-slide__image race-photos__image"
-                                    decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-07.png"
-                                /><span
-                                    aria-hidden="true"
-                                    class="race-photos__zoom"
-                                    ><svg class="swiper-slide__image race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-                                        </g>
-                                    </svg></span>
-                            </button>
-                        </div>
-                        <div class="swiper-slide race-photos__group">
-                            <div class="slider-loading__skeleton" aria-hidden="true"></div>
-                            <button
-                                aria-label="Увеличить фотографию 8"
-                                class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-08.png"
-                                data-photo-index="7"
-                            >
-                                <img
-                                    alt="Участники гонки Ski Factory 2026 — фото 8"
-                                    class="swiper-slide__image race-photos__image"
-                                    decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-08.png"
-                                /><span
-                                    aria-hidden="true"
-                                    class="race-photos__zoom"
-                                    ><svg class="swiper-slide__image race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-                                        </g>
-                                    </svg></span>
-                            </button>
-                        </div>
-                        <div class="swiper-slide race-photos__group">
-                            <div class="slider-loading__skeleton" aria-hidden="true"></div>
-                            <button
-                                aria-label="Увеличить фотографию 9"
-                                class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-09.png"
-                                data-photo-index="8"
-                            >
-                                <img
-                                    alt="Участники гонки Ski Factory 2026 — фото 9"
-                                    class="swiper-slide__image race-photos__image"
-                                    decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-09.png"
-                                /><span
-                                    aria-hidden="true"
-                                    class="race-photos__zoom"
-                                    ><svg class="swiper-slide__image race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-                                        </g>
-                                    </svg></span>
-                            </button>
-                        </div>
-                        <div class="swiper-slide race-photos__group">
-                            <div class="slider-loading__skeleton" aria-hidden="true"></div>
-                            <button
-                                aria-label="Увеличить фотографию 10"
-                                class="race-photos__button slider-loading__content"
-                                data-image="assets/images/originals/race-2026-gallery-10.png"
-                                data-photo-index="9"
-                            >
-                                <img
-                                    alt="Участники гонки Ski Factory 2026 — фото 10"
-                                    class="swiper-slide__image race-photos__image"
-                                    decoding="async"
-                                    src="assets/images/originals/race-2026-gallery-10.png"
-                                /><span
-                                    aria-hidden="true"
-                                    class="race-photos__zoom"
-                                    ><svg class="swiper-slide__image race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
-                                            <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-                                        </g>
-                                    </svg></span>
-                            </button>
+                    <div class="race-photos__track">
+                        <div class="race-photos__cycle">
+                            <div class="race-photos__group slider-loading">
+                                <div class="slider-loading__skeleton" aria-hidden="true"></div>
+                                <button
+                                    aria-label="Увеличить фотографию 1"
+                                    class="race-photos__button slider-loading__content"
+                                    data-image="assets/images/originals/race-2026-gallery-01.webp"
+                                    data-photo-index="0"
+                                >
+                                    <img
+                                        alt="Участники гонки Ski Factory 2026 — фото 1"
+                                        class="race-photos__image"
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="assets/images/originals/race-2026-gallery-01-thumb.webp"
+                                    /><span
+                                        aria-hidden="true"
+                                        class="race-photos__zoom"
+                                        ><svg class="race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                                            </g>
+                                        </svg></span>
+                                </button>
+                            </div>
+                            <div class="race-photos__group slider-loading">
+                                <div class="slider-loading__skeleton" aria-hidden="true"></div>
+                                <button
+                                    aria-label="Увеличить фотографию 2"
+                                    class="race-photos__button slider-loading__content"
+                                    data-image="assets/images/originals/race-2026-gallery-02.webp"
+                                    data-photo-index="1"
+                                >
+                                    <img
+                                        alt="Участники гонки Ski Factory 2026 — фото 2"
+                                        class="race-photos__image"
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="assets/images/originals/race-2026-gallery-02-thumb.webp"
+                                    /><span
+                                        aria-hidden="true"
+                                        class="race-photos__zoom"
+                                        ><svg class="race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                                            </g>
+                                        </svg></span>
+                                </button>
+                            </div>
+                            <div class="race-photos__group slider-loading">
+                                <div class="slider-loading__skeleton" aria-hidden="true"></div>
+                                <button
+                                    aria-label="Увеличить фотографию 3"
+                                    class="race-photos__button slider-loading__content"
+                                    data-image="assets/images/originals/race-2026-gallery-03.webp"
+                                    data-photo-index="2"
+                                >
+                                    <img
+                                        alt="Участники гонки Ski Factory 2026 — фото 3"
+                                        class="race-photos__image"
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="assets/images/originals/race-2026-gallery-03-thumb.webp"
+                                    /><span
+                                        aria-hidden="true"
+                                        class="race-photos__zoom"
+                                        ><svg class="race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                                            </g>
+                                        </svg></span>
+                                </button>
+                            </div>
+                            <div class="race-photos__group slider-loading">
+                                <div class="slider-loading__skeleton" aria-hidden="true"></div>
+                                <button
+                                    aria-label="Увеличить фотографию 4"
+                                    class="race-photos__button slider-loading__content"
+                                    data-image="assets/images/originals/race-2026-gallery-04.webp"
+                                    data-photo-index="3"
+                                >
+                                    <img
+                                        alt="Участники гонки Ski Factory 2026 — фото 4"
+                                        class="race-photos__image"
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="assets/images/originals/race-2026-gallery-04-thumb.webp"
+                                    /><span
+                                        aria-hidden="true"
+                                        class="race-photos__zoom"
+                                        ><svg class="race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                                            </g>
+                                        </svg></span>
+                                </button>
+                            </div>
+                            <div class="race-photos__group slider-loading">
+                                <div class="slider-loading__skeleton" aria-hidden="true"></div>
+                                <button
+                                    aria-label="Увеличить фотографию 5"
+                                    class="race-photos__button slider-loading__content"
+                                    data-image="assets/images/originals/race-2026-gallery-05.webp"
+                                    data-photo-index="4"
+                                >
+                                    <img
+                                        alt="Участники гонки Ski Factory 2026 — фото 5"
+                                        class="race-photos__image"
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="assets/images/originals/race-2026-gallery-05-thumb.webp"
+                                    /><span
+                                        aria-hidden="true"
+                                        class="race-photos__zoom"
+                                        ><svg class="race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                                            </g>
+                                        </svg></span>
+                                </button>
+                            </div>
+                            <div class="race-photos__group slider-loading">
+                                <div class="slider-loading__skeleton" aria-hidden="true"></div>
+                                <button
+                                    aria-label="Увеличить фотографию 6"
+                                    class="race-photos__button slider-loading__content"
+                                    data-image="assets/images/originals/race-2026-gallery-06.webp"
+                                    data-photo-index="5"
+                                >
+                                    <img
+                                        alt="Участники гонки Ski Factory 2026 — фото 6"
+                                        class="race-photos__image"
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="assets/images/originals/race-2026-gallery-06-thumb.webp"
+                                    /><span
+                                        aria-hidden="true"
+                                        class="race-photos__zoom"
+                                        ><svg class="race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                                            </g>
+                                        </svg></span>
+                                </button>
+                            </div>
+                            <div class="race-photos__group slider-loading">
+                                <div class="slider-loading__skeleton" aria-hidden="true"></div>
+                                <button
+                                    aria-label="Увеличить фотографию 7"
+                                    class="race-photos__button slider-loading__content"
+                                    data-image="assets/images/originals/race-2026-gallery-07.webp"
+                                    data-photo-index="6"
+                                >
+                                    <img
+                                        alt="Участники гонки Ski Factory 2026 — фото 7"
+                                        class="race-photos__image"
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="assets/images/originals/race-2026-gallery-07-thumb.webp"
+                                    /><span
+                                        aria-hidden="true"
+                                        class="race-photos__zoom"
+                                        ><svg class="race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                                            </g>
+                                        </svg></span>
+                                </button>
+                            </div>
+                            <div class="race-photos__group slider-loading">
+                                <div class="slider-loading__skeleton" aria-hidden="true"></div>
+                                <button
+                                    aria-label="Увеличить фотографию 8"
+                                    class="race-photos__button slider-loading__content"
+                                    data-image="assets/images/originals/race-2026-gallery-08.webp"
+                                    data-photo-index="7"
+                                >
+                                    <img
+                                        alt="Участники гонки Ski Factory 2026 — фото 8"
+                                        class="race-photos__image"
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="assets/images/originals/race-2026-gallery-08-thumb.webp"
+                                    /><span
+                                        aria-hidden="true"
+                                        class="race-photos__zoom"
+                                        ><svg class="race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                                            </g>
+                                        </svg></span>
+                                </button>
+                            </div>
+                            <div class="race-photos__group slider-loading">
+                                <div class="slider-loading__skeleton" aria-hidden="true"></div>
+                                <button
+                                    aria-label="Увеличить фотографию 9"
+                                    class="race-photos__button slider-loading__content"
+                                    data-image="assets/images/originals/race-2026-gallery-09.webp"
+                                    data-photo-index="8"
+                                >
+                                    <img
+                                        alt="Участники гонки Ski Factory 2026 — фото 9"
+                                        class="race-photos__image"
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="assets/images/originals/race-2026-gallery-09-thumb.webp"
+                                    /><span
+                                        aria-hidden="true"
+                                        class="race-photos__zoom"
+                                        ><svg class="race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                                            </g>
+                                        </svg></span>
+                                </button>
+                            </div>
+                            <div class="race-photos__group slider-loading">
+                                <div class="slider-loading__skeleton" aria-hidden="true"></div>
+                                <button
+                                    aria-label="Увеличить фотографию 10"
+                                    class="race-photos__button slider-loading__content"
+                                    data-image="assets/images/originals/race-2026-gallery-10.webp"
+                                    data-photo-index="9"
+                                >
+                                    <img
+                                        alt="Участники гонки Ski Factory 2026 — фото 10"
+                                        class="race-photos__image"
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="assets/images/originals/race-2026-gallery-10-thumb.webp"
+                                    /><span
+                                        aria-hidden="true"
+                                        class="race-photos__zoom"
+                                        ><svg class="race-photos__zoom-icon svg-icon" focusable="false" aria-hidden="true" preserveAspectRatio="none" width="34.3487" height="34.3487" viewBox="0 0 34.3487 34.3487" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M31.4872 17.1733C31.4872 25.0776 25.0795 31.4853 17.1753 31.4853C9.27097 31.4853 2.86328 25.0776 2.86328 17.1733C2.86328 9.26901 9.27097 2.86133 17.1753 2.86133C25.0795 2.86133 31.4872 9.26901 31.4872 17.1733Z" stroke-width="1.39252" stroke="currentColor"/>
+                                                <path class="svg-icon__shape svg-icon__shape--stroke" d="M21.1374 13.2056L12.875 21.468M21.1374 18.3696C21.1522 17.3396 21.8606 13.9288 21.1374 13.2056C20.4143 12.4824 17.0034 13.1909 15.9734 13.2056" stroke-width="1.39252" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                                            </g>
+                                        </svg></span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="photo-controls">
-                    <button
-                        aria-label="Предыдущие фотографии"
-                        class="photos-prev photo-controls__button"
-                    >
-<svg class="photo-controls__icon svg-icon" focusable="false" aria-hidden="true" width="22" height="50" viewBox="0 0 22 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path class="svg-icon__shape svg-icon__shape--stroke" d="M19.4697 48L4.61753 31.7454C1.12733 27.9257 1.12733 22.0743 4.61753 18.2546L19.4697 2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</svg></button
-                    ><button
-                        aria-label="Следующие фотографии"
-                        class="photos-next photo-controls__button"
-                    >
-<svg class="photo-controls__icon svg-icon" focusable="false" aria-hidden="true" width="22" height="50" viewBox="0 0 22 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path class="svg-icon__shape svg-icon__shape--stroke" d="M2 2L16.8522 18.2546C20.3424 22.0743 20.3424 27.9257 16.8522 31.7454L2 48" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
-</svg>
-                    </button>
                 </div>
             </section>
             <section class="partners container page__section">
@@ -1485,12 +1490,17 @@
                         rel="noopener"
                         data-reveal=""
                     >
-                        <span class="partner-symbol partner-card__logo"
-                            ><img
+                        <picture class="partner-symbol partner-card__logo">
+                            <source
+                                media="(width < 500px)"
+                                srcset="assets/images/figwright/bivium-logo-mobile.webp"
+                            />
+                            <img
                                 alt="БИВИУМ"
                                 class="partner-symbol__image"
-                                src="assets/images/originals/partner-symbol.png"
-                        /></span>
+                                src="assets/images/originals/partner-symbol.webp"
+                            />
+                        </picture>
                     </a>
                     <a
                         class="partner-card partner-card--link partner-card--sport"
@@ -1499,7 +1509,15 @@
                         rel="noopener"
                         data-reveal=""
                     >
-                        <svg class="partner-sport partner-card__logo svg-icon" focusable="false" role="img" aria-label="Sport noise" preserveAspectRatio="none" width="252.598" height="42.1456" viewBox="0 0 252.598 42.1456" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <img
+                            alt="Sport noise"
+                            class="partner-card__logo partner-sport partner-sport--compact"
+                            src="assets/images/figwright/sport-noise-mobile.svg"
+                            width="77"
+                            height="39"
+                            loading="lazy"
+                        />
+                        <svg class="partner-sport partner-sport--wide partner-card__logo svg-icon" focusable="false" role="img" aria-label="Sport noise" preserveAspectRatio="none" width="252.598" height="42.1456" viewBox="0 0 252.598 42.1456" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path class="svg-icon__shape svg-icon__shape--fill" d="M211.92 12.2812L204.724 14.0406L200.785 34.2678L200.773 34.3586H207.629L211.897 12.3948L211.92 12.2812Z" fill="#2D4584"/>
                                 <path class="svg-icon__shape svg-icon__shape--fill" d="M208.618 10.194C208.799 10.194 208.992 10.1826 209.185 10.1486C211.24 9.81942 213.09 7.82167 213.317 5.69906C213.43 4.64344 213.135 3.71267 212.477 3.08837C211.853 2.48678 210.956 2.24841 209.98 2.40732C207.925 2.7365 206.075 4.73424 205.848 6.85685C205.734 7.91248 206.03 8.84324 206.688 9.46754C207.187 9.94427 207.857 10.194 208.618 10.194Z" fill="#2D4584"/>
@@ -1519,13 +1537,20 @@
                             </g>
                         </svg>
                     </a>
-                    <div class="partner-card partner-card--race" data-reveal="">
+                    <a
+                        class="partner-card partner-card--link partner-card--race"
+                        href="https://results.racetime.online/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Результаты гонок на Race Time"
+                        data-reveal=""
+                    >
                         <img
                             alt="Race Time"
-                            class="partner-race"
-                            src="assets/images/originals/race-time-logo.png"
+                            class="partner-race partner-card__logo"
+                            src="assets/images/originals/race-time-logo.webp"
                         />
-                    </div>
+                    </a>
                     <a
                         class="partner-card partner-card--link partner-card--radio"
                         href="https://silver.ru/"
@@ -1533,12 +1558,17 @@
                         rel="noopener"
                         data-reveal=""
                     >
-                        <span class="partner-radio partner-card__logo"
-                            ><img
+                        <picture class="partner-radio partner-card__logo">
+                            <source
+                                media="(width < 500px)"
+                                srcset="assets/images/figwright/radio-logo-mobile.webp"
+                            />
+                            <img
                                 alt="Серебряный дождь 100.1 FM"
                                 class="partner-radio__image"
-                                src="assets/images/originals/radio-100-1-logo.png"
-                        /></span>
+                                src="assets/images/originals/radio-100-1-logo.webp"
+                            />
+                        </picture>
                     </a>
                 </div>
             </section>
@@ -1640,12 +1670,17 @@
                         </g>
                     </svg>
                 </div>
-                <img
-                    alt="Фирменная тёмно-синяя футболка Ski Factory"
-                    class="merch-shirt merch__group"
-                    data-reveal=""
-                    src="assets/images/ski-factory-shirt.png"
-                />
+                <picture class="merch-shirt merch__group" data-reveal="">
+                    <source
+                        media="(width < 768px)"
+                        srcset="assets/images/figwright/merch-shirt-mobile.webp"
+                    />
+                    <img
+                        alt="Фирменная тёмно-синяя футболка Ski Factory"
+                        class="merch-shirt__image"
+                        src="assets/images/ski-factory-shirt.webp"
+                    />
+                </picture>
                 <a
                     class="button merch__group merch__button"
                     data-reveal=""
@@ -1899,7 +1934,7 @@
         <script src="assets/vendor/swiper/swiper-bundle.min.js?v=985f1224c0ee"></script>
         <script src="assets/vendor/gsap/gsap.min.js?v=3d1bea374ab1"></script>
         <script src="assets/vendor/gsap/ScrollTrigger.min.js?v=b5bb360661f4"></script>
-        <script src="assets/js/app.js?v=0f74e600cc6f"></script>
-        <script src="assets/js/page-reveal.js?v=733ae24ab9ac"></script>
+        <script src="assets/js/app.js?v=6306b16d517c"></script>
+        <script src="assets/js/page-reveal.js?v=62b40fec94ab"></script>
     </body>
 </html>

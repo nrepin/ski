@@ -59,10 +59,6 @@
 .media-dialog__close:focus-visible {
     color: var(--hover-cyan);
 }
-.media-dialog__image {
-    max-height: 80dvh;
-    object-fit: contain;
-}
 /* Gallery and Video — Restored Project Modals */
 .sr-only {
     position: absolute;

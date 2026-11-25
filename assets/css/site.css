@@ -220,7 +220,7 @@ dialog::backdrop {
 .hero {
     position: relative;
     isolation: isolate;
-    background: var(--navy) url("../images/hero-snow-background.png") center/cover no-repeat;
+    background: var(--navy) url("../images/hero-snow-background.webp") center/cover no-repeat;
     color: var(--white);
     border-radius: 42px;
     overflow: clip;
@@ -311,8 +311,13 @@ dialog::backdrop {
     width: 579px;
     height: 492px;
     max-width: none;
-    object-fit: contain;
     pointer-events: none;
+}
+.merch-shirt__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .merch__button {
     position: relative;
@@ -493,6 +498,15 @@ dialog::backdrop {
 .tabs__button[aria-selected="true"] {
     background: var(--cyan);
 }
+.tabs__button:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+}
+@media (hover: hover) {
+    .tabs__button[aria-selected="false"]:hover {
+        opacity: 0.8;
+    }
+}
 .route-stats {
     min-height: 165px;
     display: grid;
@@ -533,9 +547,6 @@ dialog::backdrop {
     width: 100%;
     aspect-ratio: 619 / 572;
     overflow: hidden;
-    padding: 0;
-    border: 0;
-    background: none;
     grid-column: 2;
     grid-row: 1 / span 2;
 }
@@ -583,6 +594,9 @@ dialog::backdrop {
     flex-direction: column;
     gap: 28px;
     min-width: 0;
+}
+.routes__text {
+    background-color: #fff;
 }
 /* Dark Panel */
 .dark-panel {
@@ -724,6 +738,7 @@ dialog::backdrop {
     margin-bottom: 20px;
 }
 .information-panel {
+    isolation: isolate;
     padding: 108.5px 8%;
     border-radius: 44px;
     color: var(--white);
@@ -823,6 +838,10 @@ dialog::backdrop {
     text-align: center;
     line-height: 91px;
     margin-bottom: 20px;
+}
+.teams__title-break,
+.team-description__break {
+    display: none;
 }
 .team-grid {
     display: grid;
@@ -1117,12 +1136,29 @@ dialog::backdrop {
     margin: 0 auto 32px;
 }
 .race-photos {
-    --skeleton-highlight: #fff;
+    --photo-gap: 7px;
     --skeleton-radius: 9.283px;
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+.race-photos--animated {
+    overflow: clip;
+}
+.race-photos__track {
+    position: relative;
+    display: flex;
+    width: max-content;
+}
+.race-photos__cycle {
+    display: flex;
+    flex: none;
+    gap: var(--photo-gap);
+    padding-inline-end: var(--photo-gap);
 }
 .race-photos__group {
+    --skeleton-highlight: #fff;
+    flex: none;
     width: 285.93px;
     height: 347.201px;
 }
@@ -1168,35 +1204,6 @@ dialog::backdrop {
         color: var(--hover-cyan);
     }
 }
-.photo-controls {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin: 16px auto 0;
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip-path: inset(50%);
-    overflow: hidden;
-}
-.photo-controls__button {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    border: 0;
-    border-radius: 50%;
-    background: var(--ink);
-    color: white;
-}
-.photo-controls:focus-within {
-    position: relative;
-    width: auto;
-    height: auto;
-    clip-path: none;
-    overflow: visible;
-}
-
 /* Partners */
 .partners {
     text-align: center;
@@ -1266,6 +1273,9 @@ dialog::backdrop {
 /* Partner Sport */
 .partner-sport {
     width: 67.36%;
+}
+.partner-sport--compact {
+    display: none;
 }
 
 /* Partner Race */
@@ -1401,20 +1411,13 @@ dialog::backdrop {
 }
 
 /* Interactive Controls */
-.tabs__button,
-.photo-controls__button {
-    transition: background-color 200ms ease, color 200ms ease;
-}
-.tabs__button:focus-visible,
-.photo-controls__button:focus-visible {
-    background-color: var(--hover-cyan);
-    color: #fff;
+.tabs__button {
+    transition: background-color 200ms ease, opacity 200ms ease;
 }
 /* Reduced Motion — Interaction Feedback */
 @media (prefers-reduced-motion: reduce) {
     .button,
     .tabs__button,
-    .photo-controls__button,
     .information-panel__summary {
         transition: none;
     }
@@ -1457,10 +1460,6 @@ dialog::backdrop {
 .information-panel__summary[aria-expanded="true"] .information-panel__icon--open {
     display: block;
 }
-.photo-controls__icon {
-    width: 14px;
-    height: 28px;
-}
 
 /* Video Play — color the inline triangle */
 .video-cover:focus-visible .video-play {
@@ -1472,9 +1471,7 @@ dialog::backdrop {
 
 /* Desktop — Pointer Hover */
 @media (width >= 768px) {
-    .button:hover,
-    .tabs__button:hover,
-    .photo-controls__button:hover {
+    .button:hover {
         background-color: var(--hover-cyan);
         color: #fff;
     }

@@ -6,7 +6,7 @@
     overflow: clip;
     border-radius: 43px;
     color: #fff;
-    background: #1e58ea url("../images/footer-shade-desktop.png") center / 100% 100% no-repeat;
+    background: #1e58ea url("../images/footer-shade-desktop.webp") center / 100% 100% no-repeat;
 }
 
 .footer-layout {
@@ -184,7 +184,7 @@
         width: 100%;
         margin-inline: 0;
         border-radius: 20px 20px 0 0;
-        background-image: url("../images/footer-shade-mobile.png");
+        background-image: url("../images/footer-shade-mobile.webp");
     }
 
     .footer-layout {

@@ -11,6 +11,38 @@
         />
         <link href="assets/images/ski-factory-favicon.svg" rel="icon" />
         <title>Гонка Уралхим Ski Factory 2027</title>
+        <link
+            rel="preload"
+            as="image"
+            type="image/webp"
+            fetchpriority="high"
+            media="(width >= 768px)"
+            href="assets/images/hero-snow-background.webp"
+        />
+        <link
+            rel="preload"
+            as="image"
+            type="image/webp"
+            fetchpriority="high"
+            media="(width &lt; 768px)"
+            href="assets/images/originals/hero-snow-background-mobile.webp"
+        />
+        <link
+            rel="preload"
+            as="image"
+            type="image/webp"
+            fetchpriority="high"
+            media="(width >= 768px)"
+            href="assets/images/hero/skier-unclipped.webp"
+        />
+        <link
+            rel="preload"
+            as="image"
+            type="image/webp"
+            fetchpriority="high"
+            media="(width &lt; 768px)"
+            href="assets/images/section9/hero-skier-mobile.webp"
+        />
         <script>
             if (location.protocol === "http:" || location.protocol === "https:") {
                 for (const file of ["TT_Bluescreens_Pro_Extended_Medium.otf", "TT_Bluescreens_Pro_Extended_Bold.otf"]) {
@@ -29,14 +61,14 @@
             href="assets/vendor/swiper/swiper-bundle.min.css?v=74ca6aae5468"
             rel="stylesheet"
         />
-        <link href="assets/css/site.css?v=58104e5592d9" rel="stylesheet" />
-        <link href="assets/css/mobile.css?v=aa872876c013" rel="stylesheet" />
-        <link href="assets/css/overlays.css?v=aa9d2576f4d5" rel="stylesheet" />
-        <link href="assets/css/hero.css?v=a635a2eb6d8e" rel="stylesheet" />
+        <link href="assets/css/site.css?v=cd05091229c8" rel="stylesheet" />
+        <link href="assets/css/mobile.css?v=f97637d26782" rel="stylesheet" />
+        <link href="assets/css/overlays.css?v=9b207e07f8ac" rel="stylesheet" />
+        <link href="assets/css/hero.css?v=01609c3ad9d9" rel="stylesheet" />
         <link href="assets/css/burger-menu.css?v=d9fccc418b34" rel="stylesheet" />
-        <link href="assets/css/footer.css?v=128f57fa590e" rel="stylesheet" />
-        <link href="assets/css/sliding-footer.css?v=a6ff88542008" rel="stylesheet" />
-        <link href="assets/css/decor.css?v=b40e507845e6" rel="stylesheet" />
+        <link href="assets/css/footer.css?v=99846a30352f" rel="stylesheet" />
+        <link href="assets/css/sliding-footer.css?v=ecd923076e56" rel="stylesheet" />
+        <link href="assets/css/decor.css?v=c7d227add11f" rel="stylesheet" />
         <script>
             document.documentElement.classList.add("page--js");
             Promise.allSettled([
@@ -51,6 +83,13 @@
                     if (!element.hasAttribute("aria-busy")) {
                         element.dataset.sliderReady = "unavailable";
                     }
+                });
+                const pendingImages = document.querySelectorAll(
+                    ".hero-slider.swiper-initialized img[loading='lazy']",
+                );
+                pendingImages.forEach((image) => {
+                    image.loading = "eager";
+                    image.decode().catch(() => {});
                 });
             }, { once: true });
         </script>
@@ -296,7 +335,9 @@
                                         aria-hidden="true"
                                         class="hero-slider__artwork"
                                     >
-                                        <div class="hero-slider__scene"></div>
+                                        <div class="hero-slider__scene">
+                                            <span class="hero-slider__rainbow"></span>
+                                        </div>
                                     </div>
                                     <div
                                         aria-hidden="true"
@@ -312,13 +353,14 @@
                                                     <source
                                                         media="(width &lt; 768px)"
                                                         srcset="
-                                                            assets/images/section9/hero-skier-mobile.svg
+                                                            assets/images/section9/hero-skier-mobile.webp
                                                         "
                                                     />
                                                     <img
                                                         alt=""
                                                         class="hero-slider__skier"
-                                                        src="assets/images/hero/skier-unclipped.svg"
+                                                        fetchpriority="high"
+                                                        src="assets/images/hero/skier-unclipped.webp"
                                                     />
                                                 </picture>
                                             </div>
@@ -390,8 +432,10 @@
                                         <div class="hero-slider__scene hero-slider__scene--race">
                                             <img
                                                 alt=""
-                                                class="hero-slider__backdrop" loading="lazy"
-                                                src="assets/images/hero/stage2-background.png"
+                                                class="hero-slider__backdrop"
+                                                fetchpriority="low"
+                                                loading="lazy"
+                                                src="assets/images/hero/stage2-background.webp"
                                             />
                                         </div>
                                     </div>
@@ -405,8 +449,10 @@
                                             <div class="hero-slider__figure hero-slider__figure--relay">
                                                 <img
                                                     alt=""
-                                                    class="hero-slider__skier" loading="lazy"
-                                                    src="assets/images/hero/stage2-skier.png"
+                                                    class="hero-slider__skier"
+                                                    fetchpriority="low"
+                                                    loading="lazy"
+                                                    src="assets/images/hero/stage2-skier.webp"
                                                 />
                                             </div>
                                         </div>
@@ -422,11 +468,13 @@
                                             <p class="hero-slider__text hero-slider__text--race">
                                                 Одинцовский парк культуры, спорта и&nbsp;отдыха
                                             </p>
+                                            <!--
                                             <a
                                                 class="button cyan hero-slider__link"
                                                 href="stage2.html"
                                                 >Подробнее</a
                                             >
+                                            -->
                                         </div>
                                         <p class="hero-slider__note">
                                             Принять участие смогут все желающие - дети, новички и профессионалы
@@ -476,8 +524,10 @@
                                         <div class="hero-slider__scene hero-slider__scene--race">
                                             <img
                                                 alt=""
-                                                class="hero-slider__backdrop" loading="lazy"
-                                                src="assets/images/hero/stage3-background.png"
+                                                class="hero-slider__backdrop"
+                                                fetchpriority="low"
+                                                loading="lazy"
+                                                src="assets/images/hero/stage3-background.webp"
                                             />
                                         </div>
                                     </div>
@@ -491,8 +541,10 @@
                                             <div class="hero-slider__figure hero-slider__figure--spring">
                                                 <img
                                                     alt=""
-                                                    class="hero-slider__skier" loading="lazy"
-                                                    src="assets/images/hero/stage3-skier.png"
+                                                    class="hero-slider__skier"
+                                                    fetchpriority="low"
+                                                    loading="lazy"
+                                                    src="assets/images/hero/stage3-skier.webp"
                                                 />
                                             </div>
                                         </div>
@@ -508,11 +560,13 @@
                                             <p class="hero-slider__text hero-slider__text--race">
                                                 Одинцовский парк культуры, спорта и&nbsp;отдыха
                                             </p>
+                                            <!--
                                             <a
                                                 class="button cyan hero-slider__link"
                                                 href="stage3.html"
                                                 >Подробнее</a
                                             >
+                                            -->
                                         </div>
                                         <p class="hero-slider__note">
                                             Принять участие смогут все желающие - дети, новички и профессионалы
@@ -787,7 +841,7 @@
         <script src="assets/vendor/swiper/swiper-bundle.min.js?v=985f1224c0ee"></script>
         <script src="assets/vendor/gsap/gsap.min.js?v=3d1bea374ab1"></script>
         <script src="assets/vendor/gsap/ScrollTrigger.min.js?v=b5bb360661f4"></script>
-        <script src="assets/js/app.js?v=0f74e600cc6f"></script>
-        <script src="assets/js/page-reveal.js?v=733ae24ab9ac"></script>
+        <script src="assets/js/app.js?v=6306b16d517c"></script>
+        <script src="assets/js/page-reveal.js?v=62b40fec94ab"></script>
     </body>
 </html>

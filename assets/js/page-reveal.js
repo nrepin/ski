@@ -188,11 +188,12 @@ function initHeroTextMotion() {
             let text;
             let cta;
             let secondary = [];
+            let supporting = [];
             let ready = false;
             let active = true;
             const restore = () => {
                 if (text)
-                    gsap.set([text, ...secondary, cta], {
+                    gsap.set([text, ...supporting], {
                         clearProps: "opacity,transform",
                     });
                 title?.classList.remove("hero-slider__title--revealing");
@@ -211,9 +212,10 @@ function initHeroTextMotion() {
                 ].map((selector) => frame.querySelector(selector));
                 const extra = frame.querySelector(".hero-slider__stage, .hero-slider__note");
                 if (extra) secondary.push(extra);
+                supporting = cta ? [...secondary, cta] : secondary;
                 title.classList.add("hero-slider__title--revealing");
                 gsap.set(text, { yPercent: 110, opacity: 0 });
-                gsap.set([...secondary, cta], { y: 16, opacity: 0 });
+                gsap.set(supporting, { y: 16, opacity: 0 });
                 lock(true);
             };
             context.add("playHero", () => {
@@ -246,8 +248,9 @@ function initHeroTextMotion() {
                             ease: referenceEase,
                         },
                         0.5,
-                    )
-                    .to(
+                    );
+                if (cta) {
+                    timeline.to(
                         cta,
                         {
                             y: 0,
@@ -257,6 +260,7 @@ function initHeroTextMotion() {
                         },
                         0.65,
                     );
+                }
             });
             const onChange = () => context.playHero();
             slider?.on("slideChangeTransitionStart", onChange);
@@ -269,11 +273,7 @@ function initHeroTextMotion() {
 
             // Keyboard focus must never land on transparent supporting text.
             const onFocus = (event) => {
-                if (
-                    [...secondary, cta].some((item) =>
-                        item.contains(event.target),
-                    )
-                ) {
+                if (supporting.some((item) => item.contains(event.target))) {
                     timeline?.progress(1);
                 }
             };

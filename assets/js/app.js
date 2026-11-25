@@ -27,7 +27,7 @@ function initMediaLoading(element, slider) {
         controller = new AbortController();
         const { signal } = controller;
         const frame = slider ? slider.slides[slider.activeIndex] : element;
-        const image = frame?.querySelector(".hero-slider__skier, .race-photos__image");
+        const image = frame?.querySelector(".hero-slider__skier");
         const backdrop = frame?.querySelector(".hero-slider__backdrop");
         if (!image) {
             finish("ready");
@@ -610,7 +610,6 @@ viewer?.addEventListener("close", () => {
     galleryResizeObserver = null;
     thumbnailSlider?.destroy();
     thumbnailSlider = null;
-    photoSlider?.keyboard?.enable();
     const video = viewerContent.querySelector(".video-player__frame");
     if (video) {
         video.pause();
@@ -620,47 +619,20 @@ viewer?.addEventListener("close", () => {
     viewerContent.replaceChildren();
     scrollLock.unlock(viewer);
     viewer.removeAttribute("data-mode");
-    // Growing the ribbon buffer during a popup resize replaces its buttons.
-    // Return focus to the nearest instance of the same logical photo.
+    // A change to reduced motion can remove the repeated card that opened the dialog.
     if (
         viewerOpener &&
         !viewerOpener.isConnected &&
         viewerOpener.dataset.photoIndex !== undefined
     ) {
         const index = viewerOpener.dataset.photoIndex;
-        const candidates = Array.from(
-            photoElement.querySelectorAll(`[data-photo-index="${index}"]`),
+        viewerOpener = photoElement.querySelector(
+            `[data-photo-index="${index}"]`,
         );
-        candidates.sort((a, b) => {
-            const centerDistance = (element) => {
-                const box = element.getBoundingClientRect();
-                return Math.abs(box.left + box.width / 2 - innerWidth / 2);
-            };
-            return centerDistance(a) - centerDistance(b);
-        });
-        viewerOpener = candidates[0];
     }
     if (!menu.open) viewerOpener?.focus({ preventScroll: true });
 });
 
-document.addEventListener("click", (event) => {
-    if (!viewer) return;
-    const button = event.target.closest("[data-image]");
-    if (!button) return;
-    if (button.closest(".race-photos")) {
-        if (photoSlider && !photoSlider.allowClick) return;
-        openGallery(Number(button.dataset.photoIndex), button);
-        return;
-    }
-    viewer.dataset.mode = "image";
-    viewer.setAttribute("aria-label", "Схема трасс");
-    const image = new Image();
-    image.className = "media-dialog__image";
-    image.src = button.dataset.image;
-    image.alt = button.querySelector(".map-preview__image").alt;
-    viewerContent.replaceChildren(image);
-    openViewer(button);
-});
 viewer
     ?.querySelector(".media-dialog__close")
     .addEventListener("click", () => closeViewer());
@@ -714,12 +686,21 @@ document.querySelector("[data-video]")?.addEventListener("click", (event) => {
     video.src = opener.dataset.video;
 });
 
+const photoElement = document.querySelector(".race-photos");
+photoElement?.addEventListener("click", (event) => {
+    const button = event.target.closest(".race-photos__button");
+    if (viewer && button) openGallery(Number(button.dataset.photoIndex), button);
+});
 const galleryPhotos = Array.from(
-    document.querySelectorAll(".race-photos [data-photo-index]"),
-    (button) => ({
-        src: button.dataset.image,
-        alt: button.querySelector(".race-photos__image").alt,
-    }),
+    photoElement?.querySelectorAll("[data-photo-index]") ?? [],
+    (button) => {
+        const thumbnail = button.querySelector(".race-photos__image");
+        return {
+            src: button.dataset.image,
+            thumbnailSrc: thumbnail.src,
+            alt: thumbnail.alt,
+        };
+    },
 );
 function openGallery(index, opener) {
     viewer.dataset.mode = "gallery";
@@ -766,7 +747,7 @@ function openGallery(index, opener) {
         button.setAttribute("aria-label", "Открыть фотографию " + (i + 1));
         const thumb = new Image();
         thumb.className = "gallery__thumbnail";
-        thumb.src = photo.src;
+        thumb.src = photo.thumbnailSrc;
         thumb.alt = "";
         button.append(thumb);
         thumbSlide.append(button);
@@ -794,7 +775,6 @@ function openGallery(index, opener) {
     stage.append(controls);
     viewerContent.replaceChildren(stage, thumbs, status);
     openViewer(opener);
-    photoSlider?.keyboard?.disable();
     const thumbTemplates = galleryPhotos.map((photo, i) =>
         thumbTrack.querySelector(`[data-photo-index="${i}"]`).cloneNode(true),
     );
@@ -903,16 +883,18 @@ function slideToLogicalPhoto(slider, index) {
     slider.slideToLoop(closest);
 }
 
-// Independent panels; text switches immediately, only the map fades.
+// The overview remains visible until the visitor selects a distance.
 const routeButtons = Array.from(document.querySelectorAll("[data-route]"));
-const routeTemplate = document.querySelector(".routes__panel");
+const routeOverview = document.querySelector("#routes-overview");
 routeButtons.forEach((button, index) => {
-    const panel = index === 0 ? routeTemplate : routeTemplate.cloneNode(true);
+    const panel = routeOverview.cloneNode(true);
+    panel.id = button.getAttribute("aria-controls");
+    panel.setAttribute("role", "tabpanel");
+    panel.setAttribute("aria-labelledby", button.id);
+    panel.tabIndex = 0;
+    panel.hidden = true;
     const { route, routeMap, routeDescription, routeLaps, routeTurns, routeDifficulty } = button.dataset;
     if (index !== 0) {
-        panel.id = button.getAttribute("aria-controls");
-        panel.setAttribute("aria-labelledby", button.id);
-        panel.hidden = true;
         panel.querySelector(".routes__text").textContent = routeDescription.trim();
         panel.querySelector(".stats-icon__em").textContent = `×${routeLaps}`;
         panel.querySelector(".route-stats__emphasis--laps").textContent =
@@ -920,12 +902,10 @@ routeButtons.forEach((button, index) => {
         panel.querySelector(".route-stats__emphasis--turns").textContent = routeTurns;
         panel.querySelector(".route-stats__emphasis--difficulty").textContent = routeDifficulty;
     }
-    const preview = panel.querySelector(".map-preview");
-    const image = preview.querySelector(".map-preview__image");
-    preview.dataset.image = routeMap;
+    const image = panel.querySelector(".map-preview__image");
     image.src = routeMap;
     image.alt = `Схема трассы на ${route}`;
-    if (index !== 0) routeTemplate.parentElement.append(panel);
+    routeOverview.parentElement.append(panel);
 });
 let routeMapAnimation;
 let routeMapVersion = 0;
@@ -949,18 +929,22 @@ async function revealRouteMap(panel) {
     animation.onfinish = () => animation.cancel();
     animation.play();
 }
-function selectRoute(button) {
-    if (button.getAttribute("aria-selected") === "true") return;
+function selectRoute(button, reset = false) {
+    if (!reset && button.getAttribute("aria-selected") === "true") return;
+    routeOverview.hidden = !reset;
     routeButtons.forEach((tab) => {
-        const selected = tab === button;
+        const selected = !reset && tab === button;
         tab.setAttribute("aria-selected", String(selected));
-        tab.tabIndex = selected ? 0 : -1;
+        tab.tabIndex = tab === button ? 0 : -1;
         document.getElementById(tab.getAttribute("aria-controls")).hidden = !selected;
     });
-    revealRouteMap(document.getElementById(button.getAttribute("aria-controls")));
+    const panel = reset ? routeOverview : document.getElementById(button.getAttribute("aria-controls"));
+    revealRouteMap(panel);
 }
 routeButtons.forEach((button, index) => {
-    button.addEventListener("click", () => selectRoute(button));
+    button.addEventListener("click", () => {
+        selectRoute(button, button.getAttribute("aria-selected") === "true");
+    });
     button.addEventListener("keydown", (event) => {
         const offsets = {
             ArrowRight: 1,
@@ -1025,66 +1009,104 @@ document.querySelectorAll(".information-panel__details").forEach((details) => {
     });
 });
 
-// Build repetitions before Swiper initialization. Each duplicate points to an
-// existing resource and retains the logical index used by the popup/counter.
-let photoSlider;
-const photoElement = document.querySelector(".race-photos");
-const photoTrack = photoElement?.querySelector(".swiper-wrapper");
-const photoTemplates = Array.from(photoTrack?.children ?? [], (slide) =>
-    slide.cloneNode(true),
-);
-
-function initializePhotoSlider() {
-    const current = photoSlider
-        ? photoSlider.realIndex % galleryPhotos.length
-        : 0;
-    const slideWidth = desktopViewport.matches ? 285.93 : 190;
-    const minimum = 2 * (Math.ceil(photoElement.clientWidth / slideWidth) + 2);
-    const count =
-        Math.ceil(
-            Math.max(minimum, galleryPhotos.length) / galleryPhotos.length,
-        ) * galleryPhotos.length;
-    if (photoSlider && photoTrack.children.length >= count) return;
-    photoSlider?.destroy(true, true);
-    photoTrack.replaceChildren();
-    for (let i = 0; i < count; i++) {
-        const slide = photoTemplates[i % galleryPhotos.length].cloneNode(true);
-        slide.querySelectorAll(".race-photos__image").forEach((image) => {
-            image.loading = "eager";
-        });
-        photoTrack.append(slide);
-    }
-    photoSlider = new Swiper(photoElement, {
-        slidesPerView: "auto",
-        spaceBetween: 10,
-        centeredSlides: true,
-        initialSlide: current,
-        breakpoints: {
-            768: { spaceBetween: 7 },
-        },
-        loop: true,
-        speed: matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 200,
-        grabCursor: true,
-        simulateTouch: true,
-        keyboard: { enabled: !viewer.open, onlyInViewport: true },
-        navigation: { nextEl: ".photos-next", prevEl: ".photos-prev" },
-        on: { init: initSliderLoading },
-        a11y: {
-            slideLabelMessage: "Фотография",
-            prevSlideMessage: "Предыдущая фотография",
-            nextSlideMessage: "Следующая фотография",
-        },
+function preparePhotoCycle(cycle) {
+    cycle.querySelectorAll(".race-photos__group").forEach((card) => {
+        const image = card.querySelector(".race-photos__image");
+        delete card.dataset.sliderReady;
+        card.setAttribute("aria-busy", "true");
+        const finish = async () => {
+            await image.decode().catch(() => {});
+            card.dataset.sliderReady = image.naturalWidth ? "ready" : "error";
+            card.setAttribute("aria-busy", "false");
+        };
+        if (image.complete) {
+            finish();
+        } else {
+            image.addEventListener("load", finish, { once: true });
+            image.addEventListener("error", finish, { once: true });
+        }
     });
 }
 
-// Decode each original once; repeated URLs share the browser's image cache.
-const photoPreloads = galleryPhotos.map((photo) => {
-    const image = new Image();
-    image.src = photo.src;
-    image.decode().catch(() => {});
-    return image;
-});
-if (photoTrack) {
-    initializePhotoSlider();
-    new ResizeObserver(initializePhotoSlider).observe(photoElement);
+function initializePhotoMarquee() {
+    const track = photoElement.querySelector(".race-photos__track");
+    const cycle = track.firstElementChild;
+    const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+    const hoverPointer = matchMedia("(hover: hover)");
+    const speed = 48;
+    let width = 0;
+    let motion;
+    let visible = false;
+
+    const updatePlayback = () => {
+        if (!motion) return;
+        const hovering = hoverPointer.matches && photoElement.matches(":hover");
+        if (!visible || viewer.open || hovering || photoElement.matches(":focus-within")) {
+            motion.pause();
+        } else {
+            motion.play();
+        }
+    };
+
+    const updateTrack = () => {
+        const cycleWidth = cycle.getBoundingClientRect().width;
+        if (!cycleWidth) return;
+        photoElement.classList.toggle("race-photos--animated", !reducedMotion.matches);
+        if (reducedMotion.matches) {
+            motion?.cancel();
+            motion = null;
+            track.querySelectorAll(".race-photos__cycle--copy").forEach((copy) => copy.remove());
+            return;
+        }
+
+        // Keep enough repetitions after the first cycle to cover even a wide viewport.
+        const required = 1 + Math.ceil(photoElement.clientWidth / cycleWidth);
+        while (track.children.length < required) {
+            const copy = cycle.cloneNode(true);
+            copy.classList.add("race-photos__cycle--copy");
+            copy.setAttribute("aria-hidden", "true");
+            copy.querySelectorAll(".race-photos__button").forEach((button) => { button.tabIndex = -1; });
+            preparePhotoCycle(copy);
+            track.append(copy);
+        }
+        if (!motion || width !== cycleWidth) {
+            const progress = motion?.effect.getComputedTiming().progress ?? 0;
+            motion?.cancel();
+            width = cycleWidth;
+            const duration = width / speed * 1000;
+            motion = track.animate(
+                [{ transform: "translateX(0)" }, { transform: `translateX(-${width}px)` }],
+                { duration, iterations: Infinity },
+            );
+            motion.currentTime = progress * duration;
+        }
+        updatePlayback();
+    };
+
+    photoElement.addEventListener("pointerenter", updatePlayback);
+    photoElement.addEventListener("pointerleave", updatePlayback);
+    photoElement.addEventListener("focusin", (event) => {
+        const card = event.target.closest(".race-photos__group");
+        if (motion && card && event.target.matches(":focus-visible")) {
+            const viewport = photoElement.getBoundingClientRect();
+            const box = card.getBoundingClientRect();
+            if (box.left < viewport.left || box.right > viewport.right) {
+                motion.currentTime = (card.offsetLeft % width) / speed * 1000;
+            }
+        }
+        updatePlayback();
+    });
+    photoElement.addEventListener("focusout", () => queueMicrotask(updatePlayback));
+    viewer.addEventListener("close", updatePlayback);
+    reducedMotion.addEventListener("change", updateTrack);
+    new ResizeObserver(updateTrack).observe(photoElement);
+    new IntersectionObserver(([entry]) => {
+        visible = entry.isIntersecting;
+        updatePlayback();
+    }).observe(photoElement);
+
+    preparePhotoCycle(cycle);
+    updateTrack();
 }
+
+if (galleryPhotos.length) initializePhotoMarquee();

@@ -215,8 +215,9 @@
     .price-artwork {
         clip-path: none;
         border-radius: 0;
-        background: linear-gradient(var(--ink), var(--ink)) center/100%
-            calc(100% - 96px) no-repeat;
+        background:
+            linear-gradient(var(--ink), var(--ink)) left / 50% 100% no-repeat,
+            linear-gradient(var(--ink), var(--ink)) center / 100% calc(100% - 96px) no-repeat;
     }
     .price-artwork::before {
         content: "";
@@ -452,19 +453,27 @@
 
     /* Mobile — Teams */
     .teams {
+        width: 100%;
         max-width: 560px;
     }
     .teams__title {
-        max-width: 191px;
-        margin: 0 auto 25px;
+        max-width: 280px;
+        margin: 0 auto 20px;
         font-size: 32px;
         line-height: 30px;
+        letter-spacing: 0.02em;
+    }
+    .teams__title-break,
+    .team-description__break {
+        display: inline;
     }
     .team-grid {
         display: flex;
         flex-direction: column;
-        gap: 54px;
+        row-gap: 64.34px;
         align-items: stretch;
+        width: min(calc(100% - 40px), 281px);
+        margin-inline: auto;
     }
     .team-grid__article {
         align-items: center;
@@ -472,6 +481,12 @@
     }
     .team-grid__picture {
         width: 72px;
+        margin-bottom: 12px;
+    }
+    .team-grid__image--club {
+        display: block;
+        width: 72px;
+        height: auto;
         margin-bottom: 12px;
     }
     .team-grid__image--desktop {
@@ -483,39 +498,37 @@
     .team-grid__subtitle {
         font-size: 14px;
         line-height: 18px;
-        margin-bottom: 19px;
+        letter-spacing: 0.02em;
+        margin-bottom: 10px;
     }
     .team-grid__text--team-lead {
         font-size: 12px;
         line-height: 16px;
-        margin-bottom: 19px;
+        margin-bottom: 8px;
     }
     .team-grid__text--content {
         font-size: 12px;
         line-height: 16px;
+        letter-spacing: 0.02em;
+    }
+    .team-description {
+        color: #262d3e;
+    }
+    .team-lead--corporate {
+        color: var(--ink);
     }
     .team-grid__link {
         width: 228px;
         margin: 25px 0 12px;
+        letter-spacing: 0.02em;
+    }
+    .team-grid__link--corporate {
+        margin-block-start: 35px;
     }
     .team-grid__note {
+        font-family: "TT Bluescreens Pro Extended", sans-serif;
         font-size: 12px;
         line-height: 16px;
-    }
-    .team-grid__article--secondary {
-        position: relative;
-    }
-    .team-grid__article--secondary::before {
-        content: "";
-        position: absolute;
-        top: -54px;
-        left: -20px;
-        right: -20px;
-        height: 54px;
-        z-index: -1;
-        background: url("../images/section9/schedule-bottom-decoration-mobile.svg") center/328px 270px
-            no-repeat;
-        pointer-events: none;
     }
     .team-description--secondary {
         max-width: none;
@@ -700,21 +713,18 @@
         display: none;
     }
     .race-photos__group {
-        width: 190px;
+        width: 189px;
         height: 260px;
     }
     .race-photos__button {
         border-radius: 6px;
     }
-    /* Mobile — Slider Loading */
     .race-photos {
+        --photo-gap: 10px;
         --skeleton-radius: 6px;
     }
     .race-photos__zoom {
-        width: 24px;
-        height: 24px;
-        top: 12px;
-        right: 12px;
+        display: none;
     }
 
     /* Mobile — Partners */
@@ -766,50 +776,68 @@
 
     /* Mobile — Merch Banner */
     .merch.container {
-        gap: 97px;
+        gap: 99.7px;
         border-radius: 10px;
-        padding: 20px max(24px, calc((100% - 512px) / 2)) 12px;
+        padding: 9.92px max(24.58px, calc((100% - 512px) / 2)) 10.9px;
         width: 100%;
         max-width: 100%;
         margin-inline: 0;
     }
-    .merch-title {
-        align-self: start;
+    .merch-base {
+        background: url(../images/figwright/merch-glow-mobile.webp)
+                calc(50% + 5.64px) 28.8px / 275px 200.5px no-repeat,
+            url(../images/figwright/merch-shade-mobile.webp) center / 100% 100% no-repeat,
+            #1e58ea;
     }
-    .merch__title {
-        font-size: 36px;
-        line-height: 40px;
-        white-space: normal;
+    .merch-art::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(../images/figwright/merch-lines-mobile.svg) left top / 229px 230px no-repeat;
+        mix-blend-mode: plus-lighter;
     }
-    .merch__subtitle {
-        width: 261px;
-        height: 16px;
-    }
-    .merch-shirt {
-        top: 57px;
-        right: calc(50% - 114px);
-        width: 228px;
-        height: 194px;
-    }
-    .merch__button {
-        margin-top: 0;
-        width: 228px;
-        font-size: 12px;
-        min-height: 44px;
-        padding: 12px 16px;
-    }
-    .merch-notch {
-        width: 75px;
-        left: calc(50% - 37.5px);
-    }
+    .merch-glow,
+    .merch-pattern,
     .merch-seal {
         display: none;
     }
-    .merch-pattern {
-        width: 371px;
-        height: 190px;
-        left: calc(50% - 388px);
-        top: -20px;
+    .merch-notch {
+        width: 75px;
+        height: 16px;
+        left: calc(50% - 37.5px);
+    }
+    .merch-title {
+        display: grid;
+    }
+    .merch__title {
+        grid-area: 1 / 1;
+        align-self: start;
+        font-size: 36.08px;
+        line-height: 61.9px;
+    }
+    .merch__subtitle {
+        grid-area: 1 / 1;
+        align-self: start;
+        margin-block-start: 53.08px;
+        margin-inline-start: 1.42px;
+        width: 200.04px;
+        height: 11.75px;
+    }
+    .merch-shirt {
+        top: 48.85px;
+        right: auto;
+        left: calc(50% - 114px);
+        width: 219.37px;
+        height: 180.44px;
+    }
+    .merch__button {
+        width: 227.29px;
+        font-size: 12px;
+        line-height: 19.27px;
+        letter-spacing: .02em;
+        min-height: 44px;
+        padding: 12px 16px;
+        color: var(--ink);
     }
 
     /* Mobile — Price Decoration Frame */
@@ -828,7 +856,7 @@
         height: 115.706px;
         transform-origin: 0 0;
         transform: matrix(0.87, 0.5, 0.51, -0.86, 0, 0);
-        background: url(../images/originals/merch-pattern-mobile.png)
+        background: url(../images/originals/merch-pattern-mobile.webp)
             center/100% 100% no-repeat;
         pointer-events: none;
     }
@@ -838,6 +866,40 @@
         width: 100%;
         max-width: 100%;
         margin-inline: 0;
+    }
+}
+
+/* Mobile — Partner Logos */
+@media (width < 500px) {
+    .partner-park {
+        width: 90.87px;
+        height: 30.02px;
+    }
+    .partner-symbol {
+        width: 32.3px;
+    }
+    .partner-sport--wide {
+        display: none;
+    }
+    .partner-sport--compact {
+        display: block;
+        width: 76.83px;
+        height: 39px;
+    }
+    .partner-race {
+        width: 42.59px;
+        height: 46px;
+        object-fit: contain;
+    }
+    .partner-radio {
+        width: 42px;
+        aspect-ratio: 42 / 41;
+    }
+    .partner-symbol__image,
+    .partner-radio__image {
+        width: 100%;
+        height: auto;
+        transform: none;
     }
 }
 
