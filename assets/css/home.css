@@ -175,16 +175,26 @@
     cursor: default;
 }
 
-@media (768px <= width < 1200px) {
-    .hero-stages {
-        --stage-row: 40px;
-        --stage-gap: 9px;
-        font-size: 32px;
-    }
+@media (width >= 768px) {
+    @container (width < 1174px) {
+        .hero-stages {
+            --stage-row: 40px;
+            --stage-gap: 9px;
+            font-size: 32px;
+        }
 
-    .hero-stages__label {
-        margin-block-start: 10px;
-        font-size: 18px;
+        .hero-stages__label {
+            margin-block-start: 10px;
+            font-size: 18px;
+        }
+    }
+}
+
+@media (width >= 1200px) {
+    @container (width < 875px) {
+        .hero-stages {
+            inset-block-start: 38%;
+        }
     }
 }
 

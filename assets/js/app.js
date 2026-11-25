@@ -1033,7 +1033,7 @@ function initializePhotoMarquee() {
     const cycle = track.firstElementChild;
     const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
     const hoverPointer = matchMedia("(hover: hover)");
-    const speed = 48;
+    const speed = Number(getComputedStyle(photoElement).getPropertyValue("--marquee-speed"));
     let width = 0;
     let motion;
     let visible = false;
@@ -1075,7 +1075,7 @@ function initializePhotoMarquee() {
             width = cycleWidth;
             const duration = width / speed * 1000;
             motion = track.animate(
-                [{ transform: "translateX(0)" }, { transform: `translateX(-${width}px)` }],
+                [{ transform: `translateX(-${width}px)` }, { transform: "translateX(0)" }],
                 { duration, iterations: Infinity },
             );
             motion.currentTime = progress * duration;
@@ -1091,7 +1091,9 @@ function initializePhotoMarquee() {
             const viewport = photoElement.getBoundingClientRect();
             const box = card.getBoundingClientRect();
             if (box.left < viewport.left || box.right > viewport.right) {
-                motion.currentTime = (card.offsetLeft % width) / speed * 1000;
+                const distance = width - card.offsetLeft % width;
+                // Stay just before the wrap so the first original card can receive focus.
+                motion.currentTime = Math.min(distance / speed * 1000, width / speed * 1000 - 1);
             }
         }
         updatePlayback();

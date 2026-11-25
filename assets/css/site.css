@@ -52,6 +52,7 @@
     --hover-cyan: #1ec3e7;
     --white: #f8feff;
     --content: 1166px;
+    --marquee-speed: 48;
 }
 * {
     box-sizing: border-box;
@@ -175,6 +176,15 @@ dialog::backdrop {
 @media (min-width: 768px) {
     .page__body {
         padding-block-end: 12px;
+    }
+}
+
+/* Wide Desktop — Banner Width */
+@media (min-width: 1200px) {
+    :root {
+        --wide-banner-height: calc(100svh - 24px);
+        /* Match the tallest home slide (1331 × 878) and retain room for the controls. */
+        --wide-banner-width: max(800px, calc(var(--wide-banner-height) * 1331 / 878));
     }
 }
 
@@ -336,6 +346,7 @@ dialog::backdrop {
     width: 96px;
     height: 96px;
 }
+
 
 /* Intro */
 .intro {
@@ -1392,6 +1403,31 @@ dialog::backdrop {
     .merch-shirt {
         width: 50%;
         height: auto;
+    }
+}
+
+/* Wide Desktop — Merch Banner */
+@media (min-width: 1200px) {
+    .merch.container {
+        max-width: var(--wide-banner-width);
+        margin-inline: auto;
+        padding-inline: max(32px, (min(100% - 26px, var(--wide-banner-width)) - 1109px) / 2);
+        container-type: inline-size;
+    }
+
+    @container (width < 1100px) {
+        .merch__title {
+            font-size: min(151.19px, 13.64cqw);
+        }
+
+        .merch__subtitle {
+            max-width: 100cqw;
+        }
+
+        .merch-shirt {
+            width: min(579px, 50%);
+            height: auto;
+        }
     }
 }
 

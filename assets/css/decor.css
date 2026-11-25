@@ -13,10 +13,31 @@ main::before {
 
 /* Brand Ribbon */
 .brand-ribbon {
+    --brand-ribbon-tile: 1366;
+    --brand-ribbon-image: url("../images/section9/brand-ribbon-desktop.webp");
+    position: relative;
     height: 91px;
-    background: url("../images/section9/brand-ribbon-desktop.webp") center / auto 100%
-        repeat-x;
+    overflow: clip;
     pointer-events: none;
+}
+.brand-ribbon::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 calc(-1px * var(--brand-ribbon-tile));
+    background: var(--brand-ribbon-image) calc(50% + 0.5px * var(--brand-ribbon-tile)) center /
+        calc(1px * var(--brand-ribbon-tile)) 100% repeat-x;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .brand-ribbon::before {
+        animation: brand-ribbon-scroll calc(1s * var(--brand-ribbon-tile) / var(--marquee-speed)) linear infinite;
+    }
+}
+
+@keyframes brand-ribbon-scroll {
+    to {
+        transform: translateX(calc(1px * var(--brand-ribbon-tile)));
+    }
 }
 
 /* Tracks */
@@ -127,8 +148,9 @@ main::before {
 
     /* Mobile — Brand Ribbon */
     .brand-ribbon {
+        --brand-ribbon-tile: calc(50.896 * 640 / 102);
+        --brand-ribbon-image: url("../images/section9/brand-ribbon-mobile.webp");
         height: 50.896px;
-        background-image: url("../images/section9/brand-ribbon-mobile.webp");
     }
 
     /* Mobile — Tracks */

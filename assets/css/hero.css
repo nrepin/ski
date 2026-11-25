@@ -43,7 +43,7 @@
     grid-template-columns: minmax(0, 1fr) var(--header-brand-width) minmax(0, 1fr);
     align-items: center;
     min-height: calc(67 * var(--header-unit));
-    margin-inline: clamp(16px, 18cqw - 153px, 6.78%);
+    margin-inline: clamp(16px, 18cqw - 153px, min(6.78%, max(79px, (100% - 1162px) / 2)));
 }
 .header__actions,
 .header__contact {
@@ -161,11 +161,13 @@
 
 /* Wide Desktop — Header Alignment */
 @media (min-width: 1366px) {
-    .header__actions,
-    .header__contact {
-        align-self: start;
-        /* Use the viewport so a scrollbar on only one page cannot shift the row. */
-        margin-block-start: max(23px, calc(45 * (100vw - 26px) / 1342 - 22px));
+    @container (width > 954px) {
+        .header__actions,
+        .header__contact {
+            align-self: start;
+            /* Follow the available Hero width while ignoring scrollbar differences at full width. */
+            margin-block-start: max(23px, calc(45 * var(--header-layout-width, calc(100vw - 26px)) / 1342 - 22px));
+        }
     }
 }
 
@@ -470,6 +472,27 @@
     background: none;
 }
 
+/* Wide Desktop — Hero and Slider */
+@media (min-width: 1200px) {
+    .hero {
+        max-width: var(--wide-banner-width);
+        margin-inline: auto;
+    }
+
+    .header {
+        --header-layout-width: min(100vw - 26px, var(--wide-banner-width));
+    }
+
+    .hero-slider__bottom {
+        padding-block-start: clamp(0px, var(--wide-banner-height) - 65.9654cqw, 10.43cqw);
+        column-gap: clamp(16px, 8cqw - 48px, 30px);
+    }
+
+    .hero-slider__emphasis {
+        white-space: nowrap;
+    }
+}
+
 @media (width < 768px) {
     /* Mobile — Hero */
     .hero-slider {
@@ -640,38 +663,40 @@
     }
 }
 
-@media (768px <= width <= 980px) {
-    /* Compact Desktop — Header */
-    .header__actions {
-        justify-content: center;
+@media (width >= 768px) {
+    @container (width <= 954px) {
+        /* Compact Desktop — Header */
+        .header__actions {
+            justify-content: center;
+        }
+
+        .header__action-link--participation {
+            width: min(290px, 100%);
+        }
+
+        .header__action-link--partnership,
+        .header__action-link--volunteer,
+        .header__phone-number {
+            display: none;
+        }
+
+        .header__phone {
+            gap: 0;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+        }
+
+        .header__social {
+            gap: 10px;
+        }
     }
 
-    .header__action-link--participation {
-        width: min(290px, 100%);
-    }
-
-    .header__action-link--partnership,
-    .header__action-link--volunteer,
-    .header__phone-number {
-        display: none;
-    }
-
-    .header__phone {
-        gap: 0;
-        width: 36px;
-        height: 36px;
-        padding: 0;
-    }
-
-    .header__social {
-        gap: 10px;
-    }
-}
-
-@media (768px <= width < 820px) {
-    /* Narrow Desktop — Header */
-    .header__social {
-        display: none;
+    @container (width < 794px) {
+        /* Narrow Desktop — Header */
+        .header__social {
+            display: none;
+        }
     }
 }
 
