@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html class="page" lang="ru">
+<html class="page" lang="ru" data-ski-page="race">
     <head>
         <meta charset="utf-8" />
         <meta content="width=device-width,initial-scale=1" name="viewport" />
@@ -43,6 +43,9 @@
             href="assets/images/section9/hero-skier-mobile.webp"
         />
         <script>
+            const skiPage = document.documentElement;
+            skiPage.classList.add("ski-factory-2027", "ski-factory-race");
+            skiPage.removeAttribute("data-ski-page");
             if (location.protocol === "http:" || location.protocol === "https:") {
                 for (const file of ["TT_Bluescreens_Pro_Extended_Medium.otf", "TT_Bluescreens_Pro_Extended_Bold.otf"]) {
                     const preload = document.createElement("link");
@@ -55,24 +58,16 @@
                 }
             }
         </script>
-        <link href="assets/css/reset.css?v=ed555a279183" rel="stylesheet" />
         <link
             href="assets/vendor/swiper/swiper-bundle.min.css?v=74ca6aae5468"
             rel="stylesheet"
         />
-        <link href="assets/css/site.css?v=395fbb0e9199" rel="stylesheet" />
-        <link href="assets/css/mobile.css?v=f97637d26782" rel="stylesheet" />
-        <link href="assets/css/overlays.css?v=9b207e07f8ac" rel="stylesheet" />
-        <link href="assets/css/hero.css?v=9e30fc701a0a" rel="stylesheet" />
-        <link href="assets/css/burger-menu.css?v=d9fccc418b34" rel="stylesheet" />
-        <link href="assets/css/footer.css?v=797787648f32" rel="stylesheet" />
-        <link href="assets/css/sliding-footer.css?v=ecd923076e56" rel="stylesheet" />
-        <link href="assets/css/decor.css?v=6ab812ff90ef" rel="stylesheet" />
+        <link href="assets/css/custom.css?v=1043d98ea0b2" rel="stylesheet" />
         <script>
             document.documentElement.classList.add("page--js");
             Promise.allSettled([
-                document.fonts.load('500 12px "TT Bluescreens Pro Extended"'),
-                document.fonts.load('700 14px "TT Bluescreens Pro Extended"'),
+                document.fonts.load('500 12px "Ski Factory 2027 TT Bluescreens Pro Extended"'),
+                document.fonts.load('700 14px "Ski Factory 2027 TT Bluescreens Pro Extended"'),
             ]).then(() => {
                 // Failed fonts use the existing fallback without hiding navigation.
                 document.documentElement.classList.add("page--header-ready");
