@@ -16,12 +16,6 @@
         max-width: var(--wide-banner-width);
         margin-inline: auto;
     }
-
-    @container (width < 1074px) {
-        .footer-layout {
-            padding-inline: clamp(24px, 20cqw - 164.8px, 92px);
-        }
-    }
 }
 
 .footer-layout {
@@ -178,6 +172,7 @@
     @container (width < 1074px) {
         .footer-layout {
             column-gap: 12px;
+            padding-inline: clamp(24px, 20cqw - 164.8px, 92px);
         }
 
         .footer-bottom {

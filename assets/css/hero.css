@@ -1,5 +1,6 @@
 /* Hero */
 .hero {
+    --hero-race-height: 65.9654cqw;
     position: relative;
     isolation: isolate;
     container-type: inline-size;
@@ -393,7 +394,7 @@
 
 @media (min-width: 768px) {
     .hero-slider__content--race {
-        min-height: 65.9654cqw;
+        min-height: var(--hero-race-height);
         padding: var(--race-heading-top) 6.2359cqw 8.8655cqw 6.5364cqw;
     }
     .hero-slider__heading--race {
@@ -483,8 +484,12 @@
         --header-layout-width: min(100vw - 26px, var(--wide-banner-width));
     }
 
+    .hero-slider__content {
+        min-height: var(--hero-race-height);
+    }
+
     .hero-slider__bottom {
-        padding-block-start: clamp(0px, var(--wide-banner-height) - 65.9654cqw, 10.43cqw);
+        padding-block-start: clamp(0px, var(--wide-banner-height) - var(--hero-race-height), 10.43cqw);
         column-gap: clamp(16px, 8cqw - 48px, 30px);
     }
 
