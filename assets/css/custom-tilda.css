@@ -1,0 +1,748 @@
+/* Ski Factory 2027: production landing pages */
+html:where(.ski-factory-2027,.ski-factory-2027 *), body:where(.ski-factory-2027,.ski-factory-2027 *), div:where(.ski-factory-2027,.ski-factory-2027 *), span:where(.ski-factory-2027,.ski-factory-2027 *), applet:where(.ski-factory-2027,.ski-factory-2027 *), object:where(.ski-factory-2027,.ski-factory-2027 *), iframe:where(.ski-factory-2027,.ski-factory-2027 *),
+h1:where(.ski-factory-2027,.ski-factory-2027 *), h2:where(.ski-factory-2027,.ski-factory-2027 *), h3:where(.ski-factory-2027,.ski-factory-2027 *), h4:where(.ski-factory-2027,.ski-factory-2027 *), h5:where(.ski-factory-2027,.ski-factory-2027 *), h6:where(.ski-factory-2027,.ski-factory-2027 *), p:where(.ski-factory-2027,.ski-factory-2027 *), blockquote:where(.ski-factory-2027,.ski-factory-2027 *), pre:where(.ski-factory-2027,.ski-factory-2027 *),
+a:where(.ski-factory-2027,.ski-factory-2027 *), abbr:where(.ski-factory-2027,.ski-factory-2027 *), acronym:where(.ski-factory-2027,.ski-factory-2027 *), address:where(.ski-factory-2027,.ski-factory-2027 *), big:where(.ski-factory-2027,.ski-factory-2027 *), cite:where(.ski-factory-2027,.ski-factory-2027 *), code:where(.ski-factory-2027,.ski-factory-2027 *),
+del:where(.ski-factory-2027,.ski-factory-2027 *), dfn:where(.ski-factory-2027,.ski-factory-2027 *), em:where(.ski-factory-2027,.ski-factory-2027 *), img:where(.ski-factory-2027,.ski-factory-2027 *), ins:where(.ski-factory-2027,.ski-factory-2027 *), kbd:where(.ski-factory-2027,.ski-factory-2027 *), q:where(.ski-factory-2027,.ski-factory-2027 *), s:where(.ski-factory-2027,.ski-factory-2027 *), samp:where(.ski-factory-2027,.ski-factory-2027 *),
+small:where(.ski-factory-2027,.ski-factory-2027 *), strike:where(.ski-factory-2027,.ski-factory-2027 *), strong:where(.ski-factory-2027,.ski-factory-2027 *), sub:where(.ski-factory-2027,.ski-factory-2027 *), sup:where(.ski-factory-2027,.ski-factory-2027 *), tt:where(.ski-factory-2027,.ski-factory-2027 *), var:where(.ski-factory-2027,.ski-factory-2027 *),
+b:where(.ski-factory-2027,.ski-factory-2027 *), u:where(.ski-factory-2027,.ski-factory-2027 *), i:where(.ski-factory-2027,.ski-factory-2027 *), center:where(.ski-factory-2027,.ski-factory-2027 *),
+dl:where(.ski-factory-2027,.ski-factory-2027 *), dt:where(.ski-factory-2027,.ski-factory-2027 *), dd:where(.ski-factory-2027,.ski-factory-2027 *), ol:where(.ski-factory-2027,.ski-factory-2027 *), ul:where(.ski-factory-2027,.ski-factory-2027 *), li:where(.ski-factory-2027,.ski-factory-2027 *),
+fieldset:where(.ski-factory-2027,.ski-factory-2027 *), form:where(.ski-factory-2027,.ski-factory-2027 *), label:where(.ski-factory-2027,.ski-factory-2027 *), legend:where(.ski-factory-2027,.ski-factory-2027 *),
+table:where(.ski-factory-2027,.ski-factory-2027 *), caption:where(.ski-factory-2027,.ski-factory-2027 *), tbody:where(.ski-factory-2027,.ski-factory-2027 *), tfoot:where(.ski-factory-2027,.ski-factory-2027 *), thead:where(.ski-factory-2027,.ski-factory-2027 *), tr:where(.ski-factory-2027,.ski-factory-2027 *), th:where(.ski-factory-2027,.ski-factory-2027 *), td:where(.ski-factory-2027,.ski-factory-2027 *),
+article:where(.ski-factory-2027,.ski-factory-2027 *), aside:where(.ski-factory-2027,.ski-factory-2027 *), canvas:where(.ski-factory-2027,.ski-factory-2027 *), details:where(.ski-factory-2027,.ski-factory-2027 *), embed:where(.ski-factory-2027,.ski-factory-2027 *),
+figure:where(.ski-factory-2027,.ski-factory-2027 *), figcaption:where(.ski-factory-2027,.ski-factory-2027 *), footer:where(.ski-factory-2027,.ski-factory-2027 *), header:where(.ski-factory-2027,.ski-factory-2027 *), hgroup:where(.ski-factory-2027,.ski-factory-2027 *),
+menu:where(.ski-factory-2027,.ski-factory-2027 *), nav:where(.ski-factory-2027,.ski-factory-2027 *), output:where(.ski-factory-2027,.ski-factory-2027 *), ruby:where(.ski-factory-2027,.ski-factory-2027 *), section:where(.ski-factory-2027,.ski-factory-2027 *), summary:where(.ski-factory-2027,.ski-factory-2027 *),
+time:where(.ski-factory-2027,.ski-factory-2027 *), mark:where(.ski-factory-2027,.ski-factory-2027 *), audio:where(.ski-factory-2027,.ski-factory-2027 *), video:where(.ski-factory-2027,.ski-factory-2027 *){margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article:where(.ski-factory-2027,.ski-factory-2027 *), aside:where(.ski-factory-2027,.ski-factory-2027 *), details:where(.ski-factory-2027,.ski-factory-2027 *), figcaption:where(.ski-factory-2027,.ski-factory-2027 *), figure:where(.ski-factory-2027,.ski-factory-2027 *),
+footer:where(.ski-factory-2027,.ski-factory-2027 *), header:where(.ski-factory-2027,.ski-factory-2027 *), hgroup:where(.ski-factory-2027,.ski-factory-2027 *), menu:where(.ski-factory-2027,.ski-factory-2027 *), nav:where(.ski-factory-2027,.ski-factory-2027 *), section:where(.ski-factory-2027,.ski-factory-2027 *){display:block}
+body:where(.ski-factory-2027,.ski-factory-2027 *){line-height:1}
+ol:where(.ski-factory-2027,.ski-factory-2027 *), ul:where(.ski-factory-2027,.ski-factory-2027 *){list-style:none}
+blockquote:where(.ski-factory-2027,.ski-factory-2027 *), q:where(.ski-factory-2027,.ski-factory-2027 *){quotes:none}
+blockquote:where(.ski-factory-2027,.ski-factory-2027 *):before, blockquote:where(.ski-factory-2027,.ski-factory-2027 *):after,
+q:where(.ski-factory-2027,.ski-factory-2027 *):before, q:where(.ski-factory-2027,.ski-factory-2027 *):after{content:'';content:none}
+table:where(.ski-factory-2027,.ski-factory-2027 *){border-collapse:collapse;border-spacing:0}
+@font-face{font-family:"Ski Factory 2027 TT Bluescreens Pro";src:url("https://static.tildacdn.com/tila3838-6230-4539-a335-653835663632/TT_Bluescreens_Pro_B.woff");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"Ski Factory 2027 TT Bluescreens Pro Extended";src:url("https://static.tildacdn.pub/tila3534-3061-4362-b339-353532626632/TT_Bluescreens_Pro_E.woff");font-weight:500;font-display:swap}
+@font-face{font-family:"Ski Factory 2027 TT Bluescreens Pro Extended";src:url("https://static.tildacdn.pub/tila3732-3331-4834-b331-623531626462/TT_Bluescreens_Pro_E.woff");font-weight:700;font-display:swap}
+@font-face{font-family:"Ski Factory 2027 TT Bluescreens Pro Extended";src:url("https://static.tildacdn.pub/tila6334-3738-4266-a438-366238303766/TT_Bluescreens_Pro_E.woff");font-weight:800;font-display:swap}
+@font-face{font-family:"Ski Factory 2027 TT Bluescreens Pro Expanded";src:url("https://static.tildacdn.pub/tila3361-3136-4063-b730-363734303339/TT_Bluescreens_Pro_E.woff");font-weight:500;font-display:swap}
+@font-face{font-family:"Ski Factory 2027 TT Bluescreens Pro Expanded";src:url("https://static.tildacdn.pub/tila3630-3564-4464-a133-393834366331/TT_Bluescreens_Pro_E.woff");font-weight:700;font-display:swap}
+@font-face{font-family:"Ski Factory 2027 TT Bluescreens Pro Expanded";src:url("https://static.tildacdn.pub/tila3732-3236-4331-a332-346334383032/TT_Bluescreens_Pro_E.woff");font-weight:600;font-display:swap}
+:root:where(.ski-factory-2027,.ski-factory-2027 *){--navy:#08183b;--ink:#282d3a;--cyan:#21dbff;--hover-cyan:#1ec3e7;--white:#f8feff;--content:1166px;--marquee-speed:48}
+*:where(.ski-factory-2027,.ski-factory-2027 *){box-sizing:border-box}
+html:where(.ski-factory-2027,.ski-factory-2027 *){scroll-behavior:smooth;scroll-padding-top:24px}
+body:where(.ski-factory-2027,.ski-factory-2027 *){margin:0;color:var(--navy);background:#fff;font:500 18px/25px "Ski Factory 2027 TT Bluescreens Pro Expanded",Arial,sans-serif;letter-spacing:0.02em}
+img:where(.ski-factory-2027,.ski-factory-2027 *){max-width:100%;vertical-align:middle}
+a:where(.ski-factory-2027,.ski-factory-2027 *){color:inherit}
+button:where(.ski-factory-2027,.ski-factory-2027 *){font:inherit;cursor:pointer}
+button:where(.ski-factory-2027,.ski-factory-2027 *),
+a:where(.ski-factory-2027,.ski-factory-2027 *){-webkit-tap-highlight-color:transparent}
+button:disabled:where(.ski-factory-2027,.ski-factory-2027 *){cursor:default;opacity:0.4}
+strong:where(.ski-factory-2027,.ski-factory-2027 *),
+b:where(.ski-factory-2027,.ski-factory-2027 *){font-weight:700}
+p:where(.ski-factory-2027,.ski-factory-2027 *){margin:0}
+h1:where(.ski-factory-2027,.ski-factory-2027 *),
+h2:where(.ski-factory-2027,.ski-factory-2027 *),
+h3:where(.ski-factory-2027,.ski-factory-2027 *){margin:0}
+h2:where(.ski-factory-2027,.ski-factory-2027 *){font:italic 700 72px/1.26 "Ski Factory 2027 TT Bluescreens Pro",Impact,sans-serif;text-transform:uppercase;color:var(--cyan);letter-spacing:0.02em}
+h3:where(.ski-factory-2027,.ski-factory-2027 *){font:700 24px/1.2 "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif}
+:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){outline:3px solid #ee7900;outline-offset:4px}
+button:where(.ski-factory-2027,.ski-factory-2027 *),
+[role="button"]:where(.ski-factory-2027,.ski-factory-2027 *),
+.button:where(.ski-factory-2027,.ski-factory-2027 *),
+button:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *),
+[role="button"]:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *),
+.button:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){outline:none}
+[hidden]:where(.ski-factory-2027,.ski-factory-2027 *){display:none!important}
+main:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;isolation:isolate;display:flow-root}
+main:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:"";position:absolute;z-index:-1;inset:0 0 auto;height:5907px;background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM2NiIgaGVpZ2h0PSI1Mjg4IiB2aWV3Qm94PSIwIDAgMTM2NiA1Mjg4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBvcGFjaXR5PSIwLjMiPgo8cGF0aCBkPSJNMjg2LjkxIC00MDEuNTczTDIxMy4yMjggLTE5MS4yOTNDMjAwLjg5MSAtMTU2LjEyIDIyMy4yODggLTExOC4zNTcgMjYwLjEyMiAtMTEyLjI4OEMyOTYuOTU1IC0xMDYuMjE5IDMxOS41ODUgLTY3LjU0NTYgMzA2LjM5OSAtMzIuMTg1TDI2OS4zNjggNjcuMTQ0OUwxOTkuNDk3IDI1NS40NTZMMTI1LjYwMiA0NjUuN0MxMTMuMjY0IDUwMC44NzMgMTM1LjY2MiA1MzguNjM2IDE3Mi40NjkgNTQ0LjcwMUMyMDkuMjc2IDU1MC43NjYgMjMyLjE0NCA1ODkuNDc4IDIxOC45NTcgNjI0LjgzOUwxODEuOTI4IDcyNC4xNjlMMTExLjg0NCA5MTIuNDQ1TDM4LjE2NjMgMTEyMi43QzI1LjgyODYgMTE1Ny44NyA0OC4yMjIgMTE5NS42NiA4NS4wNTUyIDEyMDEuNzNDMTIxLjg4OCAxMjA3LjggMTQ0LjU0NCAxMjQ2LjQ4IDEzMS4zNTggMTI4MS44NEw5NC4zMjkyIDEzODEuMTdMMjQuNDU3MyAxNTY5LjQ4TC00OS40Mzc0IDE3NzkuNzJDLTYxLjc3NTEgMTgxNC45IC0zOS4zNzY3IDE4NTIuNjYgLTIuNTcwMDQgMTg1OC43MkMzNC4yMzY2IDE4NjQuNzkgNTcuMTAzMiAxOTAzLjUgNDMuOTE3IDE5MzguODZMNi45MTM4NSAyMDM4LjE5TC02My4xNDIgMjIyNi40OCIgc3Ryb2tlLXdpZHRoPSI2LjM3IiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNMTg1LjE3NiAtMzUyLjRMMTExLjQ2NyAtMTQyLjEyNUM5OS4xMjkxIC0xMDYuOTUyIDEyMS41MjggLTY5LjE4OTMgMTU4LjE0OSAtNjMuMTU0OUMxOTQuNzcgLTU3LjEyMDUgMjE3LjgyMyAtMTguMzc3NiAyMDQuNjM3IDE2Ljk4M0wxNjcuNjA4IDExNi4zMTNMOTcuNTUxIDMwNC41OTNMMjMuODQxNiA1MTQuODY4QzExLjUwMzkgNTUwLjA0MSAzMy45MDE2IDU4Ny44MDQgNzAuNzM0OCA1OTMuODczQzEwNy41NjggNTk5Ljk0MyAxMzAuNDA5IDYzOC42NTEgMTE3LjIyMyA2NzQuMDExTDgwLjAwODggNzczLjMxMUwxMC4xMzcgOTYxLjYyMkwtNjMuNTQyMSAxMTcxLjg3Qy03NS44Nzk4IDEyMDcuMDUgLTUzLjQ4NTQgMTI0NC44NCAtMTYuODY0NSAxMjUwLjg3QzE5Ljc1NjUgMTI1Ni45MSA0Mi44MTAxIDEyOTUuNjUgMjkuNjIzOSAxMzMxLjAxTC03LjM3OTI3IDE0MzAuMzRMLTc3LjQ2MjMgMTYxOC42MkwtMTUxLjE0NiAxODI4LjlDLTE2My40NzkgMTg2NC4wNSAtMTQxLjA4NiAxOTAxLjgzIC0xMDQuMjUzIDE5MDcuOUMtNjcuNDE5MyAxOTEzLjk3IC00NC41NzggMTk1Mi42OCAtNTcuNzY0MiAxOTg4LjA0TC05NC45Nzg2IDIwODcuMzRMLTE2NC44NDYgMjI3NS42MyIgc3Ryb2tlLXdpZHRoPSI2LjM3IiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNMTQ3NC44OCAtMjA1LjgxOUwxNDAxLjIgNC40NjA1NUMxMzg4Ljg2IDM5LjYzMzkgMTQxMS4yNiA3Ny4zOTY2IDE0NDcuODggODMuNDMxMUMxNDg0LjUgODkuNDY1NSAxNTA3LjU2IDEyOC4yMDkgMTQ5NC4zNyAxNjMuNTY5TDE0NTcuMzQgMjYyLjg5OUwxMzg3LjI4IDQ1MS4xNzlMMTMxMy41NyA2NjEuNDU0QzEzMDEuMjMgNjk2LjYyNyAxMzIzLjYzIDczNC4zOSAxMzYwLjQ3IDc0MC40NkMxMzk3LjMgNzQ2LjUyOSAxNDIwLjE0IDc4NS4yMzcgMTQwNi45NSA4MjAuNTk3TDEzNjkuNzQgOTE5Ljg5N0wxMjk5Ljg3IDExMDguMjFMMTIyNi4xOSAxMzE4LjQ2QzEyMTMuODUgMTM1My42MyAxMjM2LjI1IDEzOTEuNDIgMTI3Mi44NyAxMzk3LjQ2QzEzMDkuNDkgMTQwMy40OSAxMzMyLjU0IDE0NDIuMjMgMTMxOS4zNSAxNDc3LjZMMTI4Mi4zNSAxNTc2LjkzTDEyMTIuMjcgMTc2NS4yMUwxMTM4LjU5IDE5NzUuNDhDMTEyNi4yNSAyMDEwLjY2IDExNDguNjQgMjA0OC40MiAxMTg1LjQ4IDIwNTQuNDlDMTIyMi4zMSAyMDYwLjU2IDEyNDUuMTUgMjA5OS4yNyAxMjMxLjk3IDIxMzQuNjNMMTE5NC43NSAyMjMzLjkzTDExMjQuODggMjQyMi4yNCIgc3Ryb2tlLXdpZHRoPSIzLjgyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNMTM3My4xNSAtMTU2LjY0NUwxMjk5LjI2IDUzLjU5OTJDMTI4Ni45MiA4OC43NzI2IDEzMDkuMzIgMTI2LjUzNSAxMzQ2LjE1IDEzMi42MDVDMTM4Mi45OCAxMzguNjc0IDE0MDUuODIgMTc3LjM4MiAxMzkyLjY0IDIxMi43NDJMMTM1NS40MiAzMTIuMDQyTDEyODUuNTUgNTAwLjM1M0wxMjExLjg0IDcxMC42MjhDMTE5OS41MSA3NDUuODAxIDEyMjEuOSA3ODMuNTYzIDEyNTguNzMgNzg5LjYzM0MxMjk1LjU3IDc5NS43MDIgMTMxOC4yMiA4MzQuMzc5IDEzMDUuMDQgODY5Ljc0TDEyNjguMDEgOTY5LjA3TDExOTguMTQgMTE1Ny4zOEwxMTI0LjI1IDEzNjcuNkMxMTExLjkxIDE0MDIuNzcgMTEzNC4zIDE0NDAuNTYgMTE3MS4xMSAxNDQ2LjYzQzEyMDcuOTIgMTQ1Mi42OSAxMjMwLjc4IDE0OTEuNCAxMjE3LjYgMTUyNi43NkwxMTgwLjM4IDE2MjYuMDZMMTExMC41MSAxODE0LjM3TDEwMzYuODMgMjAyNC42NUMxMDI0LjQ5IDIwNTkuOCAxMDQ2Ljg5IDIwOTcuNTkgMTA4My42OSAyMTAzLjY1QzExMjAuNSAyMTA5LjcyIDExNDMuMTYgMjE0OC40IDExMjkuOTcgMjE4My43NkwxMDkyLjk0IDIyODMuMDlMMTAyMy4wNyAyNDcxLjM3IiBzdHJva2Utd2lkdGg9IjMuODIiIHN0cm9rZS1taXRlcmxpbWl0PSIyMi45MyIgc3Ryb2tlPSIjMjFEQkZGIi8+CjxwYXRoIGQ9Ik04ODAuMTk3IC0zMDMuODEzTDgwNi41MTQgLTkzLjUzMzZDNzk0LjE3NiAtNTguMzYwMiA4MTYuNTczIC0yMC41OTc4IDg1My4zOCAtMTQuNTMyOEM4OTAuMTg2IC04LjQ2Nzc0IDkxMi44NjkgMzAuMjE0IDg5OS42ODMgNjUuNTc0Nkw4NjIuNjU0IDE2NC45MDVMNzkyLjc4MiAzNTMuMjE1TDcxOC44ODggNTYzLjQ2QzcwNi41NTEgNTk4LjYzMyA3MjguOTQ3IDYzNi4zOTYgNzY1Ljc4IDY0Mi40NjVDODAyLjYxMyA2NDguNTM0IDgyNS40NTYgNjg3LjI0MyA4MTIuMjcgNzIyLjYwM0w3NzUuMDU0IDgyMS45MDJMNzA1LjE4MiAxMDEwLjIxTDYzMS41MDYgMTIyMC40N0M2MTkuMTY4IDEyNTUuNjQgNjQxLjU2MSAxMjkzLjQzIDY3OC4zNjggMTI5OS40OUM3MTUuMTc0IDEzMDUuNTYgNzM3Ljg1NyAxMzQ0LjI0IDcyNC42NzEgMTM3OS42TDY4Ny42NjcgMTQ3OC45NEw2MTcuNzk2IDE2NjcuMjVMNTQzLjkgMTg3Ny40OUM1MzEuNTYyIDE5MTIuNjYgNTUzLjk2MSAxOTUwLjQzIDU5MC43OTQgMTk1Ni41QzYyNy42MjcgMTk2Mi41NiA2NTAuNDcgMjAwMS4yNyA2MzcuMjg0IDIwMzYuNjNMNjAwLjA2OCAyMTM1LjkzTDUzMC4xOTYgMjMyNC4yNCIgc3Ryb2tlLXdpZHRoPSIyLjc2IiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNNTQyLjY5OSAyMjkyLjI3TDQ2OS4wMTcgMjUwMi41NUM0NTYuNjc5IDI1MzcuNzIgNDc5LjA3NyAyNTc1LjQ4IDUxNS45MSAyNTgxLjU1QzU1Mi43NDQgMjU4Ny42MiA1NzUuMzc0IDI2MjYuMyA1NjIuMTg4IDI2NjEuNjZMNTI1LjE1NyAyNzYwLjk5TDQ1NS4yODUgMjk0OS4zTDM4MS4zOTEgMzE1OS41NEMzNjkuMDUzIDMxOTQuNzIgMzkxLjQ1MSAzMjMyLjQ4IDQyOC4yNTggMzIzOC41NEM0NjUuMDY1IDMyNDQuNjEgNDg3LjkzMyAzMjgzLjMyIDQ3NC43NDYgMzMxOC42OEw0MzcuNzE3IDM0MTguMDFMMzY3LjYzMyAzNjA2LjI5TDI5My45NTUgMzgxNi41NEMyODEuNjE3IDM4NTEuNzEgMzA0LjAxMSAzODg5LjUgMzQwLjg0NCAzODk1LjU3QzM3Ny42NzcgMzkwMS42NCA0MDAuMzMzIDM5NDAuMzIgMzg3LjE0NyAzOTc1LjY4TDM1MC4xMTggNDA3NS4wMUwyODAuMjQ2IDQyNjMuMzJMMjA2LjM1MSA0NDczLjU2QzE5NC4wMTQgNDUwOC43NCAyMTYuNDEyIDQ1NDYuNSAyNTMuMjE5IDQ1NTIuNTZDMjkwLjAyNSA0NTU4LjYzIDMxMi44OTIgNDU5Ny4zNCAyOTkuNzA2IDQ2MzIuN0wyNjIuNzAzIDQ3MzIuMDRMMTkyLjY0NyA0OTIwLjMyIiBzdHJva2Utd2lkdGg9IjYuMzciIHN0cm9rZS1taXRlcmxpbWl0PSIyMi45MyIgc3Ryb2tlPSIjMjFEQkZGIi8+CjxwYXRoIGQ9Ik00NDAuOTY1IDIzNDEuNDRMMzY3LjI1NiAyNTUxLjcxQzM1NC45MTggMjU4Ni44OSAzNzcuMzE3IDI2MjQuNjUgNDEzLjkzOCAyNjMwLjY4QzQ1MC41NTkgMjYzNi43MiA0NzMuNjEyIDI2NzUuNDYgNDYwLjQyNiAyNzEwLjgyTDQyMy4zOTcgMjgxMC4xNUwzNTMuMzQgMjk5OC40M0wyNzkuNjMgMzIwOC43MUMyNjcuMjkzIDMyNDMuODggMjg5LjY5IDMyODEuNjQgMzI2LjUyNCAzMjg3LjcxQzM2My4zNTcgMzI5My43OCAzODYuMTk4IDMzMzIuNDkgMzczLjAxMiAzMzY3Ljg1TDMzNS43OTggMzQ2Ny4xNUwyNjUuOTI2IDM2NTUuNDZMMTkyLjI0NyAzODY1LjcxQzE3OS45MDkgMzkwMC44OSAyMDIuMzAzIDM5MzguNjggMjM4LjkyNCAzOTQ0LjcxQzI3NS41NDUgMzk1MC43NSAyOTguNTk5IDM5ODkuNDkgMjg1LjQxMyA0MDI0Ljg1TDI0OC40MSA0MTI0LjE4TDE3OC4zMjYgNDMxMi40NkwxMDQuNjQzIDQ1MjIuNzRDOTIuMzA5NyA0NTU3Ljg5IDExNC43MDMgNDU5NS42NyAxNTEuNTM2IDQ2MDEuNzRDMTg4LjM2OSA0NjA3LjgxIDIxMS4yMTEgNDY0Ni41MiAxOTguMDI1IDQ2ODEuODhMMTYwLjgxIDQ3ODEuMThMOTAuOTQyOCA0OTY5LjQ3IiBzdHJva2Utd2lkdGg9IjYuMzciIHN0cm9rZS1taXRlcmxpbWl0PSIyMi45MyIgc3Ryb2tlPSIjMjFEQkZGIi8+CjxwYXRoIGQ9Ik0xNzMwLjY4IDI0ODguMDJMMTY1Ni45OSAyNjk4LjNDMTY0NC42NiAyNzMzLjQ4IDE2NjcuMDUgMjc3MS4yNCAxNzAzLjY4IDI3NzcuMjdDMTc0MC4zIDI3ODMuMzEgMTc2My4zNSAyODIyLjA1IDE3NTAuMTYgMjg1Ny40MUwxNzEzLjE0IDI5NTYuNzRMMTY0My4wOCAzMTQ1LjAyTDE1NjkuMzcgMzM1NS4zQzE1NTcuMDMgMzM5MC40NyAxNTc5LjQzIDM0MjguMjMgMTYxNi4yNiAzNDM0LjNDMTY1My4xIDM0NDAuMzcgMTY3NS45NCAzNDc5LjA4IDE2NjIuNzUgMzUxNC40NEwxNjI1LjU0IDM2MTMuNzRMMTU1NS42NiAzODAyLjA1TDE0ODEuOTkgNDAxMi4zQzE0NjkuNjUgNDA0Ny40OCAxNDkyLjA0IDQwODUuMjcgMTUyOC42NiA0MDkxLjNDMTU2NS4yOCA0MDk3LjM0IDE1ODguMzQgNDEzNi4wOCAxNTc1LjE1IDQxNzEuNDRMMTUzOC4xNSA0MjcwLjc3TDE0NjguMDcgNDQ1OS4wNUwxMzk0LjM4IDQ2NjkuMzNDMTM4Mi4wNCA0NzA0LjUgMTQwNC40NCA0NzQyLjI2IDE0NDEuMjcgNDc0OC4zM0MxNDc4LjExIDQ3NTQuNCAxNTAwLjk1IDQ3OTMuMTEgMTQ4Ny43NiA0ODI4LjQ3TDE0NTAuNTUgNDkyNy43N0wxMzgwLjY4IDUxMTYuMDgiIHN0cm9rZS13aWR0aD0iMy44MiIgc3Ryb2tlLW1pdGVybGltaXQ9IjIyLjkzIiBzdHJva2U9IiMyMURCRkYiLz4KPHBhdGggZD0iTTE2MjguOTQgMjUzNy4yTDE1NTUuMDUgMjc0Ny40NEMxNTQyLjcxIDI3ODIuNjEgMTU2NS4xMSAyODIwLjM4IDE2MDEuOTQgMjgyNi40NUMxNjM4Ljc4IDI4MzIuNTIgMTY2MS42MiAyODcxLjIyIDE2NDguNDMgMjkwNi41OEwxNjExLjIyIDMwMDUuODhMMTU0MS4zNCAzMTk0LjE5TDE0NjcuNjQgMzQwNC40N0MxNDU1LjMgMzQzOS42NCAxNDc3LjY5IDM0NzcuNCAxNTE0LjUzIDM0ODMuNDdDMTU1MS4zNiAzNDg5LjU0IDE1NzQuMDIgMzUyOC4yMiAxNTYwLjgzIDM1NjMuNThMMTUyMy44IDM2NjIuOTFMMTQ1My45MyAzODUxLjIyTDEzODAuMDQgNDA2MS40NEMxMzY3LjcgNDA5Ni42MSAxMzkwLjEgNDEzNC40IDE0MjYuOSA0MTQwLjQ3QzE0NjMuNzEgNDE0Ni41MyAxNDg2LjU4IDQxODUuMjQgMTQ3My4zOSA0MjIwLjYxTDE0MzYuMTggNDMxOS45MUwxMzY2LjMgNDUwOC4yMkwxMjkyLjYyIDQ3MTguNUMxMjgwLjI5IDQ3NTMuNjQgMTMwMi42OCA0NzkxLjQzIDEzMzkuNDkgNDc5Ny41QzEzNzYuMjkgNDgwMy41NiAxMzk4Ljk1IDQ4NDIuMjQgMTM4NS43NiA0ODc3LjZMMTM0OC43MyA0OTc2LjkzTDEyNzguODcgNTE2NS4yMSIgc3Ryb2tlLXdpZHRoPSIzLjgyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNLTUxLjk5NiAyMTk0LjI3TC0xMjUuNjc4IDI0MDQuNTVDLTEzOC4wMTYgMjQzOS43MyAtMTE1LjYxOSAyNDc3LjQ5IC03OC44MTIxIDI0ODMuNTVDLTQyLjAwNTQgMjQ4OS42MiAtMTkuMzQ4NyAyNTI4LjMgLTMyLjUzNSAyNTYzLjY2TC02OS41NjQgMjY2Mi45OUwtMTM5LjQzNiAyODUxLjNMLTIxMy4zMzEgMzA2MS41NEMtMjI1LjY2OCAzMDk2LjcxIC0yMDMuMjcxIDMxMzQuNDggLTE2Ni40NjUgMzE0MC41NEMtMTI5LjY1OCAzMTQ2LjYxIC0xMDYuNzkgMzE4NS4zMiAtMTE5Ljk3NiAzMjIwLjY4TC0xNTcuMTkxIDMzMTkuOThMLTIyNy4wNjIgMzUwOC4yOUwtMzAwLjc0IDM3MTguNTRDLTMxMy4wNzggMzc1My43MiAtMjkwLjY4NCAzNzkxLjUxIC0yNTMuODUxIDM3OTcuNTdDLTIxNy4wMTggMzgwMy42NCAtMTk0LjM2MiAzODQyLjMyIC0yMDcuNTQ4IDM4NzcuNjhMLTI0NC41NzcgMzk3Ny4wMUwtMzE0LjQ0OSA0MTY1LjMyTC0zODguMzQ0IDQzNzUuNTdDLTQwMC42ODIgNDQxMC43NCAtMzc4LjI4NCA0NDQ4LjUgLTM0MS40NTEgNDQ1NC41N0MtMzA0LjYxNyA0NDYwLjY0IC0yODEuNzc2IDQ0OTkuMzUgLTI5NC45NjIgNDUzNC43MUwtMzMyLjE3NyA0NjM0LjAxTC00MDIuMDQ4IDQ4MjIuMzIiIHN0cm9rZS13aWR0aD0iMy44MiIgc3Ryb2tlLW1pdGVybGltaXQ9IjIyLjkzIiBzdHJva2U9IiMyMURCRkYiLz4KPHBhdGggZD0iTTExMzUuOTkgMjM5MC4wM0wxMDYyLjMgMjYwMC4zMUMxMDQ5Ljk2IDI2MzUuNDggMTA3Mi4zNiAyNjczLjI0IDExMDkuMTcgMjY3OS4zMUMxMTQ1Ljk4IDI2ODUuMzcgMTE2OC42NiAyNzI0LjA2IDExNTUuNDcgMjc1OS40MkwxMTE4LjQ0IDI4NTguNzVMMTA0OC41NyAzMDQ3LjA2TDk3NC42NzcgMzI1Ny4zQzk2Mi4zMzkgMzI5Mi40OCA5ODQuNzM2IDMzMzAuMjQgMTAyMS41NyAzMzM2LjMxQzEwNTguNCAzMzQyLjM4IDEwODEuMjQgMzM4MS4wOCAxMDY4LjA2IDM0MTYuNDRMMTAzMC44NCAzNTE1Ljc0TDk2MC45NzEgMzcwNC4wNUw4ODcuMjk1IDM5MTQuMzFDODc0Ljk1NyAzOTQ5LjQ4IDg5Ny4zNSAzOTg3LjI3IDkzNC4xNTYgMzk5My4zNEM5NzAuOTYzIDM5OTkuNCA5OTMuNjQ2IDQwMzguMDggOTgwLjQ1OSA0MDczLjQ0TDk0My40NTYgNDE3Mi43OEw4NzMuNTg0IDQzNjEuMDlMNzk5LjY4OCA0NTcxLjMzQzc4Ny4zNTEgNDYwNi41MSA4MDkuNzUgNDY0NC4yNyA4NDYuNTgzIDQ2NTAuMzRDODgzLjQxNiA0NjU2LjQxIDkwNi4yNTkgNDY5NS4xMSA4OTMuMDczIDQ3MzAuNDhMODU1Ljg1NyA0ODI5Ljc3TDc4NS45ODUgNTAxOC4wOSIgc3Ryb2tlLXdpZHRoPSIyLjc2IiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNMTAzNC4yNSAyNDM5LjJMOTYwLjM2MSAyNjQ5LjQ1Qzk0OC4wMjMgMjY4NC42MiA5NzAuNDIgMjcyMi4zOCAxMDA3LjI1IDI3MjguNDVDMTA0NC4wOSAyNzM0LjUyIDEwNjYuOTMgMjc3My4yMyAxMDUzLjc0IDI4MDguNTlMMTAxNi43MSAyOTA3LjkyTDk0Ni42NTUgMzA5Ni4yTDg3Mi45NDYgMzMwNi40N0M4NjAuNjA4IDMzNDEuNjUgODgzLjAwNyAzMzc5LjQxIDkxOS44NCAzMzg1LjQ4Qzk1Ni42NzMgMzM5MS41NSA5NzkuMzI5IDM0MzAuMjMgOTY2LjE0MyAzNDY1LjU5TDkyOS4xMTQgMzU2NC45Mkw4NTkuMjQyIDM3NTMuMjNMNzg1LjM1MSAzOTYzLjQ1Qzc3My4wMTMgMzk5OC42MiA3OTUuNDA4IDQwMzYuNDEgODMyLjI0MSA0MDQyLjQ4Qzg2OS4wNzQgNDA0OC41NSA4OTEuOTE0IDQwODcuMjYgODc4LjcyOCA0MTIyLjYyTDg0MS41MTUgNDIyMS45Mkw3NzEuNjQzIDQ0MTAuMjNMNjk3Ljk2IDQ2MjAuNTFDNjg1LjYyNiA0NjU1LjY1IDcwOC4wMjEgNDY5My40NCA3NDQuODU0IDQ2OTkuNTFDNzgxLjY4NyA0NzA1LjU4IDgwNC4zMTUgNDc0NC4yNSA3OTEuMTI5IDQ3NzkuNjFMNzU0LjEgNDg3OC45NEw2ODQuMjMyIDUwNjcuMjMiIHN0cm9rZS13aWR0aD0iMi43NiIgc3Ryb2tlLW1pdGVybGltaXQ9IjIyLjkzIiBzdHJva2U9IiMyMURCRkYiLz4KPC9nPgo8L3N2Zz4K") center top/3939px 5907px no-repeat;pointer-events:none}
+dialog:where(.ski-factory-2027,.ski-factory-2027 *)::backdrop{background:#141414d9}
+.skip:where(.ski-factory-2027,.ski-factory-2027 *){position:fixed;top:0;left:10px;z-index:99;padding:14px;background:white;translate:0 -150%}
+.skip:focus:where(.ski-factory-2027,.ski-factory-2027 *){translate:0}
+.container:where(.ski-factory-2027,.ski-factory-2027 *){width:calc(100% - 64px);max-width:var(--content);margin-inline:auto}
+@media (min-width: 768px){.page__body:where(.ski-factory-2027,.ski-factory-2027 *){padding-block-end:12px}}
+@media (min-width: 1200px){:root:where(.ski-factory-2027,.ski-factory-2027 *){--wide-banner-height:calc(100svh - 24px);--wide-banner-width:max(800px,calc(var(--wide-banner-height) * 1331 / 878))}}
+.page__section:where(.ski-factory-2027,.ski-factory-2027 *){margin-block:80px}
+.page__dialog:where(.ski-factory-2027,.ski-factory-2027 *){border:0;border-radius:20px;padding:44px 20px 20px;max-width:94vw;max-height:94dvh;color:var(--navy);margin:auto}
+.button:where(.ski-factory-2027,.ski-factory-2027 *){display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:18px 24px;border:0;border-radius:100px;background:var(--ink);color:var(--white);font:500 16px/20px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;letter-spacing:0.02em;text-decoration:none;text-align:center;max-width:100%;transition:background-color 200ms ease,color 200ms ease}
+.button:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){background-color:var(--hover-cyan);color:#fff}
+.hero:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;isolation:isolate;background:var(--navy) url("https://static.tildacdn.pub/tila3465-3766-4231-b561-653035636465/hero-snow-background.webp") center/cover no-repeat;color:var(--white);border-radius:42px;overflow:clip;width:calc(100% - 26px);max-width:100%;margin-inline:13px}
+.merch.container:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;isolation:isolate;overflow:clip;display:flex;flex-direction:column;align-items:center;gap:178px;border-radius:42px;background:#08183b;padding:84px max(32px,calc((100% - 1135px) / 2)) 69px;width:calc(100% - 26px);max-width:100%;margin-inline:13px}
+.merch__group:where(.ski-factory-2027,.ski-factory-2027 *){min-width:0}
+.merch-art:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.merch-art__image:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;max-width:none}
+.merch-base:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;inset:0;background:#1d53df}
+.merch-glow:where(.ski-factory-2027,.ski-factory-2027 *){object-fit:cover;width:183.5%;height:157.7%;left:-41.75%;top:-41.5%}
+.merch-pattern:where(.ski-factory-2027,.ski-factory-2027 *){height:797px;width:1554px;left:calc(50% - 1624px);top:-84px;transform:rotate(180deg)}
+.merch-notch:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;grid-area:auto;top:0;left:calc(50% - 157px);width:314px}
+.merch-title:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;z-index:1;align-self:start}
+.merch__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:151.19px;line-height:1.1;color:var(--white);white-space:nowrap}
+.merch__subtitle:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:703px;height:41.3px;object-fit:contain}
+.merch-shirt:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;grid-area:auto;top:205px;right:max(100px,calc((100% - 1008px) / 2));width:579px;height:492px;max-width:none;pointer-events:none}
+.merch-shirt__image:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:100%;object-fit:contain}
+.merch__button:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;z-index:2;align-self:center;margin-top:0;width:403px;background:var(--white);color:var(--navy)}
+.merch-seal:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;grid-area:auto;right:max(32px,calc((100% - 1250px) / 2));bottom:45px;width:96px;height:96px}
+.intro:where(.ski-factory-2027,.ski-factory-2027 *){max-width:964px;text-align:center;margin-top:108px}
+.intro__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:72px;line-height:66px;margin-bottom:10px}
+.intro__text:where(.ski-factory-2027,.ski-factory-2027 *){font-size:18px;line-height:25px}
+.organizers:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;isolation:isolate;overflow:clip;display:flex;align-items:center;justify-content:space-between;gap:50px;padding:43px;border-radius:23px;background:radial-gradient(ellipse at 35% 20%,#08183b 40%,#1ec4e8 90%)}
+.organizers:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:"";position:absolute;inset:0;z-index:-1;background:url("https://static.tildacdn.pub/tila3664-3632-4735-b161-393239306137/organizers-backgroun.svg") center/cover;opacity:0.8;pointer-events:none}
+.organizers__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:72px;line-height:91px}
+.organizers__group:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;align-items:center;gap:101px}
+.organizers__link:where(.ski-factory-2027,.ski-factory-2027 *){display:block;flex-shrink:0}
+.organizers__image:where(.ski-factory-2027,.ski-factory-2027 *){width:229px;height:auto}
+.organizers__image--secondary:where(.ski-factory-2027,.ski-factory-2027 *){width:232.34px}
+.video:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template-columns:minmax(0,454fr) minmax(0,620fr);gap:92px;align-items:center}
+.video__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:62px;line-height:1.26}
+.video-cover:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;display:grid;grid-template:1fr/1fr;place-items:center;width:100%;aspect-ratio:620/349.348;border:0;border-radius:24px;padding:0;overflow:hidden;background:var(--navy)}
+.video-cover__image:where(.ski-factory-2027,.ski-factory-2027 *){grid-area:1/1;width:100%;height:100%;object-fit:cover}
+.video-cover:where(.ski-factory-2027,.ski-factory-2027 *)::after{content:"";position:absolute;inset:0;background:#14141466;pointer-events:none}
+.video-play:where(.ski-factory-2027,.ski-factory-2027 *){grid-area:1/1;z-index:1;display:grid;place-items:center;width:69.125px;color:var(--navy);aspect-ratio:1;border-radius:50%;background:var(--white)}
+.video-play__image:where(.ski-factory-2027,.ski-factory-2027 *){width:26.055px;height:29.777px;margin-left:4px}
+.routes:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template-columns:minmax(0,454fr) minmax(0,619fr);grid-template-rows:auto 1fr;gap:94px;align-items:start;row-gap:28px}
+.route-heading__title:where(.ski-factory-2027,.ski-factory-2027 *){line-height:91px}
+.route-heading:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;gap:10px;grid-column:1;grid-row:1}
+.tabs:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-wrap:wrap;gap:10px 18px;max-width:420px}
+.tabs__button:where(.ski-factory-2027,.ski-factory-2027 *){width:122px;min-width:115px;min-height:54px;padding:9px 15px;border:0;border-radius:100px;background:var(--ink);color:white;font:700 18px/23px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif}
+.tabs__button--compact:where(.ski-factory-2027,.ski-factory-2027 *){width:115px}
+.tabs__button[aria-selected="true"]:where(.ski-factory-2027,.ski-factory-2027 *){background:var(--cyan)}
+.tabs__button:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){outline:2px solid var(--cyan);outline-offset:3px}
+@media (hover: hover){.tabs__button[aria-selected="false"]:hover:where(.ski-factory-2027,.ski-factory-2027 *){opacity:0.8}}
+.route-stats:where(.ski-factory-2027,.ski-factory-2027 *){min-height:165px;display:grid;container-type:inline-size;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--ink);border-radius:20px;color:white;padding:15px 20px;gap:12px;font:700 12px/25px "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif;text-align:center}
+.route-stats__group:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;align-items:center;gap:8px;position:relative}
+.route-stats__emphasis:where(.ski-factory-2027,.ski-factory-2027 *){font:700 16px/20px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;font-size:clamp(8px,4.2cqi - 1.1px,16px)}
+.route-stats__icon:where(.ski-factory-2027,.ski-factory-2027 *){width:62px;height:66px;object-fit:contain}
+.map-preview:where(.ski-factory-2027,.ski-factory-2027 *){margin-block-start:32.5px;align-self:start;display:block;width:100%;aspect-ratio:619/572;overflow:hidden;grid-column:2;grid-row:1/span 2}
+.map-preview__image:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:100%;object-fit:contain}
+.stats-icon:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template:1fr/1fr;width:62px;height:66px;place-items:center}
+.stats-icon__layer:where(.ski-factory-2027,.ski-factory-2027 *){grid-area:1/1}
+.stats-icon__em:where(.ski-factory-2027,.ski-factory-2027 *){font:700 24.6px/51.26px "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif;color:var(--cyan)}
+.route-stats__group--separated:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:"";position:absolute;left:-6px;top:50%;height:106.5px;border-left:1px solid var(--white);transform:translateY(-50%)}
+.route-stats[hidden]:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.routes__panel:where(.ski-factory-2027,.ski-factory-2027 *){display:contents}
+.routes__copy:where(.ski-factory-2027,.ski-factory-2027 *){grid-column:1;grid-row:2;display:flex;flex-direction:column;gap:28px;min-width:0}
+.routes__text:where(.ski-factory-2027,.ski-factory-2027 *){background-color:#fff}
+.dark-panel:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;isolation:isolate;color:var(--white)}
+.price-definitions:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute}
+.price-artwork:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--ink) url("https://static.tildacdn.pub/tila3161-3439-4630-b039-383165396630/price-background.svg") center/100% 100% no-repeat;clip-path:url("#price-panel-clip");overflow:hidden}
+.price-artwork:where(.ski-factory-2027,.ski-factory-2027 *)::after{content:none}
+.price-content:where(.ski-factory-2027,.ski-factory-2027 *){padding:14px 69px 40px}
+.price-content__title:where(.ski-factory-2027,.ski-factory-2027 *){line-height:91px;margin-bottom:28px}
+.data-row:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;align-items:center;grid-template-columns:minmax(0,52.19fr) minmax(0,28.14fr) minmax(0,19.67fr);gap:0;min-height:78px;border-bottom:1px solid #f8feff;font:700 24px/1.2 "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif}
+.data-row__emphasis:where(.ski-factory-2027,.ski-factory-2027 *),
+.data-row__price:where(.ski-factory-2027,.ski-factory-2027 *){font:700 26px/1.2 "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif}
+.data-row__price:where(.ski-factory-2027,.ski-factory-2027 *){text-decoration:none}
+.data-row__price--free:where(.ski-factory-2027,.ski-factory-2027 *){text-transform:uppercase}
+.fine:where(.ski-factory-2027,.ski-factory-2027 *){list-style:disc;font:500 14px/25px "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif;margin-top:52px;padding-left:0}
+.fine__item--secondary:where(.ski-factory-2027,.ski-factory-2027 *){margin-top:6px}
+.benefits:where(.ski-factory-2027,.ski-factory-2027 *){text-align:center;margin-top:160px}
+.benefits__title:where(.ski-factory-2027,.ski-factory-2027 *){max-width:700px;margin:0 auto 20px;line-height:91px}
+.benefits__link:where(.ski-factory-2027,.ski-factory-2027 *){width:355px}
+.benefit-list:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;max-width:958px;min-height:261px;margin:0 auto 40px;list-style:none;padding:0;display:flex;flex-direction:column;justify-content:space-between;color:var(--ink);font:500 24px/25px "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif}
+.benefit-list__row:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;justify-content:center;flex-wrap:wrap;column-gap:20px}
+.benefit-list__emphasis:where(.ski-factory-2027,.ski-factory-2027 *),
+.benefit-large__emphasis:where(.ski-factory-2027,.ski-factory-2027 *),
+.benefit-list__food:where(.ski-factory-2027,.ski-factory-2027 *){font-weight:700}
+.benefit-list__medal:where(.ski-factory-2027,.ski-factory-2027 *),
+.benefit-list__food:where(.ski-factory-2027,.ski-factory-2027 *){font-family:"Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif}
+.benefit-large:where(.ski-factory-2027,.ski-factory-2027 *){font-family:"Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;font-size:32px;line-height:normal}
+.information:where(.ski-factory-2027,.ski-factory-2027 *){background-color:#fff;max-width:1165px}
+.information__title:where(.ski-factory-2027,.ski-factory-2027 *){text-align:center;line-height:79px;margin-bottom:20px}
+.information-panel:where(.ski-factory-2027,.ski-factory-2027 *){isolation:isolate;padding:108.5px 8%;border-radius:44px;color:var(--white);background:var(--ink);overflow:hidden;mask:radial-gradient(circle at left 58.5%,transparent 36px,#000 37px),radial-gradient(circle at right 58.5%,transparent 36px,#000 37px);mask-composite:intersect}
+.information-panel__glow:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;left:calc(50% + 14.95px);width:1480.904px;height:203.794px;border-radius:50%;transform:translateX(-50%) rotate(-0.05deg);background:var(--cyan);filter:blur(36.98px);z-index:-1;pointer-events:none}
+.information-panel__glow--top:where(.ski-factory-2027,.ski-factory-2027 *){top:-164.645px}
+.information-panel__glow--bottom:where(.ski-factory-2027,.ski-factory-2027 *){bottom:-167.15px}
+.information-panel__details--separated:where(.ski-factory-2027,.ski-factory-2027 *){border-top:0;margin-top:32px}
+.information-panel__summary--last:where(.ski-factory-2027,.ski-factory-2027 *){padding-block:0;min-height:33px;padding:0}
+.information-panel__summary:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;justify-content:space-between;align-items:center;gap:36px;list-style:none;cursor:pointer;font:700 24px/25px "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif;min-height:33px;padding:0}
+.information-panel__summary:where(.ski-factory-2027,.ski-factory-2027 *)::-webkit-details-marker{display:none}
+.information-panel__description:where(.ski-factory-2027,.ski-factory-2027 *){margin-top:15px;padding-right:81px;font-weight:500;font-size:16px;line-height:25px}
+.information-panel__content:where(.ski-factory-2027,.ski-factory-2027 *){overflow:hidden}
+.information-panel__details--ruled:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;padding-bottom:32px;border-bottom:0}
+.information-panel__details--ruled:where(.ski-factory-2027,.ski-factory-2027 *)::after{content:"";position:absolute;bottom:0;left:0;width:calc(100% - 81px);border-bottom:2px solid var(--white)}
+.information-panel__details--last:where(.ski-factory-2027,.ski-factory-2027 *){margin-top:25px}
+.information-panel__emphasis:where(.ski-factory-2027,.ski-factory-2027 *){font-weight:600}
+.information-panel__lead:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--cyan);font-family:"Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;font-weight:700}
+.teams:where(.ski-factory-2027,.ski-factory-2027 *){background-color:#fff;max-width:1030px}
+.teams__title:where(.ski-factory-2027,.ski-factory-2027 *){text-align:center;line-height:91px;margin-bottom:20px}
+.teams__title-break:where(.ski-factory-2027,.ski-factory-2027 *),
+.team-description__break:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.team-grid:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template-columns:minmax(0,480fr) minmax(0,440fr);gap:110px;align-items:stretch}
+.team-grid__article:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;align-items:start;gap:0}
+.team-grid__picture:where(.ski-factory-2027,.ski-factory-2027 *){height:auto;margin-bottom:12px;width:133px;display:block}
+.team-grid__subtitle:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--cyan);font:700 24px/21px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;margin-bottom:27px}
+.team-lead__link:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--cyan)}
+.team-grid__text--content:where(.ski-factory-2027,.ski-factory-2027 *){font-size:18px;line-height:25px}
+.team-grid__text--team-lead:where(.ski-factory-2027,.ski-factory-2027 *){font:500 18px/21px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;max-width:376px;margin-bottom:25px}
+.team-lead--corporate:where(.ski-factory-2027,.ski-factory-2027 *){max-width:393px;color:#090909}
+.team-grid__link:where(.ski-factory-2027,.ski-factory-2027 *){width:296px;margin-block:auto 27px}
+.team-grid__note:where(.ski-factory-2027,.ski-factory-2027 *){max-width:395px;color:var(--ink);font-size:20px;font-weight:700}
+.team-grid__note--corporate:where(.ski-factory-2027,.ski-factory-2027 *){max-width:420px}
+.team-grid__image--content:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:auto}
+.team-grid__image--mobile:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.team-description--secondary:where(.ski-factory-2027,.ski-factory-2027 *){max-width:420px}
+.team-grid__age-note:where(.ski-factory-2027,.ski-factory-2027 *){white-space:nowrap}
+@media (min-width: 768px){.team-grid__image--club:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:113.05px;height:auto;margin-block-end:12px}.team-description:where(.ski-factory-2027,.ski-factory-2027 *){margin-block-end:36px}}
+.schedule:where(.ski-factory-2027,.ski-factory-2027 *){max-width:1165px}
+.schedule-art:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;inset:0;z-index:-1;background:url("https://static.tildacdn.pub/tila3764-3561-4364-a135-303961653731/schedule-panel.svg") center/100% 100% no-repeat;pointer-events:none}
+.schedule__title:where(.ski-factory-2027,.ski-factory-2027 *){text-align:right;padding:14px 80px 0 40%;line-height:91px;margin-bottom:79px}
+.schedule__rows:where(.ski-factory-2027,.ski-factory-2027 *){padding:0 94px 127px 103px}
+.schedule__row:where(.ski-factory-2027,.ski-factory-2027 *){grid-template-columns:24.6% minmax(0,1fr) 25.8%;border:0;min-height:70px;font:500 18px/25px "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif}
+.schedule__row--opening:where(.ski-factory-2027,.ski-factory-2027 *){min-height:90px;align-items:start}
+.schedule__row--closing:where(.ski-factory-2027,.ski-factory-2027 *){min-height:30px}
+.schedule__value:where(.ski-factory-2027,.ski-factory-2027 *){font:700 24px/1.3 "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif}
+.schedule__distance:where(.ski-factory-2027,.ski-factory-2027 *){text-align:right}
+.location:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template-columns:minmax(0,460fr) minmax(0,460fr);gap:20px 87px;padding-inline:79px}
+.location__title:where(.ski-factory-2027,.ski-factory-2027 *){grid-column:1/-1;text-align:center;line-height:91px;margin-bottom:0}
+.location-copy:where(.ski-factory-2027,.ski-factory-2027 *){align-self:end}
+.location-copy__text:where(.ski-factory-2027,.ski-factory-2027 *){font-size:18px;line-height:25px}
+.location-copy__text--secondary:where(.ski-factory-2027,.ski-factory-2027 *){margin-top:8px;font:700 14px/21px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;color:var(--ink)}
+.location-map:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;grid-row:2/span 2;grid-column:2;align-self:end;width:100%;aspect-ratio:460/310;overflow:hidden;border-radius:20px}
+.location-map__frame:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;top:0;left:0;width:100%;height:calc(100% + 148px);border:0}
+.location-directions:where(.ski-factory-2027,.ski-factory-2027 *){align-self:start;grid-column:1;grid-row:3;justify-self:start;width:257px}
+.transport:where(.ski-factory-2027,.ski-factory-2027 *){grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:87px;margin-top:53px}
+.transport__article:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;align-items:flex-start}
+.transport__subtitle:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--ink);margin-bottom:8px}
+.transport__text:where(.ski-factory-2027,.ski-factory-2027 *){flex:1;font-size:18px;line-height:25px}
+.transport__link:where(.ski-factory-2027,.ski-factory-2027 *){margin-top:20px;width:257px}
+.slider-loading:where(.ski-factory-2027,.ski-factory-2027 *){--skeleton-base:#e4eaee;--skeleton-highlight:#f3f6f8;--skeleton-cycle:1.5s;--skeleton-fade:350ms;position:relative}
+.slider-loading__skeleton:where(.ski-factory-2027,.ski-factory-2027 *){display:none;position:absolute;inset:0;z-index:3;overflow:hidden;border-radius:var(--skeleton-radius,0px);background:var(--skeleton-base);pointer-events:none;opacity:0;visibility:hidden;transition:opacity var(--skeleton-fade) ease-out,visibility 0s var(--skeleton-fade)}
+.slider-loading__skeleton:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--skeleton-highlight) 50%,transparent);transform:translateX(-100%);animation:ski-factory-2027-slider-loading-shimmer var(--skeleton-cycle) linear infinite;animation-play-state:paused}
+.slider-loading__content:where(.ski-factory-2027,.ski-factory-2027 *){transition:opacity var(--skeleton-fade) ease-out}
+.page--js .slider-loading__skeleton:where(.ski-factory-2027,.ski-factory-2027 *){display:block}
+.page--js .slider-loading:not([data-slider-ready]) .slider-loading__skeleton:where(.ski-factory-2027,.ski-factory-2027 *){opacity:1;visibility:visible;transition:opacity var(--skeleton-fade) ease-out}
+.page--js .slider-loading:not([data-slider-ready]) .slider-loading__skeleton:where(.ski-factory-2027,.ski-factory-2027 *)::before{animation-play-state:running}
+.page--js .slider-loading:not([data-slider-ready]) .slider-loading__content:where(.ski-factory-2027,.ski-factory-2027 *){opacity:0}
+@keyframes ski-factory-2027-slider-loading-shimmer{to{transform:translateX(100%)}}
+@media (prefers-reduced-motion: reduce){.slider-loading:where(.ski-factory-2027,.ski-factory-2027 *){--skeleton-fade:0s}.slider-loading__skeleton:where(.ski-factory-2027,.ski-factory-2027 *)::before{animation:none}}
+.photos:where(.ski-factory-2027,.ski-factory-2027 *){text-align:center;overflow:clip}
+.photos__title:where(.ski-factory-2027,.ski-factory-2027 *){line-height:79px;margin:0 auto 32px}
+.race-photos:where(.ski-factory-2027,.ski-factory-2027 *){--photo-gap:7px;--skeleton-radius:9.283px;width:100%;overflow-x:auto;scrollbar-width:thin}
+.race-photos--animated:where(.ski-factory-2027,.ski-factory-2027 *){overflow:clip}
+.race-photos__track:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;display:flex;width:max-content}
+.race-photos__cycle:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex:none;gap:var(--photo-gap);padding-inline-end:var(--photo-gap)}
+.race-photos__group:where(.ski-factory-2027,.ski-factory-2027 *){--skeleton-highlight:#fff;flex:none;width:285.93px;height:347.201px}
+.race-photos__button:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;display:grid;grid-template:minmax(0,1fr) /minmax(0,1fr);width:100%;height:100%;padding:0;border:0;border-radius:9.283px;overflow:hidden;background:var(--ink)}
+.race-photos__image:where(.ski-factory-2027,.ski-factory-2027 *){grid-area:1/1;justify-self:center;width:auto;min-width:100%;max-width:none;height:100%;object-fit:cover;object-position:center}
+.race-photos__zoom:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;top:17.64px;right:16.7px;width:34.35px;height:34.35px}
+.race-photos__zoom-icon:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;height:auto;color:#fff}
+.race-photos__button:focus-visible .race-photos__zoom-icon:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}
+@media (min-width: 768px) and (hover: hover){.race-photos__button:hover .race-photos__zoom-icon:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}}
+.partners:where(.ski-factory-2027,.ski-factory-2027 *){text-align:center}
+.partners__title:where(.ski-factory-2027,.ski-factory-2027 *){line-height:91px;padding:10px;margin-bottom:5px}
+.partner-banner:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:196px;margin-bottom:20px;background:url("https://static.tildacdn.pub/tila6263-3530-4132-b730-343734343633/partners-banner.svg") center/100% 100% no-repeat}
+.partner-grid:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.partner-card:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;place-items:center;background:#f1f3f9;border-radius:30px;aspect-ratio:375/150;overflow:hidden}
+.partner-card__logo:where(.ski-factory-2027,.ski-factory-2027 *){transition:opacity 200ms ease}
+.partner-card--link:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){outline:2px solid var(--hover-cyan);outline-offset:-4px}
+.partner-card--link:focus-visible .partner-card__logo:where(.ski-factory-2027,.ski-factory-2027 *){opacity:0.8}
+@media (min-width: 768px) and (hover: hover){.partner-card--link:hover .partner-card__logo:where(.ski-factory-2027,.ski-factory-2027 *){opacity:0.8}}
+@media (prefers-reduced-motion: reduce){.partner-card__logo:where(.ski-factory-2027,.ski-factory-2027 *){transition:none}}
+.partner-park:where(.ski-factory-2027,.ski-factory-2027 *){width:59.42%}
+.partner-sport:where(.ski-factory-2027,.ski-factory-2027 *){width:67.36%}
+.partner-sport--compact:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.partner-race:where(.ski-factory-2027,.ski-factory-2027 *){width:27.54%}
+.partner-symbol:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template:1fr/1fr;width:16.5%;aspect-ratio:62.064/74;overflow:hidden;mix-blend-mode:multiply}
+.partner-symbol__image:where(.ski-factory-2027,.ski-factory-2027 *){width:240.28%;height:205.89%;max-width:none;transform:translate(-29.19%,-25.72%)}
+.partner-radio:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template:1fr/1fr;width:30.4%;aspect-ratio:114/110;overflow:hidden;mix-blend-mode:multiply}
+.partner-radio__image:where(.ski-factory-2027,.ski-factory-2027 *){width:128.28%;height:132.29%;max-width:none;transform:translate(-15.75%,-11.02%)}
+@media (768px <= width < 1280px){h2:where(.ski-factory-2027,.ski-factory-2027 *){font-size:56px}.intro__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:56px}.organizers:where(.ski-factory-2027,.ski-factory-2027 *){gap:20px;padding:32px}.organizers__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:48px}.organizers__group:where(.ski-factory-2027,.ski-factory-2027 *){gap:30px}.organizers__image:where(.ski-factory-2027,.ski-factory-2027 *),
+.organizers__image--secondary:where(.ski-factory-2027,.ski-factory-2027 *){width:160px}.video:where(.ski-factory-2027,.ski-factory-2027 *){gap:35px}.video__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:46px}.routes:where(.ski-factory-2027,.ski-factory-2027 *){gap:35px}.price-content:where(.ski-factory-2027,.ski-factory-2027 *){padding-inline:40px}.data-row:where(.ski-factory-2027,.ski-factory-2027 *){font-size:18px}.data-row__emphasis:where(.ski-factory-2027,.ski-factory-2027 *),
+.data-row__price:where(.ski-factory-2027,.ski-factory-2027 *){font-size:20px}.team-grid:where(.ski-factory-2027,.ski-factory-2027 *){gap:50px}.location:where(.ski-factory-2027,.ski-factory-2027 *){padding-inline:30px;gap:20px 40px}.transport:where(.ski-factory-2027,.ski-factory-2027 *){gap:40px}.merch__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:10.8vw}.merch-shirt:where(.ski-factory-2027,.ski-factory-2027 *){width:50%;height:auto}}
+@media (min-width: 1200px){.merch.container:where(.ski-factory-2027,.ski-factory-2027 *){max-width:var(--wide-banner-width);margin-inline:auto;padding-inline:max(32px,(min(100% - 26px,var(--wide-banner-width)) - 1109px)/2);container-type:inline-size}@container (width < 1100px){.merch__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:min(151.19px,13.64cqw)}.merch__subtitle:where(.ski-factory-2027,.ski-factory-2027 *){max-width:100cqw}.merch-shirt:where(.ski-factory-2027,.ski-factory-2027 *){width:min(579px,50%);height:auto}}}
+@media (prefers-reduced-motion: reduce){html:where(.ski-factory-2027,.ski-factory-2027 *){scroll-behavior:auto}*:where(.ski-factory-2027,.ski-factory-2027 *),
+*:where(.ski-factory-2027,.ski-factory-2027 *)::before,
+*:where(.ski-factory-2027,.ski-factory-2027 *)::after{animation-duration:0.01ms;transition-duration:0.01ms}}
+.tabs__button:where(.ski-factory-2027,.ski-factory-2027 *){transition:background-color 200ms ease,opacity 200ms ease}
+@media (prefers-reduced-motion: reduce){.button:where(.ski-factory-2027,.ski-factory-2027 *),
+.tabs__button:where(.ski-factory-2027,.ski-factory-2027 *),
+.information-panel__summary:where(.ski-factory-2027,.ski-factory-2027 *){transition:none}}
+.svg-icon__shape--fill:where(.ski-factory-2027,.ski-factory-2027 *),
+.svg-icon__shape--stroke:where(.ski-factory-2027,.ski-factory-2027 *){transition:fill 200ms ease,stroke 200ms ease}
+@media (prefers-reduced-motion: reduce){.svg-icon__shape--fill:where(.ski-factory-2027,.ski-factory-2027 *),
+.svg-icon__shape--stroke:where(.ski-factory-2027,.ski-factory-2027 *){transition:none}}
+.information-panel__summary:where(.ski-factory-2027,.ski-factory-2027 *){background:none;color:var(--white)}
+.information-panel__summary:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){outline:2px solid var(--cyan);outline-offset:5px}
+.information-panel__icon:where(.ski-factory-2027,.ski-factory-2027 *){display:block;flex:0 0 33px;width:33px;height:33px}
+.information-panel__icon--open:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.information-panel__summary[aria-expanded="true"] .information-panel__icon--closed:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.information-panel__summary[aria-expanded="true"] .information-panel__icon--open:where(.ski-factory-2027,.ski-factory-2027 *){display:block}
+.video-cover:focus-visible .video-play:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}
+.video-play:where(.ski-factory-2027,.ski-factory-2027 *){transition:color 200ms ease}
+@media (width >= 768px){.button:hover:where(.ski-factory-2027,.ski-factory-2027 *){background-color:var(--hover-cyan);color:#fff}.svg-icon--hoverable:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.video-cover:hover .video-play:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}.svg-icon--hoverable:hover .svg-icon__shape--fill:where(.ski-factory-2027,.ski-factory-2027 *){fill:currentColor}.svg-icon--hoverable:hover .svg-icon__shape--stroke:where(.ski-factory-2027,.ski-factory-2027 *){stroke:currentColor}}
+@media (width < 768px){body:where(.ski-factory-2027,.ski-factory-2027 *){font-size:12px;line-height:18px}h2:where(.ski-factory-2027,.ski-factory-2027 *){font-size:32px;line-height:30px}h3:where(.ski-factory-2027,.ski-factory-2027 *){font-size:14px;line-height:18px}main:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:none}.container:where(.ski-factory-2027,.ski-factory-2027 *){width:calc(100% - 40px);max-width:100%}.page__section:where(.ski-factory-2027,.ski-factory-2027 *){margin-block:40px}.button:where(.ski-factory-2027,.ski-factory-2027 *){min-height:44px;padding:12px 16px;font-size:12px;line-height:20px}.intro:where(.ski-factory-2027,.ski-factory-2027 *){margin-top:40px}.intro__title:where(.ski-factory-2027,.ski-factory-2027 *){max-width:191px;font-size:32px;line-height:30px;margin:0 auto 16px}.intro__text:where(.ski-factory-2027,.ski-factory-2027 *){font-size:12px;line-height:18px}.organizers:where(.ski-factory-2027,.ski-factory-2027 *){max-width:560px;display:flex;flex-direction:column;gap:15px;padding:15px 20px 22.17px;border-radius:5.52px;background:radial-gradient(ellipse at 35% 75%,#08183b 35%,#1ec4e8 100%)}.organizers__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:32px;line-height:30px}.organizers__group:where(.ski-factory-2027,.ski-factory-2027 *){flex-direction:column;gap:14px}.organizers__image:where(.ski-factory-2027,.ski-factory-2027 *){width:103.7px}.organizers__image--secondary:where(.ski-factory-2027,.ski-factory-2027 *){width:96.65px}.organizers:where(.ski-factory-2027,.ski-factory-2027 *)::before{background-image:url("https://static.tildacdn.pub/tila3439-6430-4963-b734-626136346666/organizers-backgroun.svg");background-size:371px 307px}.video:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;align-items:stretch;gap:16px}.video__title:where(.ski-factory-2027,.ski-factory-2027 *){max-width:245px;font-size:32px;line-height:30px}.video-cover:where(.ski-factory-2027,.ski-factory-2027 *){aspect-ratio:280/157.77;border-radius:10px}.video-play:where(.ski-factory-2027,.ski-factory-2027 *){width:31.218px}.video-play__image:where(.ski-factory-2027,.ski-factory-2027 *){width:12px;margin-left:2px}.routes:where(.ski-factory-2027,.ski-factory-2027 *){flex-direction:column;align-items:stretch;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto;gap:16px}.route-heading:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;gap:16px;grid-row:1}.route-heading__title:where(.ski-factory-2027,.ski-factory-2027 *){line-height:30px}.tabs:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template-columns:repeat(3,73px);max-width:280px;gap:8px}.tabs__button:where(.ski-factory-2027,.ski-factory-2027 *),
+.tabs__button--compact:where(.ski-factory-2027,.ski-factory-2027 *){width:73px;min-width:0;min-height:35px;padding:10px 0;font-size:12px;line-height:15px}.tabs__button--last-in-row:where(.ski-factory-2027,.ski-factory-2027 *){margin-right:0}.map-preview:where(.ski-factory-2027,.ski-factory-2027 *){margin-block-start:0;align-self:stretch;order:1;grid-column:1;grid-row:2}.route-stats:where(.ski-factory-2027,.ski-factory-2027 *){order:3;min-height:101.76px;padding:9px 12px;gap:7px;border-radius:12px;font-size:7.4px;line-height:15.42px}.route-stats__group:where(.ski-factory-2027,.ski-factory-2027 *){gap:5px}.route-stats__emphasis:where(.ski-factory-2027,.ski-factory-2027 *){font-size:9.87px;line-height:12px}.route-stats__icon:where(.ski-factory-2027,.ski-factory-2027 *){width:39px;height:41px}.stats-icon:where(.ski-factory-2027,.ski-factory-2027 *){width:39px;height:41px}.stats-icon__em:where(.ski-factory-2027,.ski-factory-2027 *){font-size:15.17px;line-height:31.61px}.route-stats__group--separated:where(.ski-factory-2027,.ski-factory-2027 *)::before{height:65.7px;left:-3px}.routes__copy:where(.ski-factory-2027,.ski-factory-2027 *){grid-column:1;grid-row:3;gap:16px}.price-panel:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;max-width:none}.price-content:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;padding:18px 20px 29px;max-width:600px;margin:auto}.price-content__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:32px;line-height:30px;margin-bottom:10px}.price-artwork:where(.ski-factory-2027,.ski-factory-2027 *){clip-path:none;border-radius:0;background:linear-gradient(var(--ink),var(--ink)) left /50% 100% no-repeat,linear-gradient(var(--ink),var(--ink)) center /100% calc(100% - 96px) no-repeat}.price-artwork:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:"";position:absolute;top:0;left:0;width:100%;height:48px;background:url("https://static.tildacdn.pub/tila3462-6262-4564-a366-633966643365/price-top-decoration.svg") left center/88.125% 48px no-repeat}.price-artwork:where(.ski-factory-2027,.ski-factory-2027 *)::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:48px;background:url("https://static.tildacdn.pub/tila3234-6635-4265-a662-306165643732/price-bottom-decorat.svg") left center/87.8125% 48px no-repeat}.data-row:where(.ski-factory-2027,.ski-factory-2027 *){grid-template-columns:minmax(0,1fr) auto;gap:0;min-height:48px;padding:3px 0;font-size:12px;line-height:18px}.data-row__text:where(.ski-factory-2027,.ski-factory-2027 *){grid-column:1/-1;font-weight:500}.data-row__emphasis:where(.ski-factory-2027,.ski-factory-2027 *){grid-column:1}.data-row__price:where(.ski-factory-2027,.ski-factory-2027 *){grid-column:2;text-align:right}.data-row__emphasis:where(.ski-factory-2027,.ski-factory-2027 *),
+.data-row__price:where(.ski-factory-2027,.ski-factory-2027 *){font-size:14px;line-height:18px}.data-row__price--free:where(.ski-factory-2027,.ski-factory-2027 *){text-transform:none}.fine:where(.ski-factory-2027,.ski-factory-2027 *){max-width:218px;margin-top:14px;padding-left:0;font-size:10px;line-height:13px}.fine__item--secondary:where(.ski-factory-2027,.ski-factory-2027 *){margin-top:6px}.benefits:where(.ski-factory-2027,.ski-factory-2027 *){margin-top:40px}.benefits__title:where(.ski-factory-2027,.ski-factory-2027 *){max-width:280px;font-size:32px;line-height:28px;margin:0 auto 16px}.benefits__link:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.benefit-list:where(.ski-factory-2027,.ski-factory-2027 *){max-width:280px;min-height:0;margin:0 auto;font-size:13px;line-height:13px}.benefit-list__row:where(.ski-factory-2027,.ski-factory-2027 *){flex-direction:column;align-items:center;gap:0}.benefit-list__row--opening:where(.ski-factory-2027,.ski-factory-2027 *){gap:4px;margin-bottom:4px}.benefit-list__row--gift:where(.ski-factory-2027,.ski-factory-2027 *){margin-bottom:7px}.benefit-list__row--equipment:where(.ski-factory-2027,.ski-factory-2027 *){gap:7px;margin-bottom:5px}.benefit-list__row--refreshments:where(.ski-factory-2027,.ski-factory-2027 *){gap:5px;margin-bottom:7px}.benefit-list__row--prizes:where(.ski-factory-2027,.ski-factory-2027 *),
+.benefit-list__row--draw:where(.ski-factory-2027,.ski-factory-2027 *){margin-bottom:9px}.benefit-list__track:where(.ski-factory-2027,.ski-factory-2027 *){max-width:230px;font-size:13px;line-height:18px}.benefit-list__changing-rooms:where(.ski-factory-2027,.ski-factory-2027 *){min-height:20px;line-height:20px}.benefit-list__gift:where(.ski-factory-2027,.ski-factory-2027 *){max-width:280px;font:700 12px/20px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;letter-spacing:-0.03em}.benefit-list__bib:where(.ski-factory-2027,.ski-factory-2027 *){max-width:222px;font-size:13px;line-height:13px}.benefit-list__medal:where(.ski-factory-2027,.ski-factory-2027 *){max-width:133px;font-size:12px;line-height:15px;letter-spacing:0}.benefit-list__food:where(.ski-factory-2027,.ski-factory-2027 *){font:700 13px/23px "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif}.benefit-list__photos:where(.ski-factory-2027,.ski-factory-2027 *){max-width:186px;font-size:13px;line-height:13px}.benefit-list__prizes:where(.ski-factory-2027,.ski-factory-2027 *){max-width:250px;align-self:center;font-size:14px;line-height:18px}.benefit-list__draw:where(.ski-factory-2027,.ski-factory-2027 *){max-width:180px;font-size:13px;line-height:18px}.benefit-list__cup:where(.ski-factory-2027,.ski-factory-2027 *){max-width:236px;min-height:34px;font:700 14px/98.975% "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;letter-spacing:-0.03em}.information:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;max-width:100%;padding:36px 20px 44px;background:linear-gradient(#1898b0,#252b37 5%,#252b37 95%,#1898b0);border-radius:10.58px;color:var(--white);padding-top:41.32px;padding-bottom:37.68px}.information__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:32px;line-height:30px;text-align:center;margin-bottom:31px}.information-panel:where(.ski-factory-2027,.ski-factory-2027 *){padding:0;border-radius:0;background:none;mask:none}.information-panel__glow:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.information-panel__summary:where(.ski-factory-2027,.ski-factory-2027 *){font:700 14px/18px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;gap:60px;padding-block:14px;border-bottom:1px solid #f8feff;min-height:0;padding:0 0 10px;border:0;box-shadow:inset 0 -1px #f8feff}.information-panel__details--separated:where(.ski-factory-2027,.ski-factory-2027 *){border-color:#f8feff;border-top:0;margin-top:10px}.information-panel__label:where(.ski-factory-2027,.ski-factory-2027 *){max-width:199px;flex:1;min-width:0}.information-panel__summary--last:where(.ski-factory-2027,.ski-factory-2027 *){padding-block:14px;border:0;min-height:0;padding:0;box-shadow:none}.information-panel__description:where(.ski-factory-2027,.ski-factory-2027 *){font-size:12px;line-height:18px;padding-right:0}.information-panel__details--ruled:where(.ski-factory-2027,.ski-factory-2027 *){padding-bottom:0;border-bottom:0}.information-panel__details--ruled:where(.ski-factory-2027,.ski-factory-2027 *)::after{display:none}.teams:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;max-width:560px}.teams__title:where(.ski-factory-2027,.ski-factory-2027 *){max-width:280px;margin:0 auto 20px;font-size:32px;line-height:30px;letter-spacing:0.02em}.teams__title-break:where(.ski-factory-2027,.ski-factory-2027 *),
+.team-description__break:where(.ski-factory-2027,.ski-factory-2027 *){display:inline}.team-grid:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;row-gap:64.34px;align-items:stretch;width:min(calc(100% - 40px),281px);margin-inline:auto}.team-grid__article:where(.ski-factory-2027,.ski-factory-2027 *){align-items:center;text-align:center}.team-grid__picture:where(.ski-factory-2027,.ski-factory-2027 *){width:72px;margin-bottom:12px}.team-grid__image--club:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:72px;height:auto;margin-bottom:12px}.team-grid__image--desktop:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.team-grid__image--mobile:where(.ski-factory-2027,.ski-factory-2027 *){display:block}.team-grid__subtitle:where(.ski-factory-2027,.ski-factory-2027 *){font-size:14px;line-height:18px;letter-spacing:0.02em;margin-bottom:10px}.team-grid__text--team-lead:where(.ski-factory-2027,.ski-factory-2027 *){font-size:12px;line-height:16px;margin-bottom:8px}.team-grid__text--content:where(.ski-factory-2027,.ski-factory-2027 *){font-size:12px;line-height:16px;letter-spacing:0.02em}.team-description:where(.ski-factory-2027,.ski-factory-2027 *){color:#262d3e}.team-lead--corporate:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--ink)}.team-grid__link:where(.ski-factory-2027,.ski-factory-2027 *){width:228px;margin:25px 0 12px;letter-spacing:0.02em}.team-grid__link--corporate:where(.ski-factory-2027,.ski-factory-2027 *){margin-block-start:35px}.team-grid__note:where(.ski-factory-2027,.ski-factory-2027 *){font-family:"Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;font-size:12px;line-height:16px}.team-description--secondary:where(.ski-factory-2027,.ski-factory-2027 *){max-width:none}.schedule:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;max-width:600px;background:var(--ink);clip-path:polygon(0 38px,calc(50% - 127px) 38px,calc(50% - 102px) 0,calc(50% + 102px) 0,calc(50% + 127px) 38px,100% 38px,100% 100%,0 100%);padding:8px 20px 36px;padding-bottom:34px}.schedule-art:where(.ski-factory-2027,.ski-factory-2027 *){background:none;overflow:hidden}.schedule-art:where(.ski-factory-2027,.ski-factory-2027 *)::after{position:absolute;bottom:0;left:0;right:0;background-size:320px auto;background-position:center -148px;content:"";height:49px;background:url("https://static.tildacdn.pub/tila3435-3539-4834-b331-383466383561/schedule-bottom-base.svg") center bottom /320px 49px no-repeat,url("https://static.tildacdn.pub/tila3962-3863-4534-b932-326538393365/schedule-bottom-inse.svg") center bottom /318px 26px no-repeat,url("https://static.tildacdn.pub/tila6365-6462-4266-b630-363530363965/schedule-bottom-edge.svg") center bottom /318px 5px no-repeat,url("https://static.tildacdn.pub/tila6431-3266-4638-b664-333863386532/schedule-bottom-shap.svg") center bottom /320px 38px no-repeat,url("https://static.tildacdn.pub/tila3334-3032-4636-b762-353562646562/schedule-bottom-line.svg") center bottom /320px 14px no-repeat}.schedule__title:where(.ski-factory-2027,.ski-factory-2027 *){padding:0;font-size:32px;text-align:center;margin-bottom:22px;line-height:30px}.schedule__rows:where(.ski-factory-2027,.ski-factory-2027 *){padding:0;display:flex;flex-direction:column;gap:12px}.schedule__row:where(.ski-factory-2027,.ski-factory-2027 *){border-bottom:1px solid #6d869d;gap:0;font-size:12px;line-height:18px;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:18px auto;align-content:start;align-items:start;border-color:#3f97ee;min-height:48px;padding:0 0 11px}.schedule__row--opening:where(.ski-factory-2027,.ski-factory-2027 *){align-items:start;padding-top:0;min-height:60px;padding-bottom:5px}.schedule__row--closing:where(.ski-factory-2027,.ski-factory-2027 *){border:0;min-height:36px;padding:0}.schedule__value:where(.ski-factory-2027,.ski-factory-2027 *){font-size:14px;color:var(--cyan);line-height:18px}.schedule__time:where(.ski-factory-2027,.ski-factory-2027 *){grid-area:1/1}.schedule__distance:where(.ski-factory-2027,.ski-factory-2027 *){grid-area:1/2;color:#fff}.schedule__description:where(.ski-factory-2027,.ski-factory-2027 *){grid-area:2/1/3/-1;max-width:240px;font-size:12px;line-height:18px;font-weight:500}.location:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;align-items:stretch;padding:0;gap:16px;text-align:center}.location__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:32px;line-height:30px;margin-bottom:0}.location-copy:where(.ski-factory-2027,.ski-factory-2027 *){align-self:stretch}.location-copy__text:where(.ski-factory-2027,.ski-factory-2027 *){font-size:12px;line-height:16px}.location-copy__text--secondary:where(.ski-factory-2027,.ski-factory-2027 *){font-size:10px;line-height:14px;margin-top:8px;font-weight:500;font-family:"Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif}.location-map:where(.ski-factory-2027,.ski-factory-2027 *){aspect-ratio:280/186;border-radius:10px}.location-directions:where(.ski-factory-2027,.ski-factory-2027 *){align-self:center;width:228px}.transport:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;gap:32px;margin-top:16px}.transport__article:where(.ski-factory-2027,.ski-factory-2027 *){align-items:center}.transport__subtitle:where(.ski-factory-2027,.ski-factory-2027 *){font-size:14px;line-height:18px;color:var(--cyan);margin-bottom:8px}.transport__text:where(.ski-factory-2027,.ski-factory-2027 *){font-size:12px;line-height:16px}.transport__link:where(.ski-factory-2027,.ski-factory-2027 *){width:228px;margin-top:16px}.photos__title:where(.ski-factory-2027,.ski-factory-2027 *){max-width:300px;padding:0 8px;font-size:32px;line-height:30px;margin-bottom:16px}.photos__break:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.race-photos__group:where(.ski-factory-2027,.ski-factory-2027 *){width:189px;height:260px}.race-photos__button:where(.ski-factory-2027,.ski-factory-2027 *){border-radius:6px}.race-photos:where(.ski-factory-2027,.ski-factory-2027 *){--photo-gap:10px;--skeleton-radius:6px}.race-photos__zoom:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.partners:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;max-width:600px}.partners__title:where(.ski-factory-2027,.ski-factory-2027 *){font-size:32px;line-height:30px;padding:0;margin-bottom:16px}.partner-banner:where(.ski-factory-2027,.ski-factory-2027 *){background:#f1f3f9;height:72px;margin-bottom:4px;object-fit:fill}.partner-grid:where(.ski-factory-2027,.ski-factory-2027 *){grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.partner-card:where(.ski-factory-2027,.ski-factory-2027 *){border-radius:0;aspect-ratio:158/70}.partner-card--reserved:where(.ski-factory-2027,.ski-factory-2027 *){order:2}.partner-card--symbol:where(.ski-factory-2027,.ski-factory-2027 *){order:1}.partner-card--sport:where(.ski-factory-2027,.ski-factory-2027 *){order:3}.partner-card--race:where(.ski-factory-2027,.ski-factory-2027 *){order:4}.partner-card--radio:where(.ski-factory-2027,.ski-factory-2027 *){order:5}.merch.container:where(.ski-factory-2027,.ski-factory-2027 *){gap:99.7px;border-radius:10px;padding:9.92px max(24.58px,calc((100% - 512px) / 2)) 10.9px;width:100%;max-width:100%;margin-inline:0}.merch-base:where(.ski-factory-2027,.ski-factory-2027 *){background:url("https://static.tildacdn.pub/tila3762-6335-4536-b233-376538633032/merch-glow-mobile.webp") calc(50% + 5.64px) 28.8px /275px 200.5px no-repeat,url("https://static.tildacdn.pub/tila3738-6363-4539-b837-373139623832/merch-shade-mobile.webp") center /100% 100% no-repeat,#1e58ea}.merch-art:where(.ski-factory-2027,.ski-factory-2027 *)::after{content:"";position:absolute;inset:0;background:url("https://static.tildacdn.pub/tila6236-3562-4464-a364-356361366437/merch-lines-mobile.svg") left top /229px 230px no-repeat;mix-blend-mode:plus-lighter}.merch-glow:where(.ski-factory-2027,.ski-factory-2027 *),
+.merch-pattern:where(.ski-factory-2027,.ski-factory-2027 *),
+.merch-seal:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.merch-notch:where(.ski-factory-2027,.ski-factory-2027 *){width:75px;height:16px;left:calc(50% - 37.5px)}.merch-title:where(.ski-factory-2027,.ski-factory-2027 *){display:grid}.merch__title:where(.ski-factory-2027,.ski-factory-2027 *){grid-area:1/1;align-self:start;font-size:36.08px;line-height:61.9px}.merch__subtitle:where(.ski-factory-2027,.ski-factory-2027 *){grid-area:1/1;align-self:start;margin-block-start:53.08px;margin-inline-start:1.42px;width:200.04px;height:11.75px}.merch-shirt:where(.ski-factory-2027,.ski-factory-2027 *){top:48.85px;right:auto;left:calc(50% - 114px);width:219.37px;height:180.44px}.merch__button:where(.ski-factory-2027,.ski-factory-2027 *){width:227.29px;font-size:12px;line-height:19.27px;letter-spacing:.02em;min-height:44px;padding:12px 16px;color:var(--ink)}.price-decoration-frame:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;inset:48px 0;overflow:hidden}.price-decoration:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;top:68.527px;left:calc(100% - 104.0625px);width:166.873px;height:115.706px;transform-origin:0 0;transform:matrix(0.87,0.5,0.51,-0.86,0,0);background:url("https://static.tildacdn.pub/tila6466-3837-4463-b965-643733343266/merch-pattern-mobile.webp") center/100% 100% no-repeat;pointer-events:none}.hero:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;max-width:100%;margin-inline:0}}
+@media (width < 500px){.partner-park:where(.ski-factory-2027,.ski-factory-2027 *){width:90.87px;height:30.02px}.partner-symbol:where(.ski-factory-2027,.ski-factory-2027 *){width:32.3px}.partner-sport--wide:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.partner-sport--compact:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:76.83px;height:39px}.partner-race:where(.ski-factory-2027,.ski-factory-2027 *){width:42.59px;height:46px;object-fit:contain}.partner-radio:where(.ski-factory-2027,.ski-factory-2027 *){width:42px;aspect-ratio:42/41}.partner-symbol__image:where(.ski-factory-2027,.ski-factory-2027 *),
+.partner-radio__image:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;height:auto;transform:none}}
+@media (width < 768px){.information-panel__icon:where(.ski-factory-2027,.ski-factory-2027 *){flex-basis:21.484px;width:21.484px;height:21.484px}}
+@media (width < 768px){.video-play__image:where(.ski-factory-2027,.ski-factory-2027 *){width:11.767px;height:13.448px}}
+.media-dialog:where(.ski-factory-2027,.ski-factory-2027 *){border:0;border-radius:20px;padding:44px 20px 20px;max-width:94vw;max-height:94dvh;color:var(--navy);margin:auto}
+.media-dialog:where(.ski-factory-2027,.ski-factory-2027 *)::backdrop{background:#141414d9}
+.media-dialog[open]:where(.ski-factory-2027,.ski-factory-2027 *)::backdrop{animation:ski-factory-2027-media-dialog-fade-in 200ms ease-out}
+.media-dialog--closing[open]:where(.ski-factory-2027,.ski-factory-2027 *)::backdrop{animation:ski-factory-2027-media-dialog-fade-out 160ms ease-in forwards}
+@keyframes ski-factory-2027-media-dialog-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes ski-factory-2027-media-dialog-fade-out{from{opacity:1}to{opacity:0}}
+@media (prefers-reduced-motion: reduce){.media-dialog[open]:where(.ski-factory-2027,.ski-factory-2027 *)::backdrop,
+.media-dialog--closing[open]:where(.ski-factory-2027,.ski-factory-2027 *)::backdrop{animation:none}}
+.media-dialog__close:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;right:12px;top:8px;width:44px;height:44px;padding:0;border:0;display:grid;place-items:center;background:none;color:white;transition:color 200ms ease;z-index:5}
+.media-dialog__close:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}
+.sr-only:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.media-dialog[data-mode="gallery"]:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;max-width:none;max-height:100dvh;padding:0 0 12px;margin:auto;border-radius:0;background:transparent;color:white;overflow:auto;overscroll-behavior:contain}
+.gallery__close:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;display:grid;inset:auto;margin:0 0 8px auto}
+.gallery__stage:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;width:min(1007px,calc(100vw - 100px),calc((100dvh - 250px) * 1.4985));margin-inline:auto}
+.gallery__main:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;aspect-ratio:1007/672;overflow:hidden;border-radius:20px}
+.gallery__slide:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;place-items:center;overflow:hidden}
+.gallery__image:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;height:100%;max-height:none;object-fit:cover;background:#141414}
+.gallery__arrows:where(.ski-factory-2027,.ski-factory-2027 *){z-index:2;position:absolute;top:calc(50% + 40px);left:50%;width:100vw;height:344px;max-height:60dvh;transform:translate(-50%,-50%);pointer-events:none;display:flex;justify-content:space-between;align-items:center}
+.gallery__arrow:where(.ski-factory-2027,.ski-factory-2027 *){pointer-events:auto;border:0;padding:0;width:52px;height:344px;max-height:60dvh;background-color:transparent;background-repeat:no-repeat;background-size:100% 100%}
+.gallery__next:where(.ski-factory-2027,.ski-factory-2027 *){width:54px}
+.gallery__thumbs:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;overflow:hidden;margin-top:27px}
+.gallery__thumbnail-slide:where(.ski-factory-2027,.ski-factory-2027 *){width:145.694px;height:176.914px}
+.gallery__thumb:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template:minmax(0,1fr) /minmax(0,1fr);padding:0;width:100%;height:100%;overflow:hidden;border:0;border-radius:5px;background:var(--ink)}
+.gallery__thumbnail:where(.ski-factory-2027,.ski-factory-2027 *){grid-area:1/1;justify-self:center;width:auto;min-width:100%;max-width:none;height:100%;object-fit:cover;object-position:center}
+.gallery__thumb[aria-current="true"]:where(.ski-factory-2027,.ski-factory-2027 *){box-shadow:inset 0 0 0 2px var(--cyan)}
+@media (width < 768px){.gallery__close:where(.ski-factory-2027,.ski-factory-2027 *){right:8px}.gallery__stage:where(.ski-factory-2027,.ski-factory-2027 *){width:min(100%,calc((100dvh - 120px) * 320 / 345))}.gallery__main:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;aspect-ratio:320/345;max-height:calc(100dvh - 140px);border-radius:10px}.gallery__image:where(.ski-factory-2027,.ski-factory-2027 *){object-fit:cover}.gallery__arrows:where(.ski-factory-2027,.ski-factory-2027 *){z-index:2;display:none}.gallery__thumbs:where(.ski-factory-2027,.ski-factory-2027 *){margin-top:12px}.gallery__thumbnail-slide:where(.ski-factory-2027,.ski-factory-2027 *){width:78.984px;height:66px}}
+.media-dialog[data-mode="video"]:where(.ski-factory-2027,.ski-factory-2027 *){padding:0;border-radius:24px;background:transparent;color:white;width:min(1167px,calc(100vw - 48px));max-width:none;max-height:96dvh;overflow:auto}
+.media-dialog[data-mode="video"]:where(.ski-factory-2027,.ski-factory-2027 *)::backdrop{background:#141414d9}
+.media-dialog__close--video:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;display:grid;float:none;margin:0 0 8px auto;inset:auto;color:white;z-index:2}
+.video-player:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;border-radius:24px;overflow:hidden;background:#000}
+.video-player__frame:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:auto;aspect-ratio:16/9;max-height:calc(96dvh - 100px);object-fit:contain;border:0}
+.video-player__status:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;background:#000;pointer-events:none;font-size:14px;color:#fff}
+.video-player__status[hidden]:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.video-player__status--loading:where(.ski-factory-2027,.ski-factory-2027 *)::before{width:28px;height:28px;border:3px solid rgba(255,255,255,0.25);border-top-color:var(--hover-cyan);border-radius:50%;animation:ski-factory-2027-video-player-spin 800ms linear infinite;content:""}
+@keyframes ski-factory-2027-video-player-spin{to{transform:rotate(1turn)}}
+@media (width < 768px){.media-dialog[data-mode="video"]:where(.ski-factory-2027,.ski-factory-2027 *){width:100vw;border-radius:0}.video-player:where(.ski-factory-2027,.ski-factory-2027 *){border-radius:0}.media-dialog__close--video:where(.ski-factory-2027,.ski-factory-2027 *){margin-right:12px}}
+@media (prefers-reduced-motion: reduce){.media-dialog__close:where(.ski-factory-2027,.ski-factory-2027 *){transition:none}.video-player__status--loading:where(.ski-factory-2027,.ski-factory-2027 *)::before{animation:none}}
+.media-dialog__close-icon:where(.ski-factory-2027,.ski-factory-2027 *){width:30px;height:30px}
+.gallery__arrow:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--navy);transition:color 200ms ease}
+.gallery__arrow:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}
+.gallery__icon:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:100%}
+@media (width >= 768px){.media-dialog__close:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.gallery__arrow:hover:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}}
+.hero:where(.ski-factory-2027,.ski-factory-2027 *){--hero-race-height:65.9654cqw;position:relative;isolation:isolate;container-type:inline-size;width:calc(100% - 26px);max-width:100%;margin-inline:13px;overflow:clip;border-radius:var(--hero-radius,42px);clip-path:inset(0 round var(--hero-radius,42px));color:var(--white);background:#fff}
+.hero__inner:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;display:grid}
+@media (min-width: 768px){.page__body:where(.ski-factory-2027,.ski-factory-2027 *){padding-block-start:12px}}
+.page--js:not(.page--header-ready) .header__actions:where(.ski-factory-2027,.ski-factory-2027 *),
+.page--js:not(.page--header-ready) .header__contact:where(.ski-factory-2027,.ski-factory-2027 *){visibility:hidden}
+.header:where(.ski-factory-2027,.ski-factory-2027 *){--header-unit:max(1px,0.0745156cqw);--header-brand-width:clamp(160px,38cqw - 195px,calc(314 * var(--header-unit)));--header-group-gap:clamp(6px,max(1.5cqw - 8.1px,13cqw - 162.2px),30px);position:relative;z-index:5;grid-area:1/1;align-self:start;display:grid;grid-template-columns:minmax(0,1fr) var(--header-brand-width) minmax(0,1fr);align-items:center;min-height:calc(67 * var(--header-unit));margin-inline:clamp(16px,18cqw - 153px,min(6.78%,max(79px,(100% - 1162px)/2)))}
+.header__actions:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__contact:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;align-items:center;gap:clamp(6px,var(--header-group-gap) - 3px,24px);align-self:stretch;justify-content:flex-start}
+.header__action-link:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__phone:where(.ski-factory-2027,.ski-factory-2027 *){display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;padding-inline:clamp(8px,3cqw - 20px,20px);border-radius:100px;background:var(--white);color:var(--navy);font:500 12px/20px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;white-space:nowrap;letter-spacing:0.02em;text-decoration:none;transition:background-color 200ms ease,color 200ms ease}
+.header__action-link:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__phone:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){background-color:var(--hover-cyan);color:#fff}
+.header__contact:where(.ski-factory-2027,.ski-factory-2027 *){justify-content:flex-end;gap:var(--header-group-gap)}
+.header__phone:where(.ski-factory-2027,.ski-factory-2027 *){flex-shrink:0;padding-block:9px;font-size:14px;font-weight:700}
+.header__phone-icon:where(.ski-factory-2027,.ski-factory-2027 *){flex-shrink:0;width:26px;height:auto}
+.header__brand:where(.ski-factory-2027,.ski-factory-2027 *){align-self:start;justify-self:center;width:var(--header-brand-width)}
+.header__logo:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:auto}
+.header__brand:focus-visible .header__logo-mark:where(.ski-factory-2027,.ski-factory-2027 *){fill:var(--hover-cyan)}
+.header__social:where(.ski-factory-2027,.ski-factory-2027 *){flex-shrink:0;display:flex;align-items:center;gap:clamp(6px,2cqw - 12.8px,14px)}
+.header__social-link:where(.ski-factory-2027,.ski-factory-2027 *){transition:color 200ms ease;display:grid;place-items:center;width:28px;aspect-ratio:1}
+.header__social-icon:where(.ski-factory-2027,.ski-factory-2027 *){width:100%}
+.header__social-link:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}
+.header__social-link:active:where(.ski-factory-2027,.ski-factory-2027 *){opacity:0.5}
+.header__menu-toggle:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;place-items:center;flex:0 0 36px;width:36px;aspect-ratio:1;padding:0;border:1px solid currentColor;border-radius:50%;color:var(--white);background:none;transition:color 200ms ease}
+.header__menu-toggle:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan);outline:2px solid var(--hover-cyan);outline-offset:3px}
+.header__menu-lines:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;gap:4px;width:20px}
+.header__menu-line:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:1px;background:currentColor}
+@media (min-width: 1366px){@container (width > 954px){.header__actions:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__contact:where(.ski-factory-2027,.ski-factory-2027 *){align-self:start;margin-block-start:max(23px,calc(45 * var(--header-layout-width, calc(100vw - 26px)) / 1342 - 22px))}}}
+.hero-slider:where(.ski-factory-2027,.ski-factory-2027 *){--skeleton-radius:var(--hero-radius,42px);grid-area:1/1;min-width:0;width:100%;overflow:hidden}
+.hero-slider__slide:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;isolation:isolate}
+.hero-slider__slide[hidden]:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.hero-slider__content:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;min-height:65.425cqw;padding:8.495cqw 6.781cqw 8.793cqw}
+.hero-slider__heading:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;z-index:2;display:grid;grid-template-rows:18.852cqw auto;padding-inline:0.67cqw}
+.hero-slider__title:where(.ski-factory-2027,.ski-factory-2027 *){font:italic 700 18.4224cqw/19.9426cqw "Ski Factory 2027 TT Bluescreens Pro",Impact,sans-serif;letter-spacing:0.02em;white-space:nowrap}
+.hero-slider__title-text:where(.ski-factory-2027,.ski-factory-2027 *){display:block}
+.hero-slider__title--revealing:where(.ski-factory-2027,.ski-factory-2027 *){clip-path:inset(0 -100%)}
+.hero-slider__wordmark:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;z-index:2;display:block;width:33.1097cqw;height:4.0826cqw;object-fit:contain}
+.hero-slider__artwork:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none;container-type:size}
+.hero-slider__scene:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;top:50%;left:var(--hero-scene-center,50%);width:var(--hero-scene-width,max(100cqw,152.8474cqh));aspect-ratio:var(--hero-scene-ratio,1342/878);transform:translate(-50%,-50%)}
+.hero-slider__scene:not(.hero-slider__scene--foreground, .hero-slider__scene--race):where(.ski-factory-2027,.ski-factory-2027 *){background:url("https://static.tildacdn.pub/tila3465-3766-4231-b561-653035636465/hero-snow-background.webp") center /100% 100% no-repeat}
+.hero-slider__rainbow:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;inset:0;mix-blend-mode:screen}
+.hero-slider__rainbow:where(.ski-factory-2027,.ski-factory-2027 *)::before,
+.hero-slider__rainbow:where(.ski-factory-2027,.ski-factory-2027 *)::after{content:"";position:absolute;inset-inline:0;mask-image:linear-gradient(transparent,#000 28%,#000 76%,transparent)}
+.hero-slider__rainbow:where(.ski-factory-2027,.ski-factory-2027 *)::before{top:20%;height:17%;background:linear-gradient(174deg,#fa84b500 22%,#f78aac62 41%,#ffc47580 50%,#ffeaae56 57%,#a2def84d 64%,#a2def800 79%)}
+.hero-slider__rainbow:where(.ski-factory-2027,.ski-factory-2027 *)::after{bottom:0;height:36%;background:linear-gradient(166deg,#ff88ae00 31%,#ff88ae82 43%,#ffd99392 49%,#a1ebb77a 52%,#7ddfff81 57%,#a492ff58 62%,#a492ff00 73%)}
+.hero-slider__figure:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;top:var(--hero-figure-top,27.5626%);left:var(--hero-figure-left,35.3204%);width:var(--hero-figure-width,51.0432%);height:var(--hero-figure-height,75.9681%);overflow:hidden}
+.hero-slider__picture:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:100%}
+.hero-slider__skier:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:auto;max-width:none;object-fit:contain}
+.hero-slider__bottom:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;z-index:4;display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:auto;padding-top:10.43cqw}
+.hero-slider__info:where(.ski-factory-2027,.ski-factory-2027 *){max-width:491px}
+.hero-slider__emphasis:where(.ski-factory-2027,.ski-factory-2027 *){display:block;font:800 40px/60px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;text-transform:uppercase}
+.hero-slider__text:where(.ski-factory-2027,.ski-factory-2027 *){margin:0 0 28px;font:500 24px/27px "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif}
+.hero-slider__link:where(.ski-factory-2027,.ski-factory-2027 *){width:219px;min-height:0;padding:18px 24px;background:var(--white);color:var(--navy);font-size:16px;line-height:20px}
+.hero-slider__stage:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;align-items:center;justify-content:center;gap:13px;min-width:189px;min-height:79px;padding:6px 30px;border-radius:15px;background:#fcfcfc;color:var(--navy);font:700 52px/66px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif}
+.hero-slider__content--relay:where(.ski-factory-2027,.ski-factory-2027 *){--race-heading-top:8.8973cqw;--race-title-size:15.1766cqw;--race-title-line:16.5022cqw;--race-title-row:16.0463cqw}
+.hero-slider__content--spring:where(.ski-factory-2027,.ski-factory-2027 *){--race-heading-top:6.4613cqw;--race-title-size:18.2338cqw;--race-title-line:19.8265cqw;--race-title-row:18.9331cqw}
+.hero-slider__backdrop:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:100%;object-fit:cover}
+.hero-slider__scene--race:where(.ski-factory-2027,.ski-factory-2027 *){--hero-scene-width:max(100cqw,151.5945cqh);--hero-scene-ratio:1331/878}
+.hero-slider__figure--relay:where(.ski-factory-2027,.ski-factory-2027 *){--hero-figure-top:23.918%;--hero-figure-left:36.2134%;--hero-figure-width:37.1901%;--hero-figure-height:73.2346%}
+.hero-slider__figure--spring:where(.ski-factory-2027,.ski-factory-2027 *){--hero-figure-top:25.9681%;--hero-figure-left:39.444%;--hero-figure-width:57.2502%;--hero-figure-height:73.8041%}
+@media (min-width: 768px){.hero-slider__content--race:where(.ski-factory-2027,.ski-factory-2027 *){min-height:var(--hero-race-height);padding:var(--race-heading-top) 6.2359cqw 8.8655cqw 6.5364cqw}.hero-slider__heading--race:where(.ski-factory-2027,.ski-factory-2027 *){grid-template-rows:var(--race-title-row) auto;padding-inline:0}.hero-slider__title--race:where(.ski-factory-2027,.ski-factory-2027 *){font-size:var(--race-title-size);line-height:var(--race-title-line);text-transform:uppercase}.hero-slider__wordmark--race:where(.ski-factory-2027,.ski-factory-2027 *){width:33.3833cqw;height:4.1164cqw}.hero-slider__bottom--race:where(.ski-factory-2027,.ski-factory-2027 *){padding-inline-start:0.3cqw}.hero-slider__info--race:where(.ski-factory-2027,.ski-factory-2027 *){max-width:499px}.hero-slider__text--race:where(.ski-factory-2027,.ski-factory-2027 *){letter-spacing:0.02em}.hero-slider__stage--race:where(.ski-factory-2027,.ski-factory-2027 *){padding-inline:15px}}
+.hero-slider__label:where(.ski-factory-2027,.ski-factory-2027 *){font-size:24.304px;font-weight:800;text-transform:uppercase}
+.hero-slider__arrow:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;z-index:6;top:34.8519%;display:grid;place-items:center;width:43px;height:268px;padding:0;border:0;background-color:transparent;color:var(--navy);transition:color 200ms ease}
+.hero-slider__arrow:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}
+.hero-slider__image:where(.ski-factory-2027,.ski-factory-2027 *){width:21px;height:46px}
+.hero-slider__arrow-picture:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;place-items:center}
+.hero-slider__prev:where(.ski-factory-2027,.ski-factory-2027 *){left:0}
+.hero-slider__next:where(.ski-factory-2027,.ski-factory-2027 *){right:-2px}
+.hero-slider__arrow:disabled:where(.ski-factory-2027,.ski-factory-2027 *){opacity:0.55}
+.hero-slider__arrow:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){outline-offset:-4px}
+.hero-slider__artwork--foreground:where(.ski-factory-2027,.ski-factory-2027 *){z-index:3}
+.hero-slider__scene--foreground:where(.ski-factory-2027,.ski-factory-2027 *){background:none}
+@media (min-width: 1200px){.hero:where(.ski-factory-2027,.ski-factory-2027 *){max-width:var(--wide-banner-width);margin-inline:auto}.header:where(.ski-factory-2027,.ski-factory-2027 *){--header-layout-width:min(100vw - 26px,var(--wide-banner-width))}.hero-slider__content:where(.ski-factory-2027,.ski-factory-2027 *){min-height:var(--hero-race-height)}.hero-slider__bottom:where(.ski-factory-2027,.ski-factory-2027 *){padding-block-start:clamp(0px,var(--wide-banner-height) - var(--hero-race-height),10.43cqw);column-gap:clamp(16px,8cqw - 48px,30px)}.hero-slider__emphasis:where(.ski-factory-2027,.ski-factory-2027 *){white-space:nowrap}}
+@media (width < 768px){.hero-slider:where(.ski-factory-2027,.ski-factory-2027 *){--skeleton-radius:0px}.hero:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;margin-inline:0;border-radius:0;clip-path:none}.header:where(.ski-factory-2027,.ski-factory-2027 *){--header-unit:1px;margin-inline:0;display:flex;align-items:center;justify-content:space-between;min-height:0;height:46px;padding:0 min(32px,8%);background:url("data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB3aWR0aD0iMzIwIiBoZWlnaHQ9IjQ2IiB2aWV3Qm94PSIwIDAgMzIwIDQ2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPHBhdGggZD0iTTMyMCAxM0MzMjAgMzEuMjI1NCAzMDUuMjI1IDQ2IDI4NyA0NkgyMjJDMjA1Ljc1MiA0MS40MzY4IDIwMy45MDggMjIuNDg5IDE5MSAyMi4wMTE3VjIySDEyOVYyMi4wMTE3QzExNi4wOTIgMjIuNDg5IDExNC4yNDggNDEuNDM2OCA5OCA0NkgzM0MxNC43NzQ2IDQ2IDEuOTMyOWUtMDcgMzEuMjI1NCAwIDEzVjBIMzIwVjEzWiIgZmlsbD0iI0Y4RkVGRiIvPg0KPC9zdmc+DQo=") center /100% 100% no-repeat}.header__actions:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.header__brand:where(.ski-factory-2027,.ski-factory-2027 *){align-self:center;width:65.446px;margin-right:auto}.header__contact:where(.ski-factory-2027,.ski-factory-2027 *){gap:8px;padding:0}.header__phone:where(.ski-factory-2027,.ski-factory-2027 *){gap:0;padding:0;background:none}.header__phone-number:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.header__phone-icon:where(.ski-factory-2027,.ski-factory-2027 *){width:31px}.header__social:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.header__menu-toggle:where(.ski-factory-2027,.ski-factory-2027 *){flex-basis:31px;width:31px;color:var(--navy)}.header__menu-lines:where(.ski-factory-2027,.ski-factory-2027 *){width:16.24px;gap:3px}.hero-slider__scene:where(.ski-factory-2027,.ski-factory-2027 *){width:var(--hero-scene-width,max(100cqw,55.0775cqh));aspect-ratio:var(--hero-scene-ratio,320/581)}.hero-slider__scene:not(.hero-slider__scene--foreground, .hero-slider__scene--race):where(.ski-factory-2027,.ski-factory-2027 *){background-image:url("https://static.tildacdn.pub/tila3563-3137-4161-a534-613139383537/hero-snow-background.webp")}.hero-slider__content:where(.ski-factory-2027,.ski-factory-2027 *){min-height:181.5625cqw;padding:23.125cqw 6.25cqw 4.375cqw}.hero-slider__heading:where(.ski-factory-2027,.ski-factory-2027 *){grid-template-rows:auto auto;padding:0}.hero-slider__title:where(.ski-factory-2027,.ski-factory-2027 *){max-width:76.25cqw;font-size:26.0376cqw;line-height:21.4848cqw;white-space:normal}.hero-slider__wordmark:where(.ski-factory-2027,.ski-factory-2027 *){width:47.9282cqw;height:5.9143cqw}.hero-slider__figure:where(.ski-factory-2027,.ski-factory-2027 *){top:var(--hero-figure-top,31.1532%);left:var(--hero-figure-left,0);width:var(--hero-figure-width,83.4375%);height:var(--hero-figure-height,63.8554%)}.hero-slider__skier:where(.ski-factory-2027,.ski-factory-2027 *){height:auto}.hero-slider__bottom:where(.ski-factory-2027,.ski-factory-2027 *){flex-direction:column;align-items:start;gap:5px;padding-top:36.117cqw}.hero-slider__stage:where(.ski-factory-2027,.ski-factory-2027 *){order:-1;gap:9px;min-width:0;min-height:0;padding:0;border-radius:0;background:none;color:white;font-size:34px;line-height:43px}.hero-slider__label:where(.ski-factory-2027,.ski-factory-2027 *){font-size:15.888px;line-height:24px}.hero-slider__info:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;max-width:none}.hero-slider__emphasis:where(.ski-factory-2027,.ski-factory-2027 *){font-size:24px;line-height:30px}.hero-slider__year:where(.ski-factory-2027,.ski-factory-2027 *){display:block;font-size:35.568px;line-height:39px}.hero-slider__text:where(.ski-factory-2027,.ski-factory-2027 *){max-width:225px;margin-bottom:24px;font-size:15px;line-height:18px}.hero-slider__link:where(.ski-factory-2027,.ski-factory-2027 *){width:166px;padding:12px 16px;font-size:12px;line-height:20px}.hero-slider__content--relay:where(.ski-factory-2027,.ski-factory-2027 *){--hero-scene-center:72%;--race-mobile-title-size:20.5cqw}.hero-slider__title--race:where(.ski-factory-2027,.ski-factory-2027 *){font-size:var(--race-mobile-title-size,23.125cqw);line-height:20.8cqw;text-transform:uppercase}.hero-slider__arrow:where(.ski-factory-2027,.ski-factory-2027 *){top:34.7676%;width:24px;height:177px;color:var(--white)}.hero-slider__next:where(.ski-factory-2027,.ski-factory-2027 *){right:0;transform:rotate(180deg)}.hero-slider__image:where(.ski-factory-2027,.ski-factory-2027 *){width:11px;height:23px}}
+@media (width >= 768px){@container (width <= 954px){.header__actions:where(.ski-factory-2027,.ski-factory-2027 *){justify-content:center}.header__action-link--participation:where(.ski-factory-2027,.ski-factory-2027 *){width:min(290px,100%)}.header__action-link--partnership:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__action-link--volunteer:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__phone-number:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.header__phone:where(.ski-factory-2027,.ski-factory-2027 *){gap:0;width:36px;height:36px;padding:0}.header__social:where(.ski-factory-2027,.ski-factory-2027 *){gap:10px}}@container (width < 794px){.header__social:where(.ski-factory-2027,.ski-factory-2027 *){display:none}}}
+@media (prefers-reduced-motion: reduce){.header__action-link:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__phone:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__social-link:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__menu-toggle:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__menu-line:where(.ski-factory-2027,.ski-factory-2027 *),
+.hero-slider__arrow:where(.ski-factory-2027,.ski-factory-2027 *){transition:none}}
+.header__logo--mobile:where(.ski-factory-2027,.ski-factory-2027 *),
+.hero-slider__image--mobile:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+@media (width < 768px){.header__logo--desktop:where(.ski-factory-2027,.ski-factory-2027 *),
+.hero-slider__image--desktop:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.header__logo--mobile:where(.ski-factory-2027,.ski-factory-2027 *),
+.hero-slider__image--mobile:where(.ski-factory-2027,.ski-factory-2027 *){display:block}}
+.hero-slider__outline:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-slider__outline--mobile:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.hero-slider__arrow-picture:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;z-index:1}
+@media (width >= 768px){.header__brand:hover .header__logo-mark:where(.ski-factory-2027,.ski-factory-2027 *){fill:var(--hover-cyan)}.header__action-link:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__phone:hover:where(.ski-factory-2027,.ski-factory-2027 *){background-color:var(--hover-cyan);color:#fff}.header__phone-icon.svg-icon:hover:where(.ski-factory-2027,.ski-factory-2027 *){color:inherit}.header__menu-toggle:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.header__social-link:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.hero-slider__arrow:hover:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}}
+@media (width < 768px){.hero-slider__outline--desktop:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.hero-slider__outline--mobile:where(.ski-factory-2027,.ski-factory-2027 *){display:block}}
+.burger-menu:where(.ski-factory-2027,.ski-factory-2027 *){--menu-link-highlight:#f3f3f3;position:fixed;inset:var(--menu-top,11px) auto auto var(--menu-left,0px);width:543px;min-height:min(751px,calc(100dvh - var(--menu-top, 11px)));max-width:var(--menu-width,543px);max-height:calc(100dvh - var(--menu-top, 11px));margin:0;padding:24px 31px 24.72px 16px;border:2px solid #d7d7d7;border-radius:var(--menu-radius,37px);color:var(--navy);background:#fff;overflow:auto;scrollbar-width:thin;overscroll-behavior:contain}
+.burger-menu:where(.ski-factory-2027,.ski-factory-2027 *)::backdrop{background:transparent}
+.burger-menu--animating:where(.ski-factory-2027,.ski-factory-2027 *){will-change:clip-path}
+.burger-menu[open]:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;align-items:start}
+.burger-menu__item:where(.ski-factory-2027,.ski-factory-2027 *){flex-shrink:0}
+.burger-menu__brand:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:201.568px;height:48.306px;margin-inline-start:32.392px}
+.burger-menu__brand-image:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;height:100%}
+.burger-menu__links:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;width:100%;gap:11px;margin-top:36.694px}
+.burger-menu__link:where(.ski-factory-2027,.ski-factory-2027 *){padding:11px 83px 12px 31px;border-radius:36px;font-family:"Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;font-weight:700;letter-spacing:0.02em;text-decoration:none;font-size:16px;min-height:43px;line-height:19.3265px;transition:background-color 200ms ease}
+.burger-menu__contacts:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.burger-menu__social:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;gap:21.733px;margin-top:76px;margin-inline-start:31px}
+.burger-menu__social-link:where(.ski-factory-2027,.ski-factory-2027 *){transition:color 200ms ease;display:block;width:43.278px;height:43.278px}
+.burger-menu__social-image:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;height:100%;max-height:none}
+.burger-menu__social-link:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}
+.burger-menu__social-link:active:where(.ski-factory-2027,.ski-factory-2027 *){opacity:0.5}
+.burger-menu__close:where(.ski-factory-2027,.ski-factory-2027 *){position:absolute;top:var(--menu-close-top,20px);left:var(--menu-close-left,auto);right:auto;width:var(--menu-close-size,32px);height:var(--menu-close-size,32px);padding:0;border:0;border-radius:50%;color:var(--navy);background:white;font:30px/1 Arial,sans-serif}
+@media (width < 768px){.burger-menu:where(.ski-factory-2027,.ski-factory-2027 *){inset:0;width:100%;height:100dvh;min-height:0;max-width:none;max-height:100dvh;padding:37.709px 20px 35.791px;border:0;border-radius:0}.burger-menu__brand:where(.ski-factory-2027,.ski-factory-2027 *){width:137px;height:32.832px;margin-inline-start:0}.burger-menu__links:where(.ski-factory-2027,.ski-factory-2027 *){gap:18px;max-width:282px;margin-top:27.459px}.burger-menu__link:where(.ski-factory-2027,.ski-factory-2027 *){max-width:244px;min-height:20px;padding:0;border-radius:0;font-size:15px;line-height:19.3265px}.burger-menu__contacts:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;gap:23px;margin-top:37px;margin-inline:auto;font-family:"Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;font-weight:700;font-size:14px;line-height:20px}.burger-menu__contact-link:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;align-items:center;white-space:nowrap;text-decoration:none;gap:12px}.burger-menu__image:where(.ski-factory-2027,.ski-factory-2027 *){width:25px;height:25px}.burger-menu__mail-icon:where(.ski-factory-2027,.ski-factory-2027 *){height:18px}.burger-menu__social:where(.ski-factory-2027,.ski-factory-2027 *){gap:30px;margin-top:34px;margin-inline:auto}.burger-menu__social-link:where(.ski-factory-2027,.ski-factory-2027 *){width:40.209px;height:40.209px}}
+@media (prefers-reduced-motion: reduce){.burger-menu__social-link:where(.ski-factory-2027,.ski-factory-2027 *){transition:none}}
+.burger-menu__close:where(.ski-factory-2027,.ski-factory-2027 *){transition:color 200ms ease}
+.burger-menu__link:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){background-color:var(--menu-link-highlight)}
+.burger-menu__close:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}
+.burger-menu__close:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;place-items:center}
+.burger-menu__close-icon:where(.ski-factory-2027,.ski-factory-2027 *){width:30px;height:30px}
+@media (width < 768px){.burger-menu__close-icon:where(.ski-factory-2027,.ski-factory-2027 *){width:22px;height:22px}}
+@media (prefers-reduced-motion: reduce){.burger-menu__link:where(.ski-factory-2027,.ski-factory-2027 *),
+.burger-menu__close:where(.ski-factory-2027,.ski-factory-2027 *){transition:none}}
+@media (width >= 768px){.burger-menu__social-link:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.burger-menu__close:hover:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}.burger-menu__link:any-link:hover:where(.ski-factory-2027,.ski-factory-2027 *){background-color:var(--menu-link-highlight)}}
+.page__footer:where(.ski-factory-2027,.ski-factory-2027 *){container-type:inline-size;width:calc(100% - 26px);max-width:100%;margin-inline:13px;overflow:clip;border-radius:43px;color:#fff;background:#1e58ea url("https://static.tildacdn.pub/tila3134-3163-4465-b634-643366666337/blob.webp") center /100% 100% no-repeat}
+@media (min-width: 1200px){.page__footer:where(.ski-factory-2027,.ski-factory-2027 *){max-width:var(--wide-banner-width);margin-inline:auto}}
+.footer-layout:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;grid-template-columns:minmax(0,1fr) 305px minmax(0,1fr);align-items:start;max-width:1341px;margin-inline:auto;padding:49px clamp(24px,20vw - 170px,92px) 0}
+.footer__link:where(.ski-factory-2027,.ski-factory-2027 *){justify-self:start;max-width:100%;color:var(--white)}
+.footer__logo:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:min(100%,246px);height:auto}
+.footer-contact:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;gap:29px;color:var(--white);font:700 24px/19.3265px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif}
+.footer-contact__link:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;align-items:center;width:fit-content;min-height:42px;white-space:nowrap;text-decoration:none}
+.footer-inquiry:where(.ski-factory-2027,.ski-factory-2027 *){justify-self:end;width:min(100%,309px);margin-block-start:4px;text-align:end}
+.footer-inquiry__text:where(.ski-factory-2027,.ski-factory-2027 *){font:500 18px/23px "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif}
+.footer-inquiry__link:where(.ski-factory-2027,.ski-factory-2027 *){overflow-wrap:anywhere;text-decoration:none}
+.footer-bottom:where(.ski-factory-2027,.ski-factory-2027 *){grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) max-content minmax(0,1fr);align-items:end;margin-block-start:55px}
+.hashtags:where(.ski-factory-2027,.ski-factory-2027 *){grid-column:2;display:flex;justify-content:center;gap:29px;margin:0;padding:0;list-style:none;font:500 14px/23px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif}
+.hashtags__mobile:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+.footer-social:where(.ski-factory-2027,.ski-factory-2027 *){grid-column:3;justify-self:end;display:flex;align-items:center;gap:18.52px;color:var(--white)}
+.footer-social__link:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:37px}
+.footer-social__image:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:100%;height:auto}
+.footer-credit:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;isolation:isolate;grid-column:1/-1;justify-self:center;display:flex;align-items:end;justify-content:center;width:min(412px,100%);min-height:44px;margin-block-start:10px;padding-block-end:7px;color:#07173a}
+.footer-credit:where(.ski-factory-2027,.ski-factory-2027 *)::before{position:absolute;inset:0;z-index:-1;background:url("data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBvdmVyZmxvdz0idmlzaWJsZSIgc3R5bGU9ImRpc3BsYXk6IGJsb2NrOyIgd2lkdGg9IjQxMiIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQxMiA0NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9IjEyIiBkPSJNMCAwSDQxMkMzNzIuMTc4IDAgMzU2Ljg2MiAyLjY5Mzg4IDMzNi45NTIgMjEuNTUxQzMxOC41NzMgMzguNjEyMiAzMDMuMjU3IDQ0IDI2NC45NjcgNDRIMTUxLjYyOEMxMTYuNDAxIDQ0IDEwMS4wODYgNDMuMTAyIDgyLjcwNjMgMjYuOTM4OEM1OS43MzIzIDguMDgxNjMgNDUuOTQ4IDAgMCAwWiIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=") center /100% 100% no-repeat;rotate:180deg;content:""}
+.footer-credit__mark:where(.ski-factory-2027,.ski-factory-2027 *){display:block;width:212px;height:auto}
+.footer__link:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-contact__link:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-inquiry__link:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-social__link:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-credit:where(.ski-factory-2027,.ski-factory-2027 *){transition:color 200ms ease}
+.footer__link:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-contact__link:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-inquiry__link:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-social__link:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan);outline-offset:4px}
+.footer-credit:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan);outline:2px solid var(--hover-cyan);outline-offset:-4px}
+@media (width >= 768px){@container (width < 1074px){.footer-layout:where(.ski-factory-2027,.ski-factory-2027 *){column-gap:12px;padding-inline:clamp(24px,20cqw - 164.8px,92px)}.footer-bottom:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;align-items:center;gap:18px;margin-block-start:34px}.hashtags:where(.ski-factory-2027,.ski-factory-2027 *){flex-wrap:wrap;gap:6px 20px}}}
+@media (width < 768px){.page__footer:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;margin-inline:0;border-radius:20px 20px 0 0;background-image:url("https://static.tildacdn.pub/tila3239-3137-4336-b836-333031646431/footer-shade-mobile.webp")}.footer-layout:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;align-items:center;padding:34.4px 0 0;text-align:center}.footer__logo:where(.ski-factory-2027,.ski-factory-2027 *){width:134px}.footer-contact:where(.ski-factory-2027,.ski-factory-2027 *){align-items:center;gap:0;margin-block-start:20px;font-size:14px;line-height:18px}.footer-inquiry:where(.ski-factory-2027,.ski-factory-2027 *){width:min(calc(100% - 10px),309px);margin-block-start:24px;text-align:center}.footer-inquiry__text:where(.ski-factory-2027,.ski-factory-2027 *),
+.hashtags:where(.ski-factory-2027,.ski-factory-2027 *){font:500 12px/16px "Ski Factory 2027 TT Bluescreens Pro Expanded",sans-serif}.footer-bottom:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;flex-direction:column;align-items:center;gap:22.3px;margin-block-start:24.6px}.hashtags:where(.ski-factory-2027,.ski-factory-2027 *){flex-direction:column;gap:8px}.hashtags__desktop:where(.ski-factory-2027,.ski-factory-2027 *){display:none}.hashtags__mobile:where(.ski-factory-2027,.ski-factory-2027 *){display:inline}.footer-social:where(.ski-factory-2027,.ski-factory-2027 *){gap:19.15px}.footer-social__link:where(.ski-factory-2027,.ski-factory-2027 *){width:38.13px}.footer-credit:where(.ski-factory-2027,.ski-factory-2027 *){width:min(320px,100%);min-height:34px;margin-block-start:34px;padding-block-end:5px}.footer-credit__mark:where(.ski-factory-2027,.ski-factory-2027 *){width:167px}}
+@media (min-width: 768px) and (hover: hover){.footer__link:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-contact__link:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-inquiry__link:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-social__link:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-credit:hover:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}}
+@media (prefers-reduced-motion: reduce){.footer__link:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-contact__link:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-inquiry__link:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-social__link:where(.ski-factory-2027,.ski-factory-2027 *),
+.footer-credit:where(.ski-factory-2027,.ski-factory-2027 *){transition:none}}
+.sliding-footer:where(.ski-factory-2027,.ski-factory-2027 *){display:none}
+@media (min-width: 768px){html:has(.sliding-footer--visible):where(.ski-factory-2027,.ski-factory-2027 *){scroll-padding-top:120px}.sliding-footer:where(.ski-factory-2027,.ski-factory-2027 *){--sliding-footer-top:12px;--sliding-footer-spacer:clamp(0px,14vw - 139px,29px);position:fixed;z-index:10;inset-block-start:var(--sliding-footer-top);inset-inline:13px calc(13px + var(--scroll-lock-gap, 0px));display:grid;grid-template-columns:161px minmax(108px,calc(297px + var(--sliding-footer-spacer))) minmax(224px,256px) minmax(max-content,1fr);align-items:center;gap:clamp(8px,3vw - 15px,21px);max-width:1171px;min-height:96px;margin-inline:auto;padding-inline:clamp(18px,5vw - 22px,43px) clamp(18px,4vw - 18px,30px);overflow:clip;border-radius:43px;background:var(--navy) url("https://static.tildacdn.pub/tila3032-6330-4532-a538-643031343436/blob.webp") center bottom /100% 96px no-repeat;pointer-events:none;transform:translateY(calc(-100% - var(--sliding-footer-top)));transition:transform 320ms cubic-bezier(.2,.75,.3,1)}.sliding-footer--visible:where(.ski-factory-2027,.ski-factory-2027 *){pointer-events:auto;transform:translateY(0)}.sliding-footer__brand:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__social-link:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__menu-toggle:where(.ski-factory-2027,.ski-factory-2027 *){display:grid;place-items:center;color:var(--hover-cyan);transition:color 200ms ease}.sliding-footer__brand:where(.ski-factory-2027,.ski-factory-2027 *){margin-block-start:2px;color:#fff}.sliding-footer__social-link:where(.ski-factory-2027,.ski-factory-2027 *){width:36.5px;height:37px}.sliding-footer__pill:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding-inline:clamp(10px,3vw - 12px,20px);border-radius:100px;background:var(--hover-cyan);color:#fff;font:500 12px/19.3265px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;letter-spacing:0.02em;text-decoration:none;white-space:nowrap;transition:background-color 200ms ease,color 200ms ease}.sliding-footer__participation:where(.ski-factory-2027,.ski-factory-2027 *){min-height:55.54px;margin-inline-start:var(--sliding-footer-spacer)}.sliding-footer__phone:where(.ski-factory-2027,.ski-factory-2027 *){font-size:14px;font-weight:700}.sliding-footer__phone-number:where(.ski-factory-2027,.ski-factory-2027 *){min-width:min(182px,100% - 34px)}.sliding-footer__controls:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__social:where(.ski-factory-2027,.ski-factory-2027 *){display:flex;align-items:center}.sliding-footer__controls:where(.ski-factory-2027,.ski-factory-2027 *){justify-content:flex-end;gap:clamp(10px,4vw - 21px,26px);margin-inline-start:var(--sliding-footer-spacer)}.sliding-footer__social:where(.ski-factory-2027,.ski-factory-2027 *){gap:clamp(8px,3.5vw - 20px,18.33px)}.sliding-footer__menu-toggle:where(.ski-factory-2027,.ski-factory-2027 *){padding:0;border:0;border-radius:50%;background:transparent}.sliding-footer__brand:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__pill:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__social-link:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__menu-toggle:focus-visible:where(.ski-factory-2027,.ski-factory-2027 *){outline:2px solid #fff;outline-offset:3px}}
+@media (768px <= width < 840px){.sliding-footer__social:where(.ski-factory-2027,.ski-factory-2027 *){display:none}}
+@media (min-width: 768px) and (hover: hover){.sliding-footer__brand:hover:where(.ski-factory-2027,.ski-factory-2027 *){color:var(--hover-cyan)}.sliding-footer__social-link:hover:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__menu-toggle:hover:where(.ski-factory-2027,.ski-factory-2027 *){color:#fff}.sliding-footer__pill:hover:where(.ski-factory-2027,.ski-factory-2027 *){background:#fff;color:var(--navy)}}
+@media (prefers-reduced-motion: reduce){.sliding-footer:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__brand:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__pill:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__social-link:where(.ski-factory-2027,.ski-factory-2027 *),
+.sliding-footer__menu-toggle:where(.ski-factory-2027,.ski-factory-2027 *){transition:none}}
+main:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:none}
+.benefits.container:where(.ski-factory-2027,.ski-factory-2027 *){width:100%;max-width:100%;padding-inline:32px;background-color:#fff}
+.brand-ribbon:where(.ski-factory-2027,.ski-factory-2027 *){--brand-ribbon-tile:1366;--brand-ribbon-image:url("https://static.tildacdn.pub/tila3237-6662-4666-a361-666461313136/brand-ribbon-desktop.webp");position:relative;height:91px;overflow:clip;pointer-events:none}
+.brand-ribbon:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:"";position:absolute;inset:0 0 0 calc(-1px * var(--brand-ribbon-tile));background:var(--brand-ribbon-image) calc(50% + 0.5px * var(--brand-ribbon-tile)) center /calc(1px * var(--brand-ribbon-tile)) 100% repeat-x}
+@media (prefers-reduced-motion: no-preference){.brand-ribbon:where(.ski-factory-2027,.ski-factory-2027 *)::before{animation:ski-factory-2027-brand-ribbon-scroll calc(1s * var(--brand-ribbon-tile) / var(--marquee-speed)) linear infinite}}
+@keyframes ski-factory-2027-brand-ribbon-scroll{to{transform:translateX(calc(1px * var(--brand-ribbon-tile)))}}
+.route-stats:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;overflow:hidden}
+.route-stats:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:"";position:absolute;pointer-events:none;background-repeat:no-repeat;background-size:100% 100%;left:0;background-image:url("https://static.tildacdn.pub/tila6166-3832-4062-b863-306233666135/track-notch-left.svg")}
+.route-stats:where(.ski-factory-2027,.ski-factory-2027 *)::after{content:"";position:absolute;pointer-events:none;background-repeat:no-repeat;background-size:100% 100%;right:-1px;background-image:url("https://static.tildacdn.pub/tila6162-3864-4635-b861-633539376261/track-notch-right.svg")}
+.route-stats:where(.ski-factory-2027,.ski-factory-2027 *)::before,
+.route-stats:where(.ski-factory-2027,.ski-factory-2027 *)::after{top:50%;width:14.475px;height:90.394px;transform:translateY(-50%)}
+.information-panel:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:"";position:absolute;pointer-events:none;background-repeat:no-repeat;background-size:100% 100%;left:0;background-image:url("https://static.tildacdn.pub/tila3933-3038-4265-a265-663035643634/accordion-notch-left.svg")}
+.information-panel:where(.ski-factory-2027,.ski-factory-2027 *)::after{content:"";position:absolute;pointer-events:none;background-repeat:no-repeat;background-size:100% 100%;right:0;background-image:url("https://static.tildacdn.pub/tila3339-3763-4334-b834-643836343563/accordion-notch-righ.svg")}
+.information-panel:where(.ski-factory-2027,.ski-factory-2027 *){position:relative;mask:none}
+.information-panel:where(.ski-factory-2027,.ski-factory-2027 *)::before,
+.information-panel:where(.ski-factory-2027,.ski-factory-2027 *)::after{top:50%;width:36px;height:224px;transform:translateY(-50%)}
+@media (min-width: 768px){.page__main:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:"";position:absolute;inset:0;z-index:-1;background:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM2NiIgaGVpZ2h0PSI1Mjg4IiB2aWV3Qm94PSIwIDAgMTM2NiA1Mjg4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBvcGFjaXR5PSIwLjMiPgo8cGF0aCBkPSJNMjg2LjkxIC00MDEuNTczTDIxMy4yMjggLTE5MS4yOTNDMjAwLjg5MSAtMTU2LjEyIDIyMy4yODggLTExOC4zNTcgMjYwLjEyMiAtMTEyLjI4OEMyOTYuOTU1IC0xMDYuMjE5IDMxOS41ODUgLTY3LjU0NTYgMzA2LjM5OSAtMzIuMTg1TDI2OS4zNjggNjcuMTQ0OUwxOTkuNDk3IDI1NS40NTZMMTI1LjYwMiA0NjUuN0MxMTMuMjY0IDUwMC44NzMgMTM1LjY2MiA1MzguNjM2IDE3Mi40NjkgNTQ0LjcwMUMyMDkuMjc2IDU1MC43NjYgMjMyLjE0NCA1ODkuNDc4IDIxOC45NTcgNjI0LjgzOUwxODEuOTI4IDcyNC4xNjlMMTExLjg0NCA5MTIuNDQ1TDM4LjE2NjMgMTEyMi43QzI1LjgyODYgMTE1Ny44NyA0OC4yMjIgMTE5NS42NiA4NS4wNTUyIDEyMDEuNzNDMTIxLjg4OCAxMjA3LjggMTQ0LjU0NCAxMjQ2LjQ4IDEzMS4zNTggMTI4MS44NEw5NC4zMjkyIDEzODEuMTdMMjQuNDU3MyAxNTY5LjQ4TC00OS40Mzc0IDE3NzkuNzJDLTYxLjc3NTEgMTgxNC45IC0zOS4zNzY3IDE4NTIuNjYgLTIuNTcwMDQgMTg1OC43MkMzNC4yMzY2IDE4NjQuNzkgNTcuMTAzMiAxOTAzLjUgNDMuOTE3IDE5MzguODZMNi45MTM4NSAyMDM4LjE5TC02My4xNDIgMjIyNi40OCIgc3Ryb2tlLXdpZHRoPSI2LjM3IiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNMTg1LjE3NiAtMzUyLjRMMTExLjQ2NyAtMTQyLjEyNUM5OS4xMjkxIC0xMDYuOTUyIDEyMS41MjggLTY5LjE4OTMgMTU4LjE0OSAtNjMuMTU0OUMxOTQuNzcgLTU3LjEyMDUgMjE3LjgyMyAtMTguMzc3NiAyMDQuNjM3IDE2Ljk4M0wxNjcuNjA4IDExNi4zMTNMOTcuNTUxIDMwNC41OTNMMjMuODQxNiA1MTQuODY4QzExLjUwMzkgNTUwLjA0MSAzMy45MDE2IDU4Ny44MDQgNzAuNzM0OCA1OTMuODczQzEwNy41NjggNTk5Ljk0MyAxMzAuNDA5IDYzOC42NTEgMTE3LjIyMyA2NzQuMDExTDgwLjAwODggNzczLjMxMUwxMC4xMzcgOTYxLjYyMkwtNjMuNTQyMSAxMTcxLjg3Qy03NS44Nzk4IDEyMDcuMDUgLTUzLjQ4NTQgMTI0NC44NCAtMTYuODY0NSAxMjUwLjg3QzE5Ljc1NjUgMTI1Ni45MSA0Mi44MTAxIDEyOTUuNjUgMjkuNjIzOSAxMzMxLjAxTC03LjM3OTI3IDE0MzAuMzRMLTc3LjQ2MjMgMTYxOC42MkwtMTUxLjE0NiAxODI4LjlDLTE2My40NzkgMTg2NC4wNSAtMTQxLjA4NiAxOTAxLjgzIC0xMDQuMjUzIDE5MDcuOUMtNjcuNDE5MyAxOTEzLjk3IC00NC41NzggMTk1Mi42OCAtNTcuNzY0MiAxOTg4LjA0TC05NC45Nzg2IDIwODcuMzRMLTE2NC44NDYgMjI3NS42MyIgc3Ryb2tlLXdpZHRoPSI2LjM3IiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNMTQ3NC44OCAtMjA1LjgxOUwxNDAxLjIgNC40NjA1NUMxMzg4Ljg2IDM5LjYzMzkgMTQxMS4yNiA3Ny4zOTY2IDE0NDcuODggODMuNDMxMUMxNDg0LjUgODkuNDY1NSAxNTA3LjU2IDEyOC4yMDkgMTQ5NC4zNyAxNjMuNTY5TDE0NTcuMzQgMjYyLjg5OUwxMzg3LjI4IDQ1MS4xNzlMMTMxMy41NyA2NjEuNDU0QzEzMDEuMjMgNjk2LjYyNyAxMzIzLjYzIDczNC4zOSAxMzYwLjQ3IDc0MC40NkMxMzk3LjMgNzQ2LjUyOSAxNDIwLjE0IDc4NS4yMzcgMTQwNi45NSA4MjAuNTk3TDEzNjkuNzQgOTE5Ljg5N0wxMjk5Ljg3IDExMDguMjFMMTIyNi4xOSAxMzE4LjQ2QzEyMTMuODUgMTM1My42MyAxMjM2LjI1IDEzOTEuNDIgMTI3Mi44NyAxMzk3LjQ2QzEzMDkuNDkgMTQwMy40OSAxMzMyLjU0IDE0NDIuMjMgMTMxOS4zNSAxNDc3LjZMMTI4Mi4zNSAxNTc2LjkzTDEyMTIuMjcgMTc2NS4yMUwxMTM4LjU5IDE5NzUuNDhDMTEyNi4yNSAyMDEwLjY2IDExNDguNjQgMjA0OC40MiAxMTg1LjQ4IDIwNTQuNDlDMTIyMi4zMSAyMDYwLjU2IDEyNDUuMTUgMjA5OS4yNyAxMjMxLjk3IDIxMzQuNjNMMTE5NC43NSAyMjMzLjkzTDExMjQuODggMjQyMi4yNCIgc3Ryb2tlLXdpZHRoPSIzLjgyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNMTM3My4xNSAtMTU2LjY0NUwxMjk5LjI2IDUzLjU5OTJDMTI4Ni45MiA4OC43NzI2IDEzMDkuMzIgMTI2LjUzNSAxMzQ2LjE1IDEzMi42MDVDMTM4Mi45OCAxMzguNjc0IDE0MDUuODIgMTc3LjM4MiAxMzkyLjY0IDIxMi43NDJMMTM1NS40MiAzMTIuMDQyTDEyODUuNTUgNTAwLjM1M0wxMjExLjg0IDcxMC42MjhDMTE5OS41MSA3NDUuODAxIDEyMjEuOSA3ODMuNTYzIDEyNTguNzMgNzg5LjYzM0MxMjk1LjU3IDc5NS43MDIgMTMxOC4yMiA4MzQuMzc5IDEzMDUuMDQgODY5Ljc0TDEyNjguMDEgOTY5LjA3TDExOTguMTQgMTE1Ny4zOEwxMTI0LjI1IDEzNjcuNkMxMTExLjkxIDE0MDIuNzcgMTEzNC4zIDE0NDAuNTYgMTE3MS4xMSAxNDQ2LjYzQzEyMDcuOTIgMTQ1Mi42OSAxMjMwLjc4IDE0OTEuNCAxMjE3LjYgMTUyNi43NkwxMTgwLjM4IDE2MjYuMDZMMTExMC41MSAxODE0LjM3TDEwMzYuODMgMjAyNC42NUMxMDI0LjQ5IDIwNTkuOCAxMDQ2Ljg5IDIwOTcuNTkgMTA4My42OSAyMTAzLjY1QzExMjAuNSAyMTA5LjcyIDExNDMuMTYgMjE0OC40IDExMjkuOTcgMjE4My43NkwxMDkyLjk0IDIyODMuMDlMMTAyMy4wNyAyNDcxLjM3IiBzdHJva2Utd2lkdGg9IjMuODIiIHN0cm9rZS1taXRlcmxpbWl0PSIyMi45MyIgc3Ryb2tlPSIjMjFEQkZGIi8+CjxwYXRoIGQ9Ik04ODAuMTk3IC0zMDMuODEzTDgwNi41MTQgLTkzLjUzMzZDNzk0LjE3NiAtNTguMzYwMiA4MTYuNTczIC0yMC41OTc4IDg1My4zOCAtMTQuNTMyOEM4OTAuMTg2IC04LjQ2Nzc0IDkxMi44NjkgMzAuMjE0IDg5OS42ODMgNjUuNTc0Nkw4NjIuNjU0IDE2NC45MDVMNzkyLjc4MiAzNTMuMjE1TDcxOC44ODggNTYzLjQ2QzcwNi41NTEgNTk4LjYzMyA3MjguOTQ3IDYzNi4zOTYgNzY1Ljc4IDY0Mi40NjVDODAyLjYxMyA2NDguNTM0IDgyNS40NTYgNjg3LjI0MyA4MTIuMjcgNzIyLjYwM0w3NzUuMDU0IDgyMS45MDJMNzA1LjE4MiAxMDEwLjIxTDYzMS41MDYgMTIyMC40N0M2MTkuMTY4IDEyNTUuNjQgNjQxLjU2MSAxMjkzLjQzIDY3OC4zNjggMTI5OS40OUM3MTUuMTc0IDEzMDUuNTYgNzM3Ljg1NyAxMzQ0LjI0IDcyNC42NzEgMTM3OS42TDY4Ny42NjcgMTQ3OC45NEw2MTcuNzk2IDE2NjcuMjVMNTQzLjkgMTg3Ny40OUM1MzEuNTYyIDE5MTIuNjYgNTUzLjk2MSAxOTUwLjQzIDU5MC43OTQgMTk1Ni41QzYyNy42MjcgMTk2Mi41NiA2NTAuNDcgMjAwMS4yNyA2MzcuMjg0IDIwMzYuNjNMNjAwLjA2OCAyMTM1LjkzTDUzMC4xOTYgMjMyNC4yNCIgc3Ryb2tlLXdpZHRoPSIyLjc2IiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNNTQyLjY5OSAyMjkyLjI3TDQ2OS4wMTcgMjUwMi41NUM0NTYuNjc5IDI1MzcuNzIgNDc5LjA3NyAyNTc1LjQ4IDUxNS45MSAyNTgxLjU1QzU1Mi43NDQgMjU4Ny42MiA1NzUuMzc0IDI2MjYuMyA1NjIuMTg4IDI2NjEuNjZMNTI1LjE1NyAyNzYwLjk5TDQ1NS4yODUgMjk0OS4zTDM4MS4zOTEgMzE1OS41NEMzNjkuMDUzIDMxOTQuNzIgMzkxLjQ1MSAzMjMyLjQ4IDQyOC4yNTggMzIzOC41NEM0NjUuMDY1IDMyNDQuNjEgNDg3LjkzMyAzMjgzLjMyIDQ3NC43NDYgMzMxOC42OEw0MzcuNzE3IDM0MTguMDFMMzY3LjYzMyAzNjA2LjI5TDI5My45NTUgMzgxNi41NEMyODEuNjE3IDM4NTEuNzEgMzA0LjAxMSAzODg5LjUgMzQwLjg0NCAzODk1LjU3QzM3Ny42NzcgMzkwMS42NCA0MDAuMzMzIDM5NDAuMzIgMzg3LjE0NyAzOTc1LjY4TDM1MC4xMTggNDA3NS4wMUwyODAuMjQ2IDQyNjMuMzJMMjA2LjM1MSA0NDczLjU2QzE5NC4wMTQgNDUwOC43NCAyMTYuNDEyIDQ1NDYuNSAyNTMuMjE5IDQ1NTIuNTZDMjkwLjAyNSA0NTU4LjYzIDMxMi44OTIgNDU5Ny4zNCAyOTkuNzA2IDQ2MzIuN0wyNjIuNzAzIDQ3MzIuMDRMMTkyLjY0NyA0OTIwLjMyIiBzdHJva2Utd2lkdGg9IjYuMzciIHN0cm9rZS1taXRlcmxpbWl0PSIyMi45MyIgc3Ryb2tlPSIjMjFEQkZGIi8+CjxwYXRoIGQ9Ik00NDAuOTY1IDIzNDEuNDRMMzY3LjI1NiAyNTUxLjcxQzM1NC45MTggMjU4Ni44OSAzNzcuMzE3IDI2MjQuNjUgNDEzLjkzOCAyNjMwLjY4QzQ1MC41NTkgMjYzNi43MiA0NzMuNjEyIDI2NzUuNDYgNDYwLjQyNiAyNzEwLjgyTDQyMy4zOTcgMjgxMC4xNUwzNTMuMzQgMjk5OC40M0wyNzkuNjMgMzIwOC43MUMyNjcuMjkzIDMyNDMuODggMjg5LjY5IDMyODEuNjQgMzI2LjUyNCAzMjg3LjcxQzM2My4zNTcgMzI5My43OCAzODYuMTk4IDMzMzIuNDkgMzczLjAxMiAzMzY3Ljg1TDMzNS43OTggMzQ2Ny4xNUwyNjUuOTI2IDM2NTUuNDZMMTkyLjI0NyAzODY1LjcxQzE3OS45MDkgMzkwMC44OSAyMDIuMzAzIDM5MzguNjggMjM4LjkyNCAzOTQ0LjcxQzI3NS41NDUgMzk1MC43NSAyOTguNTk5IDM5ODkuNDkgMjg1LjQxMyA0MDI0Ljg1TDI0OC40MSA0MTI0LjE4TDE3OC4zMjYgNDMxMi40NkwxMDQuNjQzIDQ1MjIuNzRDOTIuMzA5NyA0NTU3Ljg5IDExNC43MDMgNDU5NS42NyAxNTEuNTM2IDQ2MDEuNzRDMTg4LjM2OSA0NjA3LjgxIDIxMS4yMTEgNDY0Ni41MiAxOTguMDI1IDQ2ODEuODhMMTYwLjgxIDQ3ODEuMThMOTAuOTQyOCA0OTY5LjQ3IiBzdHJva2Utd2lkdGg9IjYuMzciIHN0cm9rZS1taXRlcmxpbWl0PSIyMi45MyIgc3Ryb2tlPSIjMjFEQkZGIi8+CjxwYXRoIGQ9Ik0xNzMwLjY4IDI0ODguMDJMMTY1Ni45OSAyNjk4LjNDMTY0NC42NiAyNzMzLjQ4IDE2NjcuMDUgMjc3MS4yNCAxNzAzLjY4IDI3NzcuMjdDMTc0MC4zIDI3ODMuMzEgMTc2My4zNSAyODIyLjA1IDE3NTAuMTYgMjg1Ny40MUwxNzEzLjE0IDI5NTYuNzRMMTY0My4wOCAzMTQ1LjAyTDE1NjkuMzcgMzM1NS4zQzE1NTcuMDMgMzM5MC40NyAxNTc5LjQzIDM0MjguMjMgMTYxNi4yNiAzNDM0LjNDMTY1My4xIDM0NDAuMzcgMTY3NS45NCAzNDc5LjA4IDE2NjIuNzUgMzUxNC40NEwxNjI1LjU0IDM2MTMuNzRMMTU1NS42NiAzODAyLjA1TDE0ODEuOTkgNDAxMi4zQzE0NjkuNjUgNDA0Ny40OCAxNDkyLjA0IDQwODUuMjcgMTUyOC42NiA0MDkxLjNDMTU2NS4yOCA0MDk3LjM0IDE1ODguMzQgNDEzNi4wOCAxNTc1LjE1IDQxNzEuNDRMMTUzOC4xNSA0MjcwLjc3TDE0NjguMDcgNDQ1OS4wNUwxMzk0LjM4IDQ2NjkuMzNDMTM4Mi4wNCA0NzA0LjUgMTQwNC40NCA0NzQyLjI2IDE0NDEuMjcgNDc0OC4zM0MxNDc4LjExIDQ3NTQuNCAxNTAwLjk1IDQ3OTMuMTEgMTQ4Ny43NiA0ODI4LjQ3TDE0NTAuNTUgNDkyNy43N0wxMzgwLjY4IDUxMTYuMDgiIHN0cm9rZS13aWR0aD0iMy44MiIgc3Ryb2tlLW1pdGVybGltaXQ9IjIyLjkzIiBzdHJva2U9IiMyMURCRkYiLz4KPHBhdGggZD0iTTE2MjguOTQgMjUzNy4yTDE1NTUuMDUgMjc0Ny40NEMxNTQyLjcxIDI3ODIuNjEgMTU2NS4xMSAyODIwLjM4IDE2MDEuOTQgMjgyNi40NUMxNjM4Ljc4IDI4MzIuNTIgMTY2MS42MiAyODcxLjIyIDE2NDguNDMgMjkwNi41OEwxNjExLjIyIDMwMDUuODhMMTU0MS4zNCAzMTk0LjE5TDE0NjcuNjQgMzQwNC40N0MxNDU1LjMgMzQzOS42NCAxNDc3LjY5IDM0NzcuNCAxNTE0LjUzIDM0ODMuNDdDMTU1MS4zNiAzNDg5LjU0IDE1NzQuMDIgMzUyOC4yMiAxNTYwLjgzIDM1NjMuNThMMTUyMy44IDM2NjIuOTFMMTQ1My45MyAzODUxLjIyTDEzODAuMDQgNDA2MS40NEMxMzY3LjcgNDA5Ni42MSAxMzkwLjEgNDEzNC40IDE0MjYuOSA0MTQwLjQ3QzE0NjMuNzEgNDE0Ni41MyAxNDg2LjU4IDQxODUuMjQgMTQ3My4zOSA0MjIwLjYxTDE0MzYuMTggNDMxOS45MUwxMzY2LjMgNDUwOC4yMkwxMjkyLjYyIDQ3MTguNUMxMjgwLjI5IDQ3NTMuNjQgMTMwMi42OCA0NzkxLjQzIDEzMzkuNDkgNDc5Ny41QzEzNzYuMjkgNDgwMy41NiAxMzk4Ljk1IDQ4NDIuMjQgMTM4NS43NiA0ODc3LjZMMTM0OC43MyA0OTc2LjkzTDEyNzguODcgNTE2NS4yMSIgc3Ryb2tlLXdpZHRoPSIzLjgyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNLTUxLjk5NiAyMTk0LjI3TC0xMjUuNjc4IDI0MDQuNTVDLTEzOC4wMTYgMjQzOS43MyAtMTE1LjYxOSAyNDc3LjQ5IC03OC44MTIxIDI0ODMuNTVDLTQyLjAwNTQgMjQ4OS42MiAtMTkuMzQ4NyAyNTI4LjMgLTMyLjUzNSAyNTYzLjY2TC02OS41NjQgMjY2Mi45OUwtMTM5LjQzNiAyODUxLjNMLTIxMy4zMzEgMzA2MS41NEMtMjI1LjY2OCAzMDk2LjcxIC0yMDMuMjcxIDMxMzQuNDggLTE2Ni40NjUgMzE0MC41NEMtMTI5LjY1OCAzMTQ2LjYxIC0xMDYuNzkgMzE4NS4zMiAtMTE5Ljk3NiAzMjIwLjY4TC0xNTcuMTkxIDMzMTkuOThMLTIyNy4wNjIgMzUwOC4yOUwtMzAwLjc0IDM3MTguNTRDLTMxMy4wNzggMzc1My43MiAtMjkwLjY4NCAzNzkxLjUxIC0yNTMuODUxIDM3OTcuNTdDLTIxNy4wMTggMzgwMy42NCAtMTk0LjM2MiAzODQyLjMyIC0yMDcuNTQ4IDM4NzcuNjhMLTI0NC41NzcgMzk3Ny4wMUwtMzE0LjQ0OSA0MTY1LjMyTC0zODguMzQ0IDQzNzUuNTdDLTQwMC42ODIgNDQxMC43NCAtMzc4LjI4NCA0NDQ4LjUgLTM0MS40NTEgNDQ1NC41N0MtMzA0LjYxNyA0NDYwLjY0IC0yODEuNzc2IDQ0OTkuMzUgLTI5NC45NjIgNDUzNC43MUwtMzMyLjE3NyA0NjM0LjAxTC00MDIuMDQ4IDQ4MjIuMzIiIHN0cm9rZS13aWR0aD0iMy44MiIgc3Ryb2tlLW1pdGVybGltaXQ9IjIyLjkzIiBzdHJva2U9IiMyMURCRkYiLz4KPHBhdGggZD0iTTExMzUuOTkgMjM5MC4wM0wxMDYyLjMgMjYwMC4zMUMxMDQ5Ljk2IDI2MzUuNDggMTA3Mi4zNiAyNjczLjI0IDExMDkuMTcgMjY3OS4zMUMxMTQ1Ljk4IDI2ODUuMzcgMTE2OC42NiAyNzI0LjA2IDExNTUuNDcgMjc1OS40MkwxMTE4LjQ0IDI4NTguNzVMMTA0OC41NyAzMDQ3LjA2TDk3NC42NzcgMzI1Ny4zQzk2Mi4zMzkgMzI5Mi40OCA5ODQuNzM2IDMzMzAuMjQgMTAyMS41NyAzMzM2LjMxQzEwNTguNCAzMzQyLjM4IDEwODEuMjQgMzM4MS4wOCAxMDY4LjA2IDM0MTYuNDRMMTAzMC44NCAzNTE1Ljc0TDk2MC45NzEgMzcwNC4wNUw4ODcuMjk1IDM5MTQuMzFDODc0Ljk1NyAzOTQ5LjQ4IDg5Ny4zNSAzOTg3LjI3IDkzNC4xNTYgMzk5My4zNEM5NzAuOTYzIDM5OTkuNCA5OTMuNjQ2IDQwMzguMDggOTgwLjQ1OSA0MDczLjQ0TDk0My40NTYgNDE3Mi43OEw4NzMuNTg0IDQzNjEuMDlMNzk5LjY4OCA0NTcxLjMzQzc4Ny4zNTEgNDYwNi41MSA4MDkuNzUgNDY0NC4yNyA4NDYuNTgzIDQ2NTAuMzRDODgzLjQxNiA0NjU2LjQxIDkwNi4yNTkgNDY5NS4xMSA4OTMuMDczIDQ3MzAuNDhMODU1Ljg1NyA0ODI5Ljc3TDc4NS45ODUgNTAxOC4wOSIgc3Ryb2tlLXdpZHRoPSIyLjc2IiBzdHJva2UtbWl0ZXJsaW1pdD0iMjIuOTMiIHN0cm9rZT0iIzIxREJGRiIvPgo8cGF0aCBkPSJNMTAzNC4yNSAyNDM5LjJMOTYwLjM2MSAyNjQ5LjQ1Qzk0OC4wMjMgMjY4NC42MiA5NzAuNDIgMjcyMi4zOCAxMDA3LjI1IDI3MjguNDVDMTA0NC4wOSAyNzM0LjUyIDEwNjYuOTMgMjc3My4yMyAxMDUzLjc0IDI4MDguNTlMMTAxNi43MSAyOTA3LjkyTDk0Ni42NTUgMzA5Ni4yTDg3Mi45NDYgMzMwNi40N0M4NjAuNjA4IDMzNDEuNjUgODgzLjAwNyAzMzc5LjQxIDkxOS44NCAzMzg1LjQ4Qzk1Ni42NzMgMzM5MS41NSA5NzkuMzI5IDM0MzAuMjMgOTY2LjE0MyAzNDY1LjU5TDkyOS4xMTQgMzU2NC45Mkw4NTkuMjQyIDM3NTMuMjNMNzg1LjM1MSAzOTYzLjQ1Qzc3My4wMTMgMzk5OC42MiA3OTUuNDA4IDQwMzYuNDEgODMyLjI0MSA0MDQyLjQ4Qzg2OS4wNzQgNDA0OC41NSA4OTEuOTE0IDQwODcuMjYgODc4LjcyOCA0MTIyLjYyTDg0MS41MTUgNDIyMS45Mkw3NzEuNjQzIDQ0MTAuMjNMNjk3Ljk2IDQ2MjAuNTFDNjg1LjYyNiA0NjU1LjY1IDcwOC4wMjEgNDY5My40NCA3NDQuODU0IDQ2OTkuNTFDNzgxLjY4NyA0NzA1LjU4IDgwNC4zMTUgNDc0NC4yNSA3OTEuMTI5IDQ3NzkuNjFMNzU0LjEgNDg3OC45NEw2ODQuMjMyIDUwNjcuMjMiIHN0cm9rZS13aWR0aD0iMi43NiIgc3Ryb2tlLW1pdGVybGltaXQ9IjIyLjkzIiBzdHJva2U9IiMyMURCRkYiLz4KPC9nPgo8L3N2Zz4K") center var(--page-decor-offset,0px) /100% auto no-repeat;pointer-events:none}}
+@media (width < 768px){.hero-slider__scene:where(.ski-factory-2027,.ski-factory-2027 *)::before,
+.hero-slider__scene:where(.ski-factory-2027,.ski-factory-2027 *)::after{content:"";position:absolute;left:0;width:100%;pointer-events:none;background-repeat:no-repeat;background-size:100% 100%}.hero-slider__scene:where(.ski-factory-2027,.ski-factory-2027 *)::before{top:0;height:25.1291%;background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjE0NiIgdmlld0JveD0iMCAwIDMyMCAxNDYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2ZfNjVfMzE1MikiPgo8ZWxsaXBzZSBjeD0iMTI1LjY5MyIgY3k9IjI4Ljg5ODgiIHJ4PSIyMjAuMDI1IiByeT0iNDIuODY0OSIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzY1XzMxNTIpIiBmaWxsLW9wYWNpdHk9IjAuOCIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2ZfNjVfMzE1MiIgeD0iLTE2OC4zMzIiIHk9Ii04Ny45NjYxIiB3aWR0aD0iNTg4LjA1IiBoZWlnaHQ9IjIzMy43MyIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiPgo8ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgcmVzdWx0PSJzaGFwZSIvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzNyIgcmVzdWx0PSJlZmZlY3QxX2ZvcmVncm91bmRCbHVyXzY1XzMxNTIiLz4KPC9maWx0ZXI+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl82NV8zMTUyIiB4MT0iMjc1LjE0MyIgeTE9IjE2LjAwMDUiIHgyPSItNDguNzU4NyIgeTI9IjgxLjk4NzgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzA4MTgzQiIvPgo8c3RvcCBvZmZzZXQ9IjAuNzI4OTE5IiBzdG9wLWNvbG9yPSIjMTU3Q0EwIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzFFQzRFOCIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=")}.hero-slider__scene:where(.ski-factory-2027,.ski-factory-2027 *)::after{bottom:0;height:54.0448%;background-image:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMxNCIgdmlld0JveD0iMCAwIDMyMCAzMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2ZfNjVfMzE1NSkiPgo8ZWxsaXBzZSBjeD0iODIuNDc5OSIgY3k9IjIxMi42OTgiIHJ4PSIyOTAuODM3IiByeT0iMTIwLjU4MyIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1IDgyLjQ3OTkgMjEyLjY5OCkiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl82NV8zMTU1KSIgZmlsbC1vcGFjaXR5PSIwLjYiLz4KPC9nPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9mXzY1XzMxNTUiIHg9Ii0yNzQuMiIgeT0iMCIgd2lkdGg9IjcxMy4zNiIgaGVpZ2h0PSI0MjUuMzk2IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjM3IiByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfNjVfMzE1NSIvPgo8L2ZpbHRlcj4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzY1XzMxNTUiIHgxPSItMTE1LjA2OCIgeTE9IjI0OC45ODIiIHgyPSI1MjEuODg1IiB5Mj0iMTcxLjYxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIG9mZnNldD0iMC4yMjU5NzUiIHN0b3AtY29sb3I9IiMwODE4M0IiLz4KPHN0b3Agb2Zmc2V0PSIwLjc5OTYxNiIgc3RvcC1jb2xvcj0iIzIyOTNCQSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxRUM0RTgiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K")}.hero-slider__scene--foreground:where(.ski-factory-2027,.ski-factory-2027 *)::before,
+.hero-slider__scene:not(.hero-slider__scene--foreground):where(.ski-factory-2027,.ski-factory-2027 *)::after{content:none}.benefits.container:where(.ski-factory-2027,.ski-factory-2027 *){padding-inline:20px}.brand-ribbon:where(.ski-factory-2027,.ski-factory-2027 *){--brand-ribbon-tile:calc(50.896 * 640 / 102);--brand-ribbon-image:url("https://static.tildacdn.pub/tila3365-3337-4565-b230-323138656533/brand-ribbon-mobile.webp");height:50.896px}.route-stats:where(.ski-factory-2027,.ski-factory-2027 *)::before,
+.route-stats:where(.ski-factory-2027,.ski-factory-2027 *)::after{width:9.097px;height:48px}.route-stats:where(.ski-factory-2027,.ski-factory-2027 *)::before{background-image:url("https://static.tildacdn.pub/tila3961-3331-4039-a332-313030663535/track-notch-left-mob.svg")}.route-stats:where(.ski-factory-2027,.ski-factory-2027 *)::after{background-image:url("https://static.tildacdn.pub/tila6135-6639-4232-b934-656632363230/track-notch-right-mo.svg")}.information-panel:where(.ski-factory-2027,.ski-factory-2027 *)::before,
+.information-panel:where(.ski-factory-2027,.ski-factory-2027 *)::after{content:none}.team-grid__article--secondary:where(.ski-factory-2027,.ski-factory-2027 *){position:relative}.team-grid__article--secondary:where(.ski-factory-2027,.ski-factory-2027 *)::before{content:"";position:absolute;z-index:-1;top:-157.782px;left:50%;width:320px;height:269.816px;transform:translateX(-50%);background:url("https://static.tildacdn.pub/tila6564-3134-4433-a535-396334353331/schedule-bottom-deco.svg") center /100% 100% no-repeat;pointer-events:none}.teams:where(.ski-factory-2027,.ski-factory-2027 *){isolation:isolate;overflow:clip}}
+@media (width < 768px){.page__home:where(.ski-factory-home,.ski-factory-home *){margin-block-end:10px}}
+@media (min-width: 768px){.page__body--home:where(.ski-factory-home,.ski-factory-home *){display:grid;gap:17px}}
+.header__logo-mark:where(.ski-factory-home,.ski-factory-home *){fill:var(--navy)}
+@media (min-width: 768px){.burger-menu__social:where(.ski-factory-home,.ski-factory-home *){margin-block-start:auto}}
+.hero__park-mark:where(.ski-factory-home,.ski-factory-home *){display:none}
+.hero__park-image:where(.ski-factory-home,.ski-factory-home *){display:block;width:100%;height:auto}
+.hero-slider__note:where(.ski-factory-home,.ski-factory-home *){display:none}
+@media (min-width: 768px){.hero-slider__bottom--race:where(.ski-factory-home,.ski-factory-home *){padding-inline-end:calc(6.781cqw - 6.2359cqw)}.hero-slider__note:where(.ski-factory-home,.ski-factory-home *){display:block;flex:0 1 280px;margin:0 max(clamp(24px,2.46cqw,33px),calc(99px - 6.781cqw)) 0 0;padding:10px 18px 10px 12px;border-radius:13px;background:var(--white);color:var(--navy);text-align:right;font:500 14px/19px "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;letter-spacing:0.02em}}
+@media (min-width: 1366px){.hero-slider__note:where(.ski-factory-home,.ski-factory-home *){position:relative;inset-block-start:8px}}
+.hero-stages:where(.ski-factory-home,.ski-factory-home *){--stage-row:60px;--stage-gap:16px;position:absolute;z-index:7;inset-block-start:47.38%;inset-inline-end:max(55px,4.1%);display:flex;align-items:start;gap:12px;color:var(--white);font:700 48px/1 "Ski Factory 2027 TT Bluescreens Pro Extended",sans-serif;pointer-events:none}
+.hero-stages__label:where(.ski-factory-home,.ski-factory-home *){margin-block-start:20px;font-size:24px;line-height:19.33px}
+.hero-stages__drum:where(.ski-factory-home,.ski-factory-home *){position:relative}
+.hero-stages__list:where(.ski-factory-home,.ski-factory-home *){display:grid;gap:var(--stage-gap);margin:0;padding:0;list-style:none}
+.hero-stages__mask:where(.ski-factory-home,.ski-factory-home *){position:absolute;inset:0;overflow:clip;visibility:hidden;pointer-events:none;mask-image:linear-gradient(black 17%,rgb(0 0 0/80%) 42% 62%,rgb(0 0 0/70%) 82%)}
+.hero-stages__reel:where(.ski-factory-home,.ski-factory-home *){display:grid;grid-auto-rows:calc(var(--stage-row) + var(--stage-gap))}
+.hero-stages__reel-digit:where(.ski-factory-home,.ski-factory-home *){display:grid;place-items:center;padding-block-end:var(--stage-gap)}
+.hero-stages__drum--rolling .hero-stages__mask:where(.ski-factory-home,.ski-factory-home *){visibility:visible}
+.hero-stages__drum--rolling .hero-stages__digit:where(.ski-factory-home,.ski-factory-home *){opacity:0}
+.hero-stages__button:where(.ski-factory-home,.ski-factory-home *),
+.hero-stages__current:where(.ski-factory-home,.ski-factory-home *){display:grid;place-items:center;min-width:42px;height:var(--stage-row);padding:0;border:0;border-radius:5px;background:none;color:inherit;font:inherit;opacity:0.8}
+.hero-stages__button--third:where(.ski-factory-home,.ski-factory-home *){opacity:0.7}
+.hero-stages__button:where(.ski-factory-home,.ski-factory-home *){pointer-events:auto}
+.hero-stages__current:where(.ski-factory-home,.ski-factory-home *),
+.hero-stages__button:focus-visible:where(.ski-factory-home,.ski-factory-home *),
+.hero-stages__current:focus-visible:where(.ski-factory-home,.ski-factory-home *){opacity:1}
+@media (width >= 768px){.hero-stages__button:enabled:hover:where(.ski-factory-home,.ski-factory-home *){opacity:1}}
+.hero-stages__button:focus-visible:where(.ski-factory-home,.ski-factory-home *){outline:2px solid var(--white);outline-offset:2px}
+.hero-stages__button:disabled:where(.ski-factory-home,.ski-factory-home *){cursor:default}
+@media (width >= 768px){@container (width < 1174px){.hero-stages:where(.ski-factory-home,.ski-factory-home *){--stage-row:40px;--stage-gap:9px;font-size:32px}.hero-stages__label:where(.ski-factory-home,.ski-factory-home *){margin-block-start:10px;font-size:18px}}}
+@media (width >= 1200px){@container (width < 875px){.hero-stages:where(.ski-factory-home,.ski-factory-home *){inset-block-start:38%}}}
+@media (width < 768px){.header--home:where(.ski-factory-home,.ski-factory-home *){padding-inline:min(32px,10%)}.hero__park-mark:where(.ski-factory-home,.ski-factory-home *){position:absolute;z-index:5;inset-block-start:36px;inset-inline-start:50%;display:block;width:79.334px;height:auto;transform:translateX(-50%)}.hero-stages:where(.ski-factory-home,.ski-factory-home *){--stage-row:32px;--stage-gap:8.54px;inset-block-start:60px;inset-inline-end:10.34px;gap:6.24px;font-size:25.62px}.hero-stages__button:where(.ski-factory-home,.ski-factory-home *),
+.hero-stages__current:where(.ski-factory-home,.ski-factory-home *){min-width:22.42px}.hero-stages__label:where(.ski-factory-home,.ski-factory-home *){margin-block-start:10.67px;font-size:12.81px;line-height:10.31px}}
+
+@media (768px <= width <= 1120px) {
+    .partner-card:where(.ski-factory-2027, .ski-factory-2027 *) {
+        height: 135px;
+        aspect-ratio: auto;
+    }
+}
+
+/* Partner Logos — Tablet and Desktop */
+.partner-card__logo:where(.ski-factory-2027, .ski-factory-2027 *) {
+    place-self: center;
+}
+
+svg.partner-radio:where(.ski-factory-2027, .ski-factory-2027 *) {
+    display: block;
+    aspect-ratio: 181 / 125;
+    mix-blend-mode: normal;
+}
+
+.partner-symbol__image:where(.ski-factory-2027, .ski-factory-2027 *),
+.partner-radio__image:where(.ski-factory-2027, .ski-factory-2027 *) {
+    height: auto;
+}
+
+@media (768px <= width < 1120px) {
+    .partner-park:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 177px;
+        height: 53.85px;
+    }
+
+    .partner-sport--wide:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 177px;
+        height: 29.53px;
+    }
+
+    .partner-race:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 62px;
+        height: 67.18px;
+    }
+
+    .partner-symbol:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 42px;
+        height: 50.08px;
+    }
+
+    .partner-radio:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 71px;
+        height: 68.51px;
+    }
+    svg.partner-radio:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 92px;
+        height: 63.54px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .partner-park:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 223px;
+        height: 67.84px;
+    }
+
+    .partner-sport--wide:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 253px;
+        height: 42.21px;
+    }
+
+    .partner-race:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 103px;
+        height: 111.6px;
+    }
+
+    .partner-symbol:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 62px;
+        height: 73.92px;
+    }
+
+    .partner-radio:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 114px;
+        height: 110px;
+    }
+    svg.partner-radio:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 130px;
+        height: 89.78px;
+    }
+}
+
+/* Mobile — Partners */
+@media (width < 768px) {
+    .partners:where(.ski-factory-2027, .ski-factory-2027 *) {
+        --partner-grid-gap: 4px;
+        --partner-card-ratio: 158 / 70;
+    }
+    .partner-banner:where(.ski-factory-2027, .ski-factory-2027 *) {
+        height: auto;
+        margin-bottom: var(--partner-grid-gap);
+    }
+    .partner-banner:where(.ski-factory-2027, .ski-factory-2027 *)::before {
+        content: "";
+        display: block;
+        width: calc((100% - var(--partner-grid-gap)) / 2);
+        aspect-ratio: var(--partner-card-ratio);
+    }
+    .partner-grid:where(.ski-factory-2027, .ski-factory-2027 *) {
+        gap: var(--partner-grid-gap);
+    }
+    .partner-card:where(.ski-factory-2027, .ski-factory-2027 *) {
+        aspect-ratio: var(--partner-card-ratio);
+    }
+
+    .partner-park:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 91px;
+        height: 27.69px;
+    }
+    .partner-symbol:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 32px;
+        height: 38.4px;
+    }
+    .partner-sport--wide:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 120px;
+        height: 20.02px;
+    }
+    .partner-race:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 43px;
+        height: 46.59px;
+        object-fit: contain;
+    }
+    .partner-radio:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 42px;
+        height: 41px;
+    }
+    svg.partner-radio:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 60px;
+        height: 41.44px;
+    }
+}
+
+@media (width < 500px) {
+    .partner-sport--wide:where(.ski-factory-2027, .ski-factory-2027 *) {
+        display: none;
+    }
+    .partner-sport--compact:where(.ski-factory-2027, .ski-factory-2027 *) {
+        display: block;
+        width: 77px;
+        height: 39px;
+    }
+    .partner-symbol__image:where(.ski-factory-2027, .ski-factory-2027 *),
+    .partner-radio__image:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+}
+
+@media (450px <= width < 768px) {
+    .partner-park:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 110px;
+        height: 33.47px;
+    }
+    .partner-symbol:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 39px;
+        height: 46.8px;
+    }
+    .partner-sport--wide:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 144px;
+        height: 24.03px;
+    }
+    .partner-sport--compact:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 92px;
+        height: 46.6px;
+    }
+    .partner-race:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 52px;
+        height: 56.34px;
+    }
+    .partner-radio:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 51px;
+        height: 49.79px;
+    }
+    svg.partner-radio:where(.ski-factory-2027, .ski-factory-2027 *) {
+        width: 70px;
+        height: 48.34px;
+    }
+}
+
+/* End Ski Factory 2027 production CSS */

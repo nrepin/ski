@@ -1368,18 +1368,77 @@ dialog:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-
 
 /* Partner Radio */
 .partner-radio:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
-    display: grid;
-    grid-template: 1fr/1fr;
-    width: 30.4%;
-    aspect-ratio: 114/110;
-    overflow: hidden;
-    mix-blend-mode: multiply;
+    display: block;
 }
-.partner-radio__image:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
-    width: 128.28%;
-    height: 132.29%;
-    max-width: none;
-    transform: translate(-15.75%, -11.02%);
+
+@media (768px <= width <= 1120px) {
+    .partner-card:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        height: 135px;
+        aspect-ratio: auto;
+    }
+}
+
+/* Partner Logos — Tablet and Desktop */
+.partner-card__logo:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+    place-self: center;
+}
+
+.partner-symbol__image:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+    height: auto;
+}
+
+@media (768px <= width < 1120px) {
+    .partner-park:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 177px;
+        height: 53.85px;
+    }
+
+    .partner-sport--wide:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 177px;
+        height: 29.53px;
+    }
+
+    .partner-race:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 62px;
+        height: 67.18px;
+    }
+
+    .partner-symbol:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 42px;
+        height: 50.08px;
+    }
+
+    .partner-radio:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 92px;
+        height: 63.54px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .partner-park:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 223px;
+        height: 67.84px;
+    }
+
+    .partner-sport--wide:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 253px;
+        height: 42.21px;
+    }
+
+    .partner-race:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 103px;
+        height: 111.6px;
+    }
+
+    .partner-symbol:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 62px;
+        height: 73.92px;
+    }
+
+    .partner-radio:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 130px;
+        height: 89.78px;
+    }
 }
 
 @media (768px <= width < 1280px) {
@@ -2311,6 +2370,8 @@ dialog:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-
 
     /* Mobile — Partners */
     .partners:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        --partner-grid-gap: 4px;
+        --partner-card-ratio: 158 / 70;
         width: 100%;
         max-width: 600px;
     }
@@ -2324,21 +2385,26 @@ dialog:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-
     /* Mobile — Partner Banner */
     .partner-banner:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
         background: #f1f3f9;
-        height: 72px;
-        margin-bottom: 4px;
-        object-fit: fill;
+        height: auto;
+        margin-bottom: var(--partner-grid-gap);
+    }
+    .partner-banner:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *)::before {
+        content: "";
+        display: block;
+        width: calc((100% - var(--partner-grid-gap)) / 2);
+        aspect-ratio: var(--partner-card-ratio);
     }
 
     /* Mobile — Partner Grid */
     .partner-grid:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 4px;
+        gap: var(--partner-grid-gap);
     }
 
     /* Mobile — Partner Card */
     .partner-card:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
         border-radius: 0;
-        aspect-ratio: 158/70;
+        aspect-ratio: var(--partner-card-ratio);
     }
     .partner-card--reserved:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
         order: 2;
@@ -2452,36 +2518,70 @@ dialog:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-
 }
 
 /* Mobile — Partner Logos */
-@media (width < 500px) {
+@media (width < 768px) {
     .partner-park:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
-        width: 90.87px;
-        height: 30.02px;
+        width: 91px;
+        height: 27.69px;
     }
     .partner-symbol:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
-        width: 32.3px;
+        width: 32px;
+        height: 38.4px;
     }
+    .partner-sport--wide:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 120px;
+        height: 20.02px;
+    }
+    .partner-race:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 43px;
+        height: 46.59px;
+        object-fit: contain;
+    }
+    .partner-radio:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 60px;
+        height: 41.44px;
+    }
+}
+
+@media (width < 500px) {
     .partner-sport--wide:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
         display: none;
     }
     .partner-sport--compact:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
         display: block;
-        width: 76.83px;
+        width: 77px;
         height: 39px;
     }
-    .partner-race:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
-        width: 42.59px;
-        height: 46px;
-        object-fit: contain;
-    }
-    .partner-radio:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
-        width: 42px;
-        aspect-ratio: 42 / 41;
-    }
-    .partner-symbol__image:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *),
-    .partner-radio__image:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+    .partner-symbol__image:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
         width: 100%;
         height: auto;
         transform: none;
+    }
+}
+
+@media (450px <= width < 768px) {
+    .partner-park:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 110px;
+        height: 33.47px;
+    }
+    .partner-symbol:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 39px;
+        height: 46.8px;
+    }
+    .partner-sport--wide:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 144px;
+        height: 24.03px;
+    }
+    .partner-sport--compact:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 92px;
+        height: 46.6px;
+    }
+    .partner-race:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 52px;
+        height: 56.34px;
+    }
+    .partner-radio:where(.ski-factory-2027, .ski-factory-2027 *, [data-ski-page], [data-ski-page] *) {
+        width: 70px;
+        height: 48.34px;
     }
 }
 
